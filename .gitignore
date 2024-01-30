@@ -1,0 +1,67 @@
+# Ignore common image file formats
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.bmp
+*.tif
+*.tiff
+
+# IDE and editor folders
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Node modules
+/node_modules/
+
+# Vendor folder (dependencies managed by Composer)
+/vendor/
+
+# PHP server files
+php_errors.log
+
+# Environment-specific files
+/.env
+/.env.local
+/.env.*.local
+
+# Composer files
+composer.lock
+composer.phar
+
+# User-specific files
+/.DS_Store
+/Thumbs.db
+
+# Config files
+/config/*.php
+
+# Cache and logs (Symfony)
+/var/cache/*
+/var/log/*
+!var/cache/.gitkeep
+!var/log/.gitkeep
+
+# Session Data
+/var/sessions/*
+!var/sessions/.gitkeep
+
+# Exported Databases
+*.sql
+*.sqlite
+
+# Build directory
+/build/
+
+# PHPStorm project files
+.idea/
+
+# Temporary files
+/temp/
+/tmp/
