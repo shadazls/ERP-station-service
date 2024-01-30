@@ -21,7 +21,7 @@ L'objectif de ce projet est de développer une ERP (Enterprise Resource Planning
 _Rajouter les outils utilisés ici au fur et à mesure de l'avancement du projet_
 
 ## Structure du Projet
-Le projet est organisé sur GitLab avec un ensemble d'issues reflétant les fonctionnalités à développer ainsi que le travail à réaliser en parrallèle (organisation, management, conception). Deux boards d'issues ont été créé, le premier se nomme "Conception" et contient tout le travail à effectuer n'étant pas du développement informatique. L'autre board "Développement" concerne tout le travail de développement à effectuer.
+Le projet est organisé sur GitLab avec un ensemble d'issues reflétant les fonctionnalités à développer ainsi que le travail à réaliser en parrallèle (organisation, management, conception). Deux boards d'issues ont été créé, le premier se nomme "Organisation Management Conception" et contient tout le travail à effectuer n'étant pas du développement informatique. L'autre board "Développement" concerne tout le travail de développement à effectuer.
 
 ## Comment Contribuer
 1. Clôner le projet localement : `git clone [URL du projet]`
