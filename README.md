@@ -4,12 +4,12 @@ Bienvenue dans le projet de réalisation d'une ERP, développé par l'équipe d'
 
 ## Membres de l'équipe
 - Shad Azuelos
-- Thomas Munoz
-- Nicolas Vetroff
-- Rayane Larbi
 - Lilian Farchetto
+- Rayane Larbi
 - Jeremy Moncada
 - Andy Montaru
+- Thomas Munoz
+- Nicolas Vetroff
 
 ## Description du Projet
 L'objectif de ce projet est de développer une ERP (Enterprise Resource Planning) pour une station service. Nous avons la liberté d'utiliser les outils et le langage de programmation de notre choix. Le projet comprend la conception de l'ERP ainsi que la gestion et l'organisation nécessaire. Nous adoptons la méthode Agile pour ce projet.
