@@ -2,6 +2,9 @@
 
 Bienvenue dans le projet de réalisation d'une ERP, développé par l'équipe d'étudiants 4A en BUT Informatique en 2ème année. Ce projet s'inscrit dans le cadre de la SAE Développement d'une application complexe (S4.01) et de la matière Management avancé des systèmes d’information (R4.09).
 
+## Nom du Projet
+FuelSync
+
 ## Membres de l'équipe
 - Shad Azuelos
 - Lilian Farchetto
