@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pavé Numérique</title>
         <link rel="stylesheet" href="styles/grid.css">
+        <link rel="stylesheet" href="styles/reappro.css">
+        <script src="scripts/reappro.js" defer="defer"></script>
     </head>
     <body>
         <header>
@@ -15,7 +17,43 @@
             <div>
                 <div id="manager-container-top">
                     <div>a</div>
-                    <div>b</div>
+                    <div class="manager-container-top-reappro">
+                        <div class="inputProduct">
+                            <h4>Demander un réapprovisionnement</h4>
+                            <input type="text" id="productChoice" placeholder="Produit ou energie">
+                            <input type="text" id="quantity" placeholder="Quantite">
+                            <select name="supplier" id="supplier">
+                                <option value="supplier1">Fournisseur 1</option>
+                                <option value="supplier2">Fournisseur 2</option>
+                                <option value="supplier3">Fournisseur 3</option>
+                            </select>
+                            <button id="addButton">ajouter +</button>
+                        </div>
+                        <div class="basket">
+                            <h3>Panier</h3>
+                            <div id="basketItems"></div>
+                            <div class="validate">
+                                <p id="total">Total: 0 €</p>
+                                <button id="validateButton">Valider</button>
+                            </div>
+                        </div>
+                        <div class="inProgress">
+                            <h3>En cours</h3>
+
+                            <div id="inProgressItems"></div>
+
+                            <div id="centerer"></div>
+                            
+                        </div>
+                        <div class="toConfirm">
+                            <h3>A confirmer</h3>
+
+                            <div id="toConfirmItems"></div>
+
+                            <div id="centerer"></div>
+                            
+                        </div>
+                    </div>
                 </div>
                 <div id="manager-container-center">
                     <div>c</div>
