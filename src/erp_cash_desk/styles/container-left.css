@@ -4,12 +4,20 @@
     margin: 1rem 0px;
     width: 90%;
     height: 10%;
+
 }
 
 #employee-container-left .calculator div {
     height: 17%;
 }
 
+.calculator button {
+    font-family: Balsamiq Sans;
+}
+
+.calculator input {
+    font-family: Balsamiq Sans;
+}
 
 
 #employee-container-left .calculator button {
@@ -28,4 +36,8 @@
 #employee-container-left .payment>button {
     width: 90%;
     height: 20%;
+}
+
+.payment button {
+    font-family: Balsamiq Sans;
 }

@@ -12,8 +12,35 @@
     border-bottom: 1px solid gray;
 }
 
-.line-pump>p {
+.line-pump > p {
+    display: flex;
     margin-left: 2%;
     font-family: Balsamiq Sans;
 }
 
+.ticket {
+    display: flex;
+}
+
+.addProduct {
+    border: 2px solid black;
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 100%;
+}
+
+.addProduct > p {
+    margin: 2%;
+    font-family: Balsamiq Sans;
+}
+
+.divplus {
+    margin: 1%;
+    border: 2px solid black;
+}
+
+i:hover{
+    cursor: pointer;
+}
