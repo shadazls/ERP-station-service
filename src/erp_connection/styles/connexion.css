@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+}
+
+#fuelsync {
+    margin-bottom: 20px;
+}
+
+.login-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+}
+
+.login-icon i {
+    position: absolute;
+    top: 58%;
+    right: 1%;
+}
+
+i {
+    font-size: 150%;
+}
+
+i:hover{
+    cursor: pointer;
+}

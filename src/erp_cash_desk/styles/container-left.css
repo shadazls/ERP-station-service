@@ -1,0 +1,31 @@
+/* Calculator */
+
+#employee-container-left .calculator input {
+    margin: 1rem 0px;
+    width: 90%;
+    height: 10%;
+}
+
+#employee-container-left .calculator div {
+    height: 17%;
+}
+
+
+
+#employee-container-left .calculator button {
+    width: 30%;
+    height: 90%;
+}
+
+/* PAYMENT BUTTONS */
+
+#employee-container-left .payment button {
+    width: 45%;
+    height: 6rem;
+    margin: 0.2rem;
+}
+
+#employee-container-left .payment>button {
+    width: 90%;
+    height: 20%;
+}
