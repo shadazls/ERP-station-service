@@ -32,14 +32,14 @@ body main>div {
 
 /* RIGHT + CENTER */
 
-#employee-container-top div:nth-child(1), #employee-container-center div:nth-child(1), #employee-container-bottom div:nth-child(1), #employee-container-center div:nth-child(2), #employee-container-bottom div:nth-child(2), #employee-container-center div:nth-child(3), #employee-container-bottom div:nth-child(3) {
+#employee-container-top>div:nth-child(1), #employee-container-center>div:nth-child(1), #employee-container-bottom>div:nth-child(1), #employee-container-center>div:nth-child(2), #employee-container-bottom>div:nth-child(2), #employee-container-center>div:nth-child(3), #employee-container-bottom>div:nth-child(3) {
     width: 27vw;
     border-width: 1px 1px 0px 0px;
     border-color: grey;
     border-style: solid;
 }
 
-#employee-container-top div:nth-child(2) {
+#employee-container-top>div:nth-child(2) {
     width: 54vw;
     border-width: 1px 0px 0px 0px;
     border-color: grey;
