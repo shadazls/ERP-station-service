@@ -34,15 +34,17 @@ body main>div {
 
 #employee-container-top>div:nth-child(1), #employee-container-center>div:nth-child(1), #employee-container-bottom>div:nth-child(1), #employee-container-center>div:nth-child(2), #employee-container-bottom>div:nth-child(2), #employee-container-center>div:nth-child(3), #employee-container-bottom>div:nth-child(3) {
     width: 27vw;
-    border-width: 1px 1px 0px 0px;
-    border-color: grey;
+    border-width: 3px 3px 0px 0px;
     border-style: solid;
+}
+
+#employee-container-center>div:nth-child(3), #employee-container-bottom>div:nth-child(3) {
+    border-right: none;
 }
 
 #employee-container-top>div:nth-child(2) {
     width: 54vw;
-    border-width: 1px 0px 0px 0px;
-    border-color: grey;
+    border-width: 3px 0px 0px 0px;
     border-style: solid;
 }
 
@@ -55,13 +57,13 @@ body main>div {
 }
 
 #employee-container-left .calculator {
-    border: 1px grey solid;
+    border: 3px black solid;
     height: 66%;
     text-align: center;
 }
 
 #employee-container-left .payment {
-    border: 1px grey solid;
+    border: 3px black solid;
     height: 34%;
     text-align: center;
     border-top: none;
