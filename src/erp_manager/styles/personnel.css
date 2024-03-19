@@ -1,0 +1,73 @@
+#manager-container-center-personnel-formation {
+    background-color: rgb(211, 211, 39);
+}
+
+#manager-container-center-personnel-formation>div {
+    margin: 1rem 2rem;
+}
+
+/* PERSONNEL */
+
+#manager-container-center-personnel-formation #infos-personnel {
+    display: flex;
+    justify-content: center;
+}
+
+#manager-container-center-personnel-formation #infos-personnel #liste_personnel {
+    margin-top: 1rem;
+    width: 90%;
+    height: 7rem;
+    background-color: white;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#manager-container-center-personnel-formation #infos-personnel #liste_personnel>p {
+    width: 100%;
+}
+
+#manager-container-center-personnel-formation #infos-personnel>div {
+    width: 50%;
+}
+
+#experience_personnel, #etude_personnel {
+    color: grey;
+}
+
+.personnel-selected {
+    background-color: blue;
+    color: white;
+}
+
+/* FORMATION */
+
+#manager-container-center-personnel-formation #formations-personnel #liste_formation {
+    height: 7rem;
+    width: 90%;
+    overflow-y: scroll;
+}
+
+#manager-container-center-personnel-formation #formations-personnel #liste_formation>p {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+#manager-container-center-personnel-formation #formations-personnel #liste_formation .formation-selected {
+    background-color: blue;
+}
+
+#manager-container-center-personnel-formation #formations-personnel #liste_formation .formation-selected>span {
+    color: white;
+}
+
+#manager-container-center-personnel-formation #formations-personnel {
+    display: flex;
+    justify-content: center;
+}
+
+#manager-container-center-personnel-formation #formations-personnel>div {
+    width: 50%;
+}
+
+#manager-container-center-personnel-formation #formations-personnel input {
+    display: block;
+}
