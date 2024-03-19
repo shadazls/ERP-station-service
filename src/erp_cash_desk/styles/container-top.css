@@ -9,7 +9,7 @@
 .line-pump {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid black;
 }
 
 .line-pump > p {
@@ -37,8 +37,14 @@
 }
 
 .divplus {
+    width: 7%;
     margin: 1%;
+    margin-right: 2%;
     border: 2px solid black;
+    background-color: #6AA84F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 i:hover{
