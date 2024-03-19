@@ -26,7 +26,7 @@ main {
     border-style: solid;
 }
 
-#manager-container-top div, #manager-container-center div, #manager-container-bottom div {
+#manager-container-top>div, #manager-container-center>div, #manager-container-bottom>div {
     height: 30vh;
     width: 33.33%;
     border-width: 0px 1px 0px 0px;
@@ -34,6 +34,6 @@ main {
     border-style: solid;
 }
 
-#manager-container-top div:nth-child(2) {
+#manager-container-top>div:nth-child(2) {
     width: 66.67%
 }
