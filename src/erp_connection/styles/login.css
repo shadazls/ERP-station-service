@@ -59,6 +59,18 @@ input:focus {
   display: none;
 }
 
+#passwordContainer {
+  position:relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 button {
   display: block;
   margin: 0 auto;

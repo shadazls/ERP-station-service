@@ -19,7 +19,13 @@
             <input id="usernameInput" placeholder="Nom d'utilisateur" type="text" required>
             
             <span id="passwordError" class="formError hidden"></span>
-            <input id="passwordInput" placeholder="Mot de passe" type="password" required>
+            <div id="passwordContainer">
+                <input id="passwordInput" placeholder="Mot de passe" type="password" required>
+                <span id="passwordToggle" class="password-toggle" >
+                    <i class="far fa-eye"></i>
+                </span>
+            </div>
+            
             
             <button id="connectionButton" type="submit">Connexion</button>
 
@@ -28,5 +34,6 @@
     </div>
 
     <script src="scripts/loginFormValidation.js"></script>
+    <script src="scripts/passwordToggle.js"></script>
 </body>
 </html>
