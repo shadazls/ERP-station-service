@@ -2,8 +2,11 @@ let liste_personnel = document.getElementById("liste_personnel")
 let liste_formation = document.getElementById("liste_formation")
 
 let inputName = document.getElementById("nom")
+inputName.setAttribute("placeholder", "Nom")
 let inputFirstname = document.getElementById("prenom")
+inputFirstname.setAttribute("placeholder", "Prénom")
 let inputPhone = document.getElementById("tel")
+inputPhone.setAttribute("placeholder", "Téléphone")
 
 let subscribeFormation = document.getElementById("subscribeFormation")
 
@@ -64,7 +67,6 @@ for(let node of liste_formation.childNodes) {
 
 subscribeFormation.addEventListener("click", () => {
     console.log("Envoi des données d'inscription...")
-
     // TODO
 })
 

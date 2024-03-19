@@ -20,6 +20,7 @@ main {
 
 #manager-container-top, #manager-container-center, #manager-container-bottom {
     width: 100%;
+    height: 30vh;
     display: flex;
     border-width: 1px 0px 0px 1px;
     border-color: grey;
@@ -27,7 +28,7 @@ main {
 }
 
 #manager-container-top>div, #manager-container-center>div, #manager-container-bottom>div {
-    height: 30vh;
+    height: 100%;
     width: 33.33%;
     border-width: 0px 1px 0px 0px;
     border-color: grey;
