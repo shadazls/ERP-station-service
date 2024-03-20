@@ -4,7 +4,7 @@
 /* Calculator */
 #employee-container-left .calculator input {
     margin: 0.8rem 0px;
-    width: 90%;
+    width: 80%;
     height: 10%;
 
 }
@@ -21,7 +21,7 @@
 }
 
 #employee-container-left .calculator button {
-    width: 30%;
+    width: 25%;
     height: 90%;
 }
 
@@ -41,7 +41,7 @@
 /* PAYMENT BUTTONS */
 
 #employee-container-left .payment button {
-    width: 45%;
+    width: 44%;
     height: 6rem;
     margin: 0.2rem;
 }

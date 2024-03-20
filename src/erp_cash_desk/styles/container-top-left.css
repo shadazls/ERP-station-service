@@ -1,5 +1,7 @@
 .ticket {
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .addProduct {
