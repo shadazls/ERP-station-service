@@ -1,7 +1,8 @@
 .ticket {
     display: flex;
+    flex-direction: column;
     position: relative;
-    flex-wrap: wrap;
+
 }
 
 .addProduct {
@@ -10,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
-    width: 100%;
+    width: 96%;
 }
 
 .addProduct > p {
@@ -29,7 +30,7 @@
     align-items: center;
 }
 
-i:hover{
+i:hover {
     cursor: pointer;
 }
 
