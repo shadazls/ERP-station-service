@@ -36,6 +36,11 @@
     padding: 2%;
     width: 50%;
     border: 2px solid black;
+    cursor: pointer;
+}
+
+#createButton:active {
+    background-color: grey;
 }
 
 #checkIncident {

@@ -38,7 +38,8 @@ okButton.addEventListener('click', function() {
     var inputValue = displayPad.value;
     var ticketDiv = document.querySelector('.ticket > div');
 
-    if (isEnteringValue && inputValue.trim() !== '') {
+
+    if (isEnteringValue && inputValue.trim() !== '' && /^\d{13}$/.test(inputValue)) {
         var newParagraph = document.createElement('p');
         newParagraph.textContent = inputValue;
 

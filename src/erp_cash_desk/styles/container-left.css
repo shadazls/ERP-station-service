@@ -22,8 +22,8 @@
 .calculator input {
     background-color: #F9CB9C;
     font-family: 'Seven Segment', sans-serif;
-    font-size: 300%;
-    padding-left: 1rem;
+    font-size: 250%;
+    padding-left: 0.7rem;
 }
 
 #employee-container-left .calculator button {
