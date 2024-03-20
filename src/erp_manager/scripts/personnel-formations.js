@@ -87,4 +87,4 @@ for(let node of liste_personnel.childNodes) {
 
 // -------------------------------------------------
 
-// Où ajouter et remove des employés ?
+// Où ajouter et remove des employés ? J'ai trouvé
