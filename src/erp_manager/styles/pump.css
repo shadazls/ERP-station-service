@@ -13,10 +13,12 @@
     top: 1rem;
     right: 1rem;
     text-align: right;
+    display: flex;
 }
 
 #manager-container-bottom-oil-remaining>div {
     margin-bottom: 7px;
+    margin-right: 10px;
 }
 
 .oil-name {
