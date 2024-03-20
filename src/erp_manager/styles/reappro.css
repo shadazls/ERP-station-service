@@ -1,6 +1,6 @@
 .manager-container-top-reappro{
     display: flex;
-    background-color: blueviolet;
+    background-color: rgb(99, 0, 192);
 }
 
 .manager-container-top-reappro>div{
@@ -17,7 +17,7 @@
 
 .manager-container-top-reappro>:nth-child(1){
     border-style: hidden;
-    background-color: blueviolet;
+    background-color: rgb(99, 0, 192);
 }
 
 #basketItems{
@@ -40,8 +40,20 @@
 .product{
     border-style: solid;
     margin: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #addButton{
     border-style: solid;
+    background-color: white;
+    width: 50%;
+}
+
+#supplier{
+    width: 90%;
+}
+
+.inputProduct{
+    align-items: center;
 }
