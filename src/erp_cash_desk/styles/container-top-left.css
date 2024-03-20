@@ -12,6 +12,10 @@
     justify-content: space-between;
     align-self: flex-end;
     width: 96%;
+    position: absolute;
+    bottom: 4px;
+    left: 48%;
+    transform: translateX(-50%);
 }
 
 .addProduct > p {
