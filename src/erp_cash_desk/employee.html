@@ -4,10 +4,13 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>FuelSync</title>
+      <title>FuelSync</title>
       <link rel="stylesheet" href="styles/grid.css">
       <link rel="stylesheet" href="styles/container-left.css">
       <link rel="stylesheet" href="styles/container-top-center.css">
       <link rel="stylesheet" href="styles/container-top-left.css">
+      <link rel="stylesheet" href="styles/container-top.css">
+      <link rel="stylesheet" href="styles/pump.css">
       <script defer="defer" src="scripts/calculator.js"></script>
       <script defer="defer" src="scripts/container-top-left.js"></script>
 
@@ -18,6 +21,13 @@
 
       <!--Segment Font-->
       <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
       <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
 
@@ -70,7 +80,82 @@
           <div>e</div>
         </div>
         <div id="employee-container-bottom">
-          <div>f</div>
+          <div id="employee-container-bottom-oil">
+            <div id="employee-container-bottom-oil-remaining">
+              <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
+              <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
+              <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
+            </div>
+            <div id="employee-container-bottom-pump-status">
+              <div id="pump1">
+                <div>
+                  <p class="pump-name">Pompe n°1</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump2">
+                <div>
+                  <p class="pump-name">Pompe n°2</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump3">
+                <div>
+                  <p class="pump-name">Pompe n°3</p>
+                  <p class="status-close"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name out-of-stock">Gazole</span>
+                </p>
+              </div>
+              <div id="pump4">
+                <div>
+                  <p class="pump-name">Pompe n°4</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump5">
+                <div>
+                  <p class="pump-name">Pompe n°5</p>
+                  <p class="status-close"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name out-of-stock">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump6">
+                <div>
+                  <p class="pump-name">Pompe n°6</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div>g</div>
           <div>h</div>
         </div>
@@ -84,8 +169,12 @@
             <button id="times-pad">X</button>
             <button id="minus-pad">-</button>
             <button id="delete-pad"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="delete-pad"><i class="fa-solid fa-delete-left"></i></button>
           </div>
           <div>
+            <button class="num-pad">7</button>
+            <button class="num-pad">8</button>
+            <button class="num-pad">9</button>
             <button class="num-pad">7</button>
             <button class="num-pad">8</button>
             <button class="num-pad">9</button>
@@ -99,9 +188,13 @@
             <button class="num-pad">1</button>
             <button class="num-pad">2</button>
             <button class="num-pad">3</button>
+            <button class="num-pad">1</button>
+            <button class="num-pad">2</button>
+            <button class="num-pad">3</button>
           </div>
           <div>
             <button class="num-pad">0</button>
+            <button id="doat-pad">.</button>
             <button id="doat-pad">.</button>
             <button id="ok-pad">OK</button>
           </div>

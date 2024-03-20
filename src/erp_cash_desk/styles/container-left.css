@@ -1,11 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/seven-segment');
 
 
+@import url('https://fonts.cdnfonts.com/css/seven-segment');
+
+
 /* Calculator */
 #employee-container-left .calculator input {
     margin: 0.8rem 0px;
     width: 80%;
     height: 10%;
+
 
 }
 
@@ -13,6 +17,12 @@
     height: 17%;
 }
 
+.calculator input {
+    background-color: #F9CB9C;
+    font-family: 'Seven Segment', sans-serif;
+    font-size: 300%;
+    padding-left: 1rem;
+}
 .calculator input {
     background-color: #F9CB9C;
     font-family: 'Seven Segment', sans-serif;
@@ -50,6 +60,46 @@
     width: 90%;
     height: 20%;
 }
+
+.payment {
+    background-color: #CCCCCC;
+}
+
+.payment button {
+    font-family: Balsamiq Sans;
+    margin: 2px;
+    font-size: 200%;
+    border: solid #000;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* PAD COLOR */
+#ok-pad {
+    background-color: #6AA84F;
+}
+
+#delete-pad {
+    background-color: #CC0000;
+}
+
+#money {
+    background-color: #93C47D;
+}
+
+#credit-card {
+    background-color: #9FC5F8;
+}
+
+#fuel-card {
+    background-color: #E06666;
+}
+
+#member-card {
+    background-color: #EA9999;
+}
+
+
 
 .payment {
     background-color: #CCCCCC;
