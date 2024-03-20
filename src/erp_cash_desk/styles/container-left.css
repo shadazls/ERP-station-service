@@ -135,3 +135,38 @@
     background-color: #EA9999;
 }
 
+.num-pad:active,
+#times-pad:active,
+#minus-pad:active,
+#doat-pad:active,
+#ticket:active {
+    background-color: grey;
+}
+
+#ok-pad:active {
+    background-color: #4F9744;
+}
+
+#delete-pad:active {
+    background-color: #AA0000;
+}
+
+#money:active {
+    background-color: #77B255;
+}
+
+#credit-card:active {
+    background-color: #6D8EC1;
+}
+
+#fuel-card:active {
+    background-color: #B43D3D;
+}
+
+#member-card:active {
+    background-color: #CC6666;
+}
+
+
+
+

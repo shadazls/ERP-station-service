@@ -5,12 +5,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>FuelSync</title>
       <title>FuelSync</title>
+
+      <!-- Style css -->
       <link rel="stylesheet" href="styles/grid.css">
       <link rel="stylesheet" href="styles/container-left.css">
       <link rel="stylesheet" href="styles/container-top-center.css">
       <link rel="stylesheet" href="styles/container-top-left.css">
-      <link rel="stylesheet" href="styles/container-top.css">
       <link rel="stylesheet" href="styles/pump.css">
+      <link rel="stylesheet" href="styles/incident.css">
+      <link rel="stylesheet" href="styles/cards.css">
+
+      <!-- Link Js -->
       <script defer="defer" src="scripts/calculator.js"></script>
       <script defer="defer" src="scripts/container-top-left.js"></script>
 
@@ -76,11 +81,32 @@
             </div>
         </div>
       </div>
+      
         <div id="employee-container-center">
           <div>c</div>
           <div>d</div>
-          <div>e</div>
+
+          <div id="incident">
+            <div id="createIncident">
+              <input type="datetime-local" id="dateTime" placeholder="Date Heure">
+              <select id="incidentType">
+                  <option value="" disabled selected>Type</option>
+                  <option value="type1">Type 1</option>
+                  <option value="type2">Type 2</option>
+                  <option value="type3">Type 3</option>
+              </select>
+              <textarea id="technicalDetail" placeholder="Détail technique"></textarea>
+              <textarea id="remark" placeholder="Remarque"></textarea>
+              <button id="createButton">Créer</button>
+            </div>
+
+            <div id="checkIncident">
+
+            </div>
+          </div>
+
         </div>
+
         <div id="employee-container-bottom">
           <div id="employee-container-bottom-oil">
             <div id="employee-container-bottom-oil-remaining">
@@ -159,7 +185,9 @@
           </div>
 
           <div>g</div>
-          <div>h</div>
+          <div id="cards">
+
+          </div>
         </div>
       </div>
 
