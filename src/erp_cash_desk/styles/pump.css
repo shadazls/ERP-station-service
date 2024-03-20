@@ -54,3 +54,9 @@
 .out-of-stock {
     color: red;
 }
+
+#employee-container-bottom-pump-status,
+.oil-remaining,
+.oil-name {
+    font-family: Balsamiq Sans;
+}
