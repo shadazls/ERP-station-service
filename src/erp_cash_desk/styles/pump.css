@@ -37,18 +37,21 @@
     height: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     align-items: flex-end;
+    gap: 3%;
+    margin-left: 3%;
 }
 
 #employee-container-bottom-pump-status>div {
-    width: 26%;
-    height: 5rem;
+    width: 30%;
+    height: 6.2rem;
     background-color: white;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1%;
 }
 
 .out-of-stock {
@@ -59,4 +62,9 @@
 .oil-remaining,
 .oil-name {
     font-family: Balsamiq Sans;
+}
+
+.status-open,
+.status-close {
+    margin-bottom: 5%;
 }

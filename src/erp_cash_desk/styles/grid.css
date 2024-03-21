@@ -60,12 +60,13 @@ body main>div {
     border: 3px black solid;
     height: 66%;
     text-align: center;
+    border-bottom: none;
 }
 
 #employee-container-left .payment {
     border: 3px black solid;
     height: 34%;
     text-align: center;
-    border-top: none;
+    /*border-top: none;*/
     padding-top: 1rem;
 }
