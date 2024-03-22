@@ -1,0 +1,160 @@
+header {
+	display: flex;
+	/* align-items: center;
+	background-color: #f8f9fa;
+	height: 9.75vh;
+	border-bottom: 1px solid #e9ecef; */
+}
+
+#headerTitle {
+	display: flex;
+	font-family: 'Balsamiq Sans', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 48pt;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-right: 2px solid black;
+}
+
+#houseIcon {
+	display: flex;
+	align-items: center;
+	margin-left: 50px;
+	font-size: 48pt;
+}
+
+#secondaryHeadersContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 20px;
+}
+
+#secondHeaderTitle {
+	font-family: 'Balsamiq Sans', sans-serif;
+	font-weight: 400;
+	font-size: 30pt;
+
+}
+
+#thirdHeaderTitle {
+	font-family: 'Balsamiq Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18pt;
+	color: #666666;
+
+}
+
+#timeContainer {
+	display: flex;
+	align-items: center;
+}
+
+#time {
+	margin-left: 200px;
+	margin-right: 500px;
+	font-family: 'Balsamiq Sans', sans-serif;
+	font-weight: 400;
+	font-size: 48pt;
+}
+
+* {
+	box-sizing: border-box;
+  }
+  
+  .select {
+	display: flex;
+	align-items: center;
+	position: relative;
+	min-width: 200px;
+  }
+  
+  .select svg {
+	position: absolute;
+	right: 12px;
+	top: calc(50% - 3px);
+	width: 10px;
+	height: 6px;
+	stroke-width: 2px;
+	stroke: #9098A9;
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	pointer-events: none;
+  }
+  
+  .select select {
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 7px 40px 7px 12px;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+	background: white;
+	box-shadow: 0 1px 3px -2px #9098A9;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 16px;
+	transition: all 150ms ease;
+  }
+  
+  .select select:required:invalid {
+	color: #5A667F;
+  }
+  
+  .select select option {
+	color: #223254;
+  }
+  
+  .select select option[value=""][disabled] {
+	display: none;
+  }
+  
+  .select select:focus {
+	outline: none;
+	border-color: #0077FF;
+	box-shadow: 0 0 0 2px rgba(0, 119, 255, .2);
+  }
+  
+  .select select:hover + svg {
+	stroke: #0077FF;
+  }
+  
+  .sprites {
+	position: absolute;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	user-select: none;
+  }
+
+  #userContainer {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 50px;
+  }
+
+  #usernameDisplay {
+	font-family: 'Balsamiq Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18pt;
+	margin-right: 30px;
+  }
+
+  .circle-icon {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50pt;
+    height: 50pt;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.circle-icon i {
+    color: black; /* Couleur de l'icône */
+    font-size: 30pt; /* Taille de l'icône */
+}
