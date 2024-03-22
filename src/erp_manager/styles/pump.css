@@ -1,0 +1,56 @@
+#manager-container-bottom-oil {
+    position: relative;
+    background-color: orange;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+}
+
+/* NAME + OIL REMAINING */
+
+#manager-container-bottom-oil-remaining {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: right;
+    display: flex;
+}
+
+#manager-container-bottom-oil-remaining>div {
+    margin-bottom: 7px;
+    margin-right: 10px;
+}
+
+.oil-name {
+    margin-right: 15px;
+}
+
+.oil-remaining {
+    background-color: white;
+    padding: 2px;
+}
+
+/* PUMP STATUS + OIL STATUS */
+
+#manager-container-bottom-pump-status {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#manager-container-bottom-pump-status>div {
+    width: 26%;
+    height: 5rem;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.out-of-stock {
+    color: red;
+}

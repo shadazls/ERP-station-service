@@ -1,0 +1,20 @@
+.pumps {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.line-pump {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.line-pump > p {
+    display: flex;
+    margin-left: 2%;
+    font-family: Balsamiq Sans;
+    font-size: 170%;
+}
