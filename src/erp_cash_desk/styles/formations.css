@@ -1,0 +1,47 @@
+/* FORMATION */
+
+#employee-container-center-formation {
+    background-color: rgb(211, 211, 39);
+}
+
+#employee-container-center-formation>div {
+    margin: 1rem 2rem;
+}
+
+#formations-personnel #liste_formation {
+    height: 15rem;
+    width: 90%;
+    overflow-y: scroll;
+    margin-top: 1rem;
+    background-color: yellowgreen;
+}
+
+#formations-personnel #liste_formation>p {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+#formations-personnel #liste_formation .formation-selected {
+    background-color: blue;
+}
+
+#formations-personnel #liste_formation .formation-selected>span {
+    color: white;
+}
+
+#formations-personnel {
+    display: flex;
+    justify-content: center;
+}
+
+#formations-personnel>div:nth-child(2)>input:nth-child(2) {
+    margin-top: 1rem;
+}
+
+#formations-personnel>div {
+    width: 50%;
+}
+
+#formations-personnel input {
+    display: block;
+}
