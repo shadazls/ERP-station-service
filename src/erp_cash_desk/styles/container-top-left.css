@@ -1,7 +1,8 @@
 .ticket {
     display: flex;
+    flex-direction: column;
     position: relative;
-    flex-wrap: wrap;
+
 }
 
 .addProduct {
@@ -10,7 +11,11 @@
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
-    width: 100%;
+    width: 96%;
+    position: absolute;
+    bottom: 4px;
+    left: 48%;
+    transform: translateX(-50%);
 }
 
 .addProduct > p {
@@ -29,6 +34,10 @@
     align-items: center;
 }
 
-i:hover{
+i:hover {
     cursor: pointer;
+}
+
+#ticket-items {
+    overflow-y: scroll;
 }
