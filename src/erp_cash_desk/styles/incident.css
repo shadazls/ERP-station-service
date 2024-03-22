@@ -50,4 +50,16 @@
     border: 3px solid black;
     margin-left: 2%;
     overflow-y: scroll;
+    padding: 2.5%;
 }
+
+.incident-info {
+    margin-bottom: 10px;
+    font-family: Balsamiq Sans;
+    font-size: 75%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 5px;
+  }
+  
