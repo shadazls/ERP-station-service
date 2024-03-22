@@ -53,6 +53,12 @@
 #supplier{
     width: 90%;
 }
+#productChoice{
+    width: 90%;
+}
+#quantity{
+    width: 90%;
+}
 
 .inputProduct{
     align-items: center;

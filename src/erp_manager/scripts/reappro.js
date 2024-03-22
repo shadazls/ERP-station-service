@@ -24,7 +24,7 @@ function onLoad() {
 
 
 // faire en sorte de recuperer les fournisseur et les met en option
-function getSupplier(){	// TODO
+function getSupplier(){	// TODO later
 
 }
 
@@ -142,9 +142,6 @@ function addInProgress(){
 	inProgressItems.appendChild(basket.childNodes[0])
 	if (basket.childNodes.length != 0) addInProgress()
 
-	// TODO +, ranger tous les elements dans l'ordre decroissant du nombre de jours avant les livraisons
-	
-
 	// on update le total
 	updateTotal()
 }
@@ -192,23 +189,24 @@ function addButtonConfirm(node){
 	// on creer les deux boutons 
 	let confirmButton = document.createElement("button")
 	confirmButton.className = "confirmButton"
-	confirmButton.textContent = "+"	// TODO changer par image
+	confirmButton.textContent = "✔"	// TODO changer par image
 
 	let refuteButton = document.createElement("button")
 	refuteButton.className = "refuteButton"
-	refuteButton.textContent = "-"	// TODO changer par image
+	refuteButton.textContent = "✘"	// TODO changer par image
 
 	// on rajoute les events
 	confirmButton.addEventListener('click',() => {
-		let parentDirect = confirmButton.parentNode
-		let grandParent = parentDirect.parentNode
-		grandParent.removeChild(parentDirect)
+		let parent = confirmButton.parentNode.parentNode
+		let grandParent = parent.parentNode
+		grandParent.removeChild(parent)
 		console.log("confirmation de livraison du produit")
+		// TODO later, notifie la bdd da l'arrive du produit
 	})
 	refuteButton.addEventListener('click',() => {
-		let parentDirect = confirmButton.parentNode
-		let grandParent = parentDirect.parentNode
-		grandParent.removeChild(parentDirect)
+		let parent = confirmButton.parentNode.parentNode
+		let grandParent = parent.parentNode
+		grandParent.removeChild(parent)
 		console.log("non confirmation de livraison du produit")
 	})
 
