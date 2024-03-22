@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuelSync</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="loginDiv">
+
+        <h1 id="primaryText">FuelSync</h1>
+
+        <form id="loginForm" novalidate>
+            
+            <span id="usernameError" class="formError hidden"></span>
+            <input id="usernameInput" placeholder="Nom d'utilisateur" type="text" required>
+            
+            <span id="passwordError" class="formError hidden"></span>
+            <div id="passwordContainer">
+                <input id="passwordInput" placeholder="Mot de passe" type="password" required>
+                <span id="passwordToggle" class="password-toggle" >
+                    <i class="far fa-eye"></i>
+                </span>
+            </div>
+            
+            
+            <button id="connectionButton" type="submit">Connexion</button>
+
+        </form>
+
+    </div>
+
+    <script src="scripts/loginFormValidation.js"></script>
+    <script src="scripts/passwordToggle.js"></script>
+</body>
+</html>
