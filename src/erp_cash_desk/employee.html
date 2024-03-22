@@ -3,10 +3,18 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Pavé Numérique</title>
+      <title>FuelSync</title>
       <link rel="stylesheet" href="styles/grid.css">
       <link rel="stylesheet" href="styles/container-left.css">
+      <link rel="stylesheet" href="styles/container-top.css">
       <script defer="defer" src="scripts/calculator.js"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <header>
@@ -16,9 +24,36 @@
     <main>
       <div>
         <div id="employee-container-top">
-          <div>a</div>
-          <div>b</div>
+          <div class="ticket">
+            <div class="addProduct">
+              <p>Ajouter un produit</p>
+              <div class="divplus">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="pumps">
+            <div class="line-pump">
+              <p>POMPE 1 : </p>
+            </div>
+            <div class="line-pump">
+              <p>POMPE 2 : </p>
+            </div>
+            <div class="line-pump">
+              <p>POMPE 3 : </p>
+            </div>
+            <div class="line-pump">
+              <p>POMPE 4 : </p>
+            </div>
+            <div class="line-pump">
+              <p>POMPE 5 : </p>
+            </div>
+            <div class="line-pump">
+              <p>POMPE 6 : </p>
+            </div>
         </div>
+      </div>
         <div id="employee-container-center">
           <div>c</div>
           <div>d</div>
@@ -38,17 +73,7 @@
           <div>
             <button id="times-pad">X</button>
             <button id="minus-pad">-</button>
-            <button id="delete-pad">Suppr</button>
-          </div>
-          <div>
-            <button class="num-pad">1</button>
-            <button class="num-pad">2</button>
-            <button class="num-pad">3</button>
-          </div>
-          <div>
-            <button class="num-pad">4</button>
-            <button class="num-pad">5</button>
-            <button class="num-pad">6</button>
+            <button id="delete-pad"><i class="fa-solid fa-delete-left"></i></button>
           </div>
           <div>
             <button class="num-pad">7</button>
@@ -56,8 +81,18 @@
             <button class="num-pad">9</button>
           </div>
           <div>
-            <button id="doat-pad">.</button>
+            <button class="num-pad">4</button>
+            <button class="num-pad">5</button>
+            <button class="num-pad">6</button>
+          </div>
+          <div>
+            <button class="num-pad">1</button>
+            <button class="num-pad">2</button>
+            <button class="num-pad">3</button>
+          </div>
+          <div>
             <button class="num-pad">0</button>
+            <button id="doat-pad">.</button>
             <button id="ok-pad">OK</button>
           </div>
         </div>

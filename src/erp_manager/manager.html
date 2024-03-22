@@ -3,14 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pavé Numérique</title>
+        <title>FuelSync - ERP</title>
         <link rel="stylesheet" href="styles/grid.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/selectProduct.css">
+        <!-- <link rel="stylesheet" href="styles/headerTitle.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styles/reappro.css">
         <script src="scripts/reappro.js" defer="defer"></script>
     </head>
     <body>
-        <header>
-            <h1>FuelSync</h1>
+        <header id="header">
+            <h1 id="headerTitle" class="hover-1">FuelSync</h1>
+
+            <i id="houseIcon" class="fa-solid fa-house"></i>
+
+            <div id="secondaryHeadersContainer">
+                <h2 id="secondHeaderTitle">Tableau de bord</h2>
+                <h3 id="thirdHeaderTitle">Système de gestion ERP</h3>
+            </div>
+
+            <div id="timeContainer">
+                <span id="time"></span>
+            </div>
+
+            <label for="slct" class="select">
+                <select id="slct" required>
+                    <option selected value="0">ERP</option>
+                    <option value="1">Caisse</option>
+                </select>
+
+                <svg>
+                    <use xlink:href="#select-arrow-down"></use>
+                </svg>
+            </label>
+            
+            <!-- SVG Sprites -->
+            <svg class="sprites">
+                <symbol id="select-arrow-down" viewBox="0 0 10 6">
+                    <polyline points="1 1 5 5 9 1"></polyline>
+                </symbol>
+            </svg>
+
+            <div id="userContainer">
+                <h3 id="usernameDisplay">Nom d'utilisateur</h3>
+                <div class="circle-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                
+            </div>
+              
+              
         </header>
         
         <main>
@@ -67,5 +113,7 @@
                 </div>
             </div>
         </main>
+
+        <script src="scripts/displayTime.js"></script>
     </body>
 </html>
