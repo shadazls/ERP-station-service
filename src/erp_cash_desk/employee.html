@@ -4,9 +4,9 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>FuelSync</title>
-      <title>FuelSync</title>
 
       <!-- Style css -->
+      <link rel="stylesheet" href="styles/header.css">
       <link rel="stylesheet" href="styles/grid.css">
       <link rel="stylesheet" href="styles/container-left.css">
       <link rel="stylesheet" href="styles/container-top-center.css">
@@ -14,10 +14,13 @@
       <link rel="stylesheet" href="styles/pump.css">
       <link rel="stylesheet" href="styles/incident.css">
       <link rel="stylesheet" href="styles/cards.css">
+      <link rel="stylesheet" href="styles/product-infos.css">
 
       <!-- Link Js -->
+      <script defer="defer" src="scripts/header.js"></script>
       <script defer="defer" src="scripts/calculator.js"></script>
       <script defer="defer" src="scripts/container-top-left.js"></script>
+      <script defer="defer" src="scripts/incident.js"></script>
 
       <!--Balsamiq Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +44,15 @@
   </head>
   <body>
     <header>
-      <h1>FuelSync</h1>
+      <div id="divFuelSync">
+        <h1 id="fuelsync">FuelSync</h1>
+      </div>
+      
+      <div id="alertBox">
+
+      </div>
+
+      <div id="current-time"></div>
     </header>
     
     <main>
@@ -83,9 +94,12 @@
       </div>
       
         <div id="employee-container-center">
-          <div>c</div>
+          <div id="divproduct">
+
+          </div>
           <div>d</div>
 
+          <!-- Incidents -->
           <div id="incident">
             <div id="createIncident">
               <input type="datetime-local" id="dateTime" placeholder="Date Heure">
@@ -108,6 +122,8 @@
         </div>
 
         <div id="employee-container-bottom">
+
+          <!-- Informations pompes -->
           <div id="employee-container-bottom-oil">
             <div id="employee-container-bottom-oil-remaining">
               <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
@@ -117,7 +133,7 @@
             <div id="employee-container-bottom-pump-status">
               <div id="pump1">
                 <div>
-                  <p class="pump-name">Pompe n°1</p>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
                   <p class="status-open"></p>
                 </div>
                 <p>
@@ -128,7 +144,7 @@
               </div>
               <div id="pump2">
                 <div>
-                  <p class="pump-name">Pompe n°2</p>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°2</p>
                   <p class="status-open"></p>
                 </div>
                 <p>
@@ -139,7 +155,7 @@
               </div>
               <div id="pump3">
                 <div>
-                  <p class="pump-name">Pompe n°3</p>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°3</p>
                   <p class="status-close"></p>
                 </div>
                 <p>
@@ -150,7 +166,7 @@
               </div>
               <div id="pump4">
                 <div>
-                  <p class="pump-name">Pompe n°4</p>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°4</p>
                   <p class="status-open"></p>
                 </div>
                 <p>
@@ -161,7 +177,7 @@
               </div>
               <div id="pump5">
                 <div>
-                  <p class="pump-name">Pompe n°5</p>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°5</p>
                   <p class="status-close"></p>
                 </div>
                 <p>
@@ -172,7 +188,7 @@
               </div>
               <div id="pump6">
                 <div>
-                  <p class="pump-name">Pompe n°6</p>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i>  Pompe n°6</p>
                   <p class="status-open"></p>
                 </div>
                 <p>
