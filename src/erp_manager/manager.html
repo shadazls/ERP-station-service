@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pavé Numérique</title>
         <link rel="stylesheet" href="styles/grid.css">
+        <link rel="stylesheet" href="styles/personnel.css">
+        <link rel="stylesheet" href="styles/pump.css">
+        <script src="scripts/personnel-formations.js" defer="defer"></script>
+        <script src="scripts/pump.js" defer="defer"></script>
         <link rel="stylesheet" href="styles/header.css">
         <!-- <link rel="stylesheet" href="styles/headerTitle.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,11 +69,112 @@
                 <div id="manager-container-center">
                     <div>c</div>
                     <div>d</div>
-                    <div>e</div>
+                    <div id="manager-container-center-personnel-formation">
+                        <div id="infos-personnel">
+                            <div>
+                                <h3>Liste du personnel</h3>
+                                <div id="liste_personnel"></div>
+                            </div>
+                            <div>
+                                <h3>Fiche personnelle</h3>
+                                <h4>Formation</h4>
+                                <p id="etude_personnel">NULL</p>
+                                <h4>Expérience professionnelle</h4>
+                                <p id="experience_personnel">NULL</p>
+                            </div>
+                        </div>
+                        <div id="formations-personnel">
+                            <div>
+                                <h3>Formations</h3>
+                                <div id="liste_formation"></div>
+                            </div>
+                            <div>
+                                <h3>Inscription</h3>
+                                <input type="text" id="prenom" disabled>
+                                <input type="text" id="nom" disabled>
+                                <input type="text" id="tel" disabled>
+                                <input type="button" id="subscribeFormation" value="Inscrire">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="manager-container-bottom">
                     <div>f</div>
-                    <div>g</div>
+                    <div id="manager-container-bottom-oil">
+                        <div id="manager-container-bottom-oil-remaining">
+                            <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
+                            <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
+                            <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
+                        </div>
+                        <div id="manager-container-bottom-pump-status">
+                            <div id="pump1">
+                                <div>
+                                    <p class="pump-name">Pompe n°1</p>
+                                    <p class="status-open"></p>
+                                </div>
+                                <p>
+                                    <span class="pump-oil-name">SP95</span>
+                                    <span class="pump-oil-name">SP98</span>
+                                    <span class="pump-oil-name">Gazole</span>
+                                </p>
+                            </div>
+                            <div id="pump2">
+                                <div>
+                                    <p class="pump-name">Pompe n°2</p>
+                                    <p class="status-open"></p>
+                                </div>
+                                <p>
+                                    <span class="pump-oil-name">SP95</span>
+                                    <span class="pump-oil-name">SP98</span>
+                                    <span class="pump-oil-name">Gazole</span>
+                                </p>
+                            </div>
+                            <div id="pump3">
+                                <div>
+                                    <p class="pump-name">Pompe n°3</p>
+                                    <p class="status-close"></p>
+                                </div>
+                                <p>
+                                    <span class="pump-oil-name">SP95</span>
+                                    <span class="pump-oil-name">SP98</span>
+                                    <span class="pump-oil-name out-of-stock">Gazole</span>
+                                </p>
+                            </div>
+                            <div id="pump4">
+                                <div>
+                                    <p class="pump-name">Pompe n°4</p>
+                                    <p class="status-open"></p>
+                                </div>
+                                <p>
+                                    <span class="pump-oil-name">SP95</span>
+                                    <span class="pump-oil-name">SP98</span>
+                                    <span class="pump-oil-name">Gazole</span>
+                                </p>
+                            </div>
+                            <div id="pump5">
+                                <div>
+                                    <p class="pump-name">Pompe n°5</p>
+                                    <p class="status-close"></p>
+                                </div>
+                                <p>
+                                    <span class="pump-oil-name out-of-stock">SP95</span>
+                                    <span class="pump-oil-name">SP98</span>
+                                    <span class="pump-oil-name">Gazole</span>
+                                </p>
+                            </div>
+                            <div id="pump6">
+                                <div>
+                                    <p class="pump-name">Pompe n°6</p>
+                                    <p class="status-open"></p>
+                                </div>
+                                <p>
+                                    <span class="pump-oil-name">SP95</span>
+                                    <span class="pump-oil-name">SP98</span>
+                                    <span class="pump-oil-name">Gazole</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div>h</div>
                 </div>
             </div>
