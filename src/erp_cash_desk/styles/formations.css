@@ -1,7 +1,7 @@
 /* FORMATION */
 
 #employee-container-center-formation {
-    background-color: rgb(211, 211, 39);
+    background-color: #F1C232;
 }
 
 #employee-container-center-formation>div {
@@ -13,7 +13,13 @@
     width: 90%;
     overflow-y: scroll;
     margin-top: 1rem;
-    background-color: yellowgreen;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
 }
 
 #formations-personnel #liste_formation>p {
