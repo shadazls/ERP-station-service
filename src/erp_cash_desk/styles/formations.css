@@ -1,16 +1,18 @@
-/* FORMATION */
 
+/* FORMATION */
 #employee-container-center-formation {
     background-color: #F1C232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#employee-container-center-formation>div {
-    margin: 1rem 2rem;
-}
 
-#formations-personnel #liste_formation {
-    height: 15rem;
-    width: 90%;
+#liste_formation,
+#inscription_formation {
+    font-family: Balsamiq Sans;
+    width: 33%;
+    height: 90%;
     overflow-y: scroll;
     margin-top: 1rem;
     background-color: #FFFFFF;
@@ -22,32 +24,37 @@
     padding: 2.5%;
 }
 
-#formations-personnel #liste_formation>p {
+#liste_formation {
+    font-size: 80%;
+}
+
+#inscription_formation {
+    margin-left: 2%;
+}
+
+#prenom,
+#nom,
+#tel {
+    margin-bottom: 10px;
+    font-family: Balsamiq Sans;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#subscribeFormation {
+    padding: 2%;
+    width: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#employee-container-center-formation #liste_formation>p {
     background-color: white;
     margin-bottom: 5px;
 }
 
-#formations-personnel #liste_formation .formation-selected {
+#liste_formation .formation-selected {
     background-color: blue;
-}
-
-#formations-personnel #liste_formation .formation-selected>span {
-    color: white;
-}
-
-#formations-personnel {
-    display: flex;
-    justify-content: center;
-}
-
-#formations-personnel>div:nth-child(2)>input:nth-child(2) {
-    margin-top: 1rem;
-}
-
-#formations-personnel>div {
-    width: 50%;
-}
-
-#formations-personnel input {
-    display: block;
 }
