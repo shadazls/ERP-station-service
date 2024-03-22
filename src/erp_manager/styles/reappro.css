@@ -1,0 +1,65 @@
+.manager-container-top-reappro{
+    display: flex;
+    background-color: rgb(99, 0, 192);
+}
+
+.manager-container-top-reappro>div{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5%;
+    justify-content: space-between;
+    border-style: solid;
+    padding: 1%;
+    width: 95%;
+    text-align: center;
+    background-color: white;
+}
+
+.manager-container-top-reappro>:nth-child(1){
+    border-style: hidden;
+    background-color: rgb(99, 0, 192);
+}
+
+#basketItems{
+    overflow-y: scroll;
+}
+
+#inProgressItems{
+    overflow-y: scroll;
+}
+
+#toConfirmItems{
+    overflow-y: scroll;
+}
+
+.validate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product{
+    border-style: solid;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#addButton{
+    border-style: solid;
+    background-color: white;
+    width: 50%;
+}
+
+#supplier{
+    width: 90%;
+}
+#productChoice{
+    width: 90%;
+}
+#quantity{
+    width: 90%;
+}
+
+.inputProduct{
+    align-items: center;
+}

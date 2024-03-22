@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/reappro.css">
+        <script src="scripts/reappro.js" defer="defer"></script>
     </head>
     <body>
         <header id="header">
@@ -60,8 +62,44 @@
         <main>
             <div>
                 <div id="manager-container-top">
-                    <div id="selectProductContainer">a</div>
-                    <div>b</div>
+                    <div>a</div>
+                    <div class="manager-container-top-reappro">
+                        <div class="inputProduct">
+                            <h4>Demander un réapprovisionnement</h4>
+                            <input type="text" id="productChoice" placeholder="Produit ou énergie">
+                            <input type="text" id="quantity" placeholder="Quantité">
+                            <select name="supplier" id="supplier">
+                                <option value="supplier1">Fournisseur 1</option>
+                                <option value="supplier2">Fournisseur 2</option>
+                                <option value="supplier3">Fournisseur 3</option>
+                            </select>
+                            <button id="addButton">ajouter +</button>
+                        </div>
+                        <div class="basket">
+                            <h3>Panier</h3>
+                            <div id="basketItems"></div>
+                            <div class="validate">
+                                <p id="total">Total: 0 €</p>
+                                <button id="validateButton">Valider</button>
+                            </div>
+                        </div>
+                        <div class="inProgress">
+                            <h3>En cours</h3>
+
+                            <div id="inProgressItems"></div>
+
+                            <div id="centerer"></div>
+                            
+                        </div>
+                        <div class="toConfirm">
+                            <h3>A confirmer</h3>
+
+                            <div id="toConfirmItems"></div>
+
+                            <div id="centerer"></div>
+                            
+                        </div>
+                    </div>
                 </div>
                 <div id="manager-container-center">
                     <div>c</div>
