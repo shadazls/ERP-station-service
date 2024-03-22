@@ -38,6 +38,11 @@ body main>div {
     border-style: solid;
 }
 
+#employee-container-bottom>div:nth-child(1), #employee-container-bottom>div:nth-child(2), #employee-container-bottom>div:nth-child(3) {
+    border-bottom: 3px;
+    border-style: solid;
+}
+
 #employee-container-center>div:nth-child(3), #employee-container-bottom>div:nth-child(3) {
     border-right: none;
 }
@@ -65,7 +70,7 @@ body main>div {
 
 #employee-container-left .payment {
     border: 3px black solid;
-    height: 34%;
+    height: 33%;
     text-align: center;
     /*border-top: none;*/
     padding-top: 1rem;
