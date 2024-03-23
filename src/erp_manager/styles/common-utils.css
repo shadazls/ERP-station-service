@@ -2,6 +2,10 @@
     font-family: "Balsamiq Sans", sans-serif;
 }
 
+.cliquable {
+    cursor: pointer;
+}
+
 .classic-box {
     background-color: white;
     border: solid black;
