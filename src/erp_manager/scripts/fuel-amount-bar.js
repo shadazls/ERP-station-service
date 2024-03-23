@@ -1,7 +1,7 @@
 function updateTextInput() {
     var range = document.getElementById('fuel-amount-bar');
     var input = document.getElementById('fuel-amount-input');
-    input.value = range.value;
+    input.value = range.value + " L";
 }
 
 function updateRange() {
