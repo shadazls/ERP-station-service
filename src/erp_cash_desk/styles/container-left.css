@@ -46,16 +46,7 @@
 
 /* PAYMENT BUTTONS */
 
-#employee-container-left .payment button {
-    width: 44%;
-    height: 6rem;
-    margin: 0.2rem;
-}
 
-#employee-container-left .payment>button {
-    width: 90%;
-    height: 20%;
-}
 
 .payment {
     background-color: #CCCCCC;
@@ -64,7 +55,7 @@
 .payment button {
     font-family: Balsamiq Sans;
     margin: 2px;
-    font-size: 200%;
+    font-size: 250%;
     border: solid #000;
     cursor: pointer;
     background-color: #fff;
@@ -81,58 +72,33 @@
 
 #money {
     background-color: #93C47D;
+    width: 60%;
+    height: 6.5rem;
 }
 
 #credit-card {
     background-color: #9FC5F8;
+    width: 35%;
+    height: 6.5rem;
 }
 
 #fuel-card {
     background-color: #E06666;
+    width: 50%;
+    height: 6.5rem;
+    margin-top: 0.2rem;
 }
 
 #member-card {
     background-color: #EA9999;
+    width: 45%;
+    height: 6.5rem;
+    margin-top: 0.2rem;
 }
 
-
-
-.payment {
-    background-color: #CCCCCC;
-}
-
-.payment button {
-    font-family: Balsamiq Sans;
-    margin: 2px;
-    font-size: 200%;
-    border: solid #000;
-    cursor: pointer;
-    background-color: #fff;
-}
-
-/* PAD COLOR */
-#ok-pad {
-    background-color: #6AA84F;
-}
-
-#delete-pad {
-    background-color: #CC0000;
-}
-
-#money {
-    background-color: #93C47D;
-}
-
-#credit-card {
-    background-color: #9FC5F8;
-}
-
-#fuel-card {
-    background-color: #E06666;
-}
-
-#member-card {
-    background-color: #EA9999;
+#ticket {
+    width: 97.5%;
+    height: 24%;
 }
 
 .num-pad:active,
@@ -166,7 +132,3 @@
 #member-card:active {
     background-color: #CC6666;
 }
-
-
-
-
