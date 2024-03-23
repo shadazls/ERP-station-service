@@ -223,26 +223,65 @@
               <input type="text" id="prenom" disabled>
               <input type="text" id="nom" disabled>
               <input type="text" id="tel" disabled>
-              <input type="button" id="subscribeFormation" value="M'inscrire">
+              <input type="button" id="subscribeFormation" value="Valider">
             </div>
           </div>
 
           <!-- Cartes -->
           <div id="cards">
-            <p>N° Carte</p>
-            <div>
-              <button id="scanner">SCANNER</button>
+            <div id="divSearch">
+              <p>N° Carte</p>
+              <div>
+                <input type="search" placeholder="rechercher">
+                <button class="button">SCANNER</button>
+              </div>
             </div>
 
-            <p>Numéro d'identification de la carte :</p>
-            <div>
-              <button id="scanner">Modifier</button>
+            <div id="divIdCard">
+              <p>Numéro d'identification de la carte :</p>
+              <div>
+                <input type="text">
+                <button class="button">Modifier</button>
+              </div>
             </div>
 
-            <p>NOM & PRÉNOM :</p>
-            <div>
-              <button id="scanner">Modifier</button>
+            <div id="divPhoto">
+              <img src="chemin/vers/photo.jpg" alt="Photo du détenteur de la carte">
+              <button class="button">Modifier</button>
             </div>
+
+            <div id="divName">
+              <p>NOM & PRÉNOM :</p>
+              <div>
+                  <input type="text">
+                  <button class="button">Modifier</button>
+              </div>
+          </div>
+
+            <div id="divDateSolde">
+              <div id="divDate">
+                <p>Date de naissance :</p>
+              </div>
+
+              <div id="divSolde">
+                <p>Solde :</p>
+              </div>
+            </div>
+
+            <div id="divCreatonValiderCrediter">
+              <div id="divCreation">
+                <p>Date de création :</p>
+              </div>
+
+              <div id="divValider">
+                <p>Valider</p>
+              </div>
+
+              <div id="divCrediter">
+                <button class="button">Créditer</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

@@ -1,3 +1,80 @@
+/* La div cartes entière */
 #cards {
+    display: flex;
+    flex-direction: column;
     background-color: #597EAA;
+    
+}
+
+#cards > div {
+    /*border: 2px solid red;*/
+    margin: 1.5%;
+}
+
+#cards input {
+    font-family: Balsamiq Sans;
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 2px;
+}
+
+/* CSS des boutons de cartes */
+.button {
+    height: 100%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#cards p,
+#cards button {
+    font-family: Balsamiq Sans;
+}
+
+#divSearch {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+#divIdCard {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+#divPhoto {
+    order: 3;
+}
+
+
+#divName {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#divDateSolde {
+    order: 5;
+    display: flex;
+}
+
+#divDate {
+    flex: 1;
+}
+
+#divSolde {
+    flex: 1;
+}
+
+#divCreatonValiderCrediter {
+    order: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
