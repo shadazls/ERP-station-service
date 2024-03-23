@@ -7,7 +7,15 @@
         <link rel="stylesheet" href="styles/grid.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/selectProduct.css">
-        <!-- <link rel="stylesheet" href="styles/headerTitle.css"> -->
+        <link rel="stylesheet" href="styles/reStocking.css">
+        <link rel="stylesheet" href="styles/alert.css">
+        <link rel="stylesheet" href="styles/station.css">
+        <link rel="stylesheet" href="styles/staff.css">
+        <link rel="stylesheet" href="styles/incident.css">
+        <link rel="stylesheet" href="styles/pump.css">
+        <link rel="stylesheet" href="styles/card.css">
+        <link rel="stylesheet" href="styles/common-utils.css">
+        <link rel="stylesheet" href="styles/button.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -60,18 +68,237 @@
         <main>
             <div>
                 <div id="manager-container-top">
-                    <div id="selectProductContainer">a</div>
-                    <div>b</div>
+                    
+                    <div id="selectProductContainer">
+                        <div id="productPicture" class="element-box"></div>
+
+                        <div id="searchProductContainer">
+                            <input id="searchInput" class="element-box" placeholder="Rechercher" type="text">
+                            <span id="searchIcon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </div>
+
+                        <div id="productDescription" class="element-box">
+
+                        </div>
+                    
+                    </div>  
+
+                    <div id="reStockingContainer">
+                        
+                        <div id="ask-restock">
+                            
+                            <p id="">Demander un réapprovisionnement</p>
+
+                            <input list="products-and-energy" id="products-and-energy-input" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
+                            <datalist id="products-and-energy">
+                                <option value="Chiffon"></option>
+                                <option value="Liquide vaisselle"></option>
+                                <option value="DIESEL"></option>
+                            </datalist>
+
+                            <input class="classic-box ask-restock-box" type="text" placeholder="Quantité">
+
+                            <input list="supplier" id="supplier-input" class="classic-box ask-restock-box" placeholder="Fournisseur">
+                            <datalist id="supplier">
+                                <option value="Chiffon"></option>
+                                <option value="Liquide vaisselle"></option>
+                                <option value="DIESEL"></option>
+                            </datalist>
+
+                            <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                <span class="relative text-black group-hover:text-white">Ajouter +</span>
+                                
+                            </a>
+
+                        </div>
+
+                        <div id="shopping-cart" class="classic-box restock-box">
+                            <p class="">Panier</p>
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Chiffon microfibre</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Lingette</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Essuie tout</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">DIESEL XXX L</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">C4</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                            <div id="shopping-cart-final" class="">
+                                <p id="shopping-cart-final-p">Total : <br>XX,XX€</p>
+                                <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                    <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                    <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                    <span class="relative text-black group-hover:text-white">Valider</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div id="in-progress" class="classic-box restock-box">
+                            <p>En cours</p>
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Chiffon microfibre X,X€</p>
+                                    <div class="right-element">
+                                        <p>6j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Lingette X,X€</p>
+                                    <div class="right-element">
+                                        <p>5j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Commande n°1 X,X€</p>
+                                    <div class="right-element">
+                                        <p>2j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Bombonne X,X€</p>
+                                    <div class="right-element">
+                                        <p>1j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">SP-95-E-1 X,X€</p>
+                                    <div class="right-element">
+                                        <p>1j</p>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div id="to-confirm" class="classic-box restock-box">
+                            <p id="to-confirm-p">À confirmer</p>
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Disque A X,X€</p>
+                                    <div class="right-element">
+                                        <i class="fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Balais A X,X€</p>
+                                    <div class="right-element">
+                                        <i class="fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Barre Mars X,X€</p>
+                                    <div class="right-element">
+                                        <i class="fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Chips Barbecue X,X€</p>
+                                    <div class="right-element">
+                                        <i class="fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Liquide vaisselle X,X€</p>
+                                    <div class="right-element">
+                                        <i class="fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Brosse à dent X,X€</p>
+                                    <div class="right-element">
+                                        <i class="fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    
                 </div>
                 <div id="manager-container-center">
-                    <div>c</div>
-                    <div>d</div>
-                    <div>e</div>
+                    <div id="alertContainer">c</div>
+                    <div id="stationContainer">d</div>
+                    <div id="staffContainer">e</div>
                 </div>
                 <div id="manager-container-bottom">
-                    <div>f</div>
-                    <div>g</div>
-                    <div>h</div>
+                    <div id="incidentContainer">f</div>
+                    <div id="pumpContainer">g</div>
+                    <div id="cardContainer">h</div>
                 </div>
             </div>
         </main>

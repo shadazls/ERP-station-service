@@ -21,17 +21,11 @@ main {
 #manager-container-top, #manager-container-center, #manager-container-bottom {
     width: 100%;
     display: flex;
-    border-width: 1px 0px 0px 1px;
-    border-color: grey;
-    border-style: solid;
 }
 
 #manager-container-top>div, #manager-container-center>div, #manager-container-bottom>div {
     height: 30vh;
     width: 33.33%;
-    border-width: 0px 1px 0px 0px;
-    border-color: grey;
-    border-style: solid;
 }
 
 #manager-container-top>div:nth-child(2) {
