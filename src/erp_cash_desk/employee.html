@@ -103,12 +103,18 @@
 
           <!-- Informations produits -->
           <div id="divproduct">
-
+            
           </div>
 
           <!-- Livraisons -->
           <div id="delivery">
+            <div id="in-progress">
+              
+            </div>
 
+            <div id="arrival">
+
+            </div>
           </div>
 
           <!-- Incidents -->
@@ -231,8 +237,11 @@
           <div id="cards">
             <div id="divSearch">
               <p>N° Carte</p>
-              <div>
-                <input type="search" placeholder="rechercher">
+              <div class="search-wrapper">
+                <div class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" id="search-input" placeholder="rechercher">
                 <button class="button">SCANNER</button>
               </div>
             </div>

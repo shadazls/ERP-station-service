@@ -38,6 +38,23 @@
     flex-direction: column;
 }
 
+.search-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    padding: 2px;
+}
+
+.search-icon i {
+    font-size: 1.2em;
+}
+
+#search-input {
+    margin-right: 2%;
+}
+
 
 #divIdCard {
     order: 2;

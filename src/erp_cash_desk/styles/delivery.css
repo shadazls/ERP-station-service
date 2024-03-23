@@ -1,3 +1,33 @@
 #delivery {
     background-color: #674EA7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#in-progress {
+    width: 33%;
+    height: 90%;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+    overflow-y: scroll;
+}
+
+#arrival {
+    width: 33%;
+    height: 90%;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+    margin-left: 2%;
+    overflow-y: scroll;
 }
