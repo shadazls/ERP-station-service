@@ -25,3 +25,12 @@
     justify-content: center;
 
 }
+
+.left-element {
+    margin-left: 10px;
+}
+
+.right-element {
+    margin-right: 10px;
+    font-size: 1.25rem;
+}
