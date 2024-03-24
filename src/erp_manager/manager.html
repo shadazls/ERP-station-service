@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FuelSync - ERP</title>
         <link rel="stylesheet" href="styles/grid.css">
+        <link rel="stylesheet" href="styles/popup.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/selectProduct.css">
         <link rel="stylesheet" href="styles/reStocking.css">
@@ -20,6 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
         <header id="header">
@@ -91,16 +93,16 @@
                             
                             <p id="">Demander un réapprovisionnement</p>
 
-                            <input list="products-and-energy" id="products-and-energy-input" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
+                            <input id="products-and-energy-input" list="products-and-energy"  class="classic-box ask-restock-box" placeholder="Produit ou énergie">
                             <datalist id="products-and-energy">
                                 <option value="Chiffon"></option>
                                 <option value="Liquide vaisselle"></option>
                                 <option value="DIESEL"></option>
                             </datalist>
 
-                            <input class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
+                            <input id="product-quantity-input" class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
 
-                            <input list="supplier" id="supplier-input" class="classic-box ask-restock-box" placeholder="Fournisseur">
+                            <input id="supplier-input" list="supplier"  class="classic-box ask-restock-box" placeholder="Fournisseur">
                             <datalist id="supplier">
                                 <option value="Chiffon"></option>
                                 <option value="Liquide vaisselle"></option>
@@ -110,7 +112,7 @@
                             <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
                                 <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                                 <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-                                <span class="relative text-black group-hover:text-white">Ajouter +</span>
+                                <span id="add-to-cart-button" class="relative text-black group-hover:text-white">Ajouter +</span>
                                 
                             </a>
 
@@ -118,54 +120,13 @@
 
                         <div id="shopping-cart" class="classic-box restock-box">
                             <p class="">Panier</p>
-                            <div class="content-wrapper">
-
-                                <!-- Éléments à ajouter dynamiquement -->
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Chiffon microfibre</p>
-                                    <div class="right-element">
-                                        <p>X,X€</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Lingette</p>
-                                    <div class="right-element">
-                                        <p>X,X€</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Essuie tout</p>
-                                    <div class="right-element">
-                                        <p>X,X€</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">DIESEL XXX L</p>
-                                    <div class="right-element">
-                                        <p>X,X€</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">C4</p>
-                                    <div class="right-element">
-                                        <p>X,X€</p>
-                                    </div>
-                                    
-                                </div>
+                            <div id="cart-container" class="content-wrapper">
 
                             </div>
 
                             <div id="shopping-cart-final" class="">
                                 <p id="shopping-cart-final-p">Total : <br>XX,XX€</p>
-                                <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                <a href="#_" id="validate-cart" class="relative inline-block px-4 py-2 font-medium group">
                                     <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                                     <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
                                     <span class="relative text-black group-hover:text-white">Valider</span>
@@ -177,49 +138,7 @@
 
                         <div id="in-progress" class="classic-box restock-box">
                             <p>En cours</p>
-                            <div class="content-wrapper">
-
-                                <!-- Éléments à ajouter dynamiquement -->
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Chiffon microfibre X,X€</p>
-                                    <div class="right-element">
-                                        <p>6j</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Lingette X,X€</p>
-                                    <div class="right-element">
-                                        <p>5j</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Commande n°1 X,X€</p>
-                                    <div class="right-element">
-                                        <p>2j</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">Bombonne X,X€</p>
-                                    <div class="right-element">
-                                        <p>1j</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="element-box classic-box">
-                                    <p id="" class="left-element">SP-95-E-1 X,X€</p>
-                                    <div class="right-element">
-                                        <p>1j</p>
-                                    </div>
-                                    
-                                </div>
-
+                            <div id="in-progress-commands-container" class="content-wrapper">
 
                             </div>
 
@@ -227,14 +146,14 @@
 
                         <div id="to-confirm" class="classic-box restock-box">
                             <p id="to-confirm-p">À confirmer</p>
-                            <div class="content-wrapper">
+                            <div id="to-confirm-element-container" class="content-wrapper">
 
                                 <!-- Éléments à ajouter dynamiquement -->
                                 <div class="element-box classic-box">
                                     <p id="" class="left-element">Disque A X,X€</p>
                                     <div class="right-element">
-                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
                                     </div>
                                     
                                 </div>
@@ -242,8 +161,8 @@
                                 <div class="element-box classic-box">
                                     <p id="" class="left-element">Balais A X,X€</p>
                                     <div class="right-element">
-                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
                                     </div>
                                     
                                 </div>
@@ -251,8 +170,8 @@
                                 <div class="element-box classic-box">
                                     <p id="" class="left-element">Barre Mars X,X€</p>
                                     <div class="right-element">
-                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
                                     </div>
                                     
                                 </div>
@@ -260,8 +179,8 @@
                                 <div class="element-box classic-box">
                                     <p id="" class="left-element">Chips Barbecue X,X€</p>
                                     <div class="right-element">
-                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
                                     </div>
                                     
                                 </div>
@@ -269,8 +188,8 @@
                                 <div class="element-box classic-box">
                                     <p id="" class="left-element">Liquide vaisselle X,X€</p>
                                     <div class="right-element">
-                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
                                     </div>
                                     
                                 </div>
@@ -278,8 +197,8 @@
                                 <div class="element-box classic-box">
                                     <p id="" class="left-element">Brosse à dent X,X€</p>
                                     <div class="right-element">
-                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
                                     </div>
                                     
                                 </div>
@@ -626,11 +545,13 @@
             </div>
         </main>
 
-        <script src="scripts/displayTime.js"></script>
-        <script src="scripts/restrictInput.js"></script>
-        <script src="scripts/product-amount-bar.js"></script>
-        <script src="scripts/fuel-amount-bar.js"></script>
-        <script src="scripts/staff-list.js"></script>
+        <script src="scripts/common/displayTime.js"></script>
+        <script src="scripts/common/restrictInput.js"></script>
+        <script src="scripts/restock-module/add-to-cart.js"></script>
+        <script src="scripts/restock-module/validate-cart.js"></script>
+        <script src="scripts/alert-module/fuel-amount-bar.js"></script>
+        <script src="scripts/alert-module/product-amount-bar.js"></script>
+        <script src="scripts/staff-module/staff-list.js"></script>
         <script src="scripts/pump.js"></script>
     </body>
 </html>
