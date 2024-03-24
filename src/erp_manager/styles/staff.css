@@ -1,4 +1,5 @@
 #staffContainer {
+    display: flex;
     width: 32.67% !important;
     height: 29.33vh !important;
     margin-top: 0.25%;
@@ -8,4 +9,117 @@
     background-color: #f1c232;
     border: thick solid black;
     border-radius: 10px;
+    font-size: 1.25rem;
+}
+
+#staff-left-div {
+    width: 40%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#staff-list {
+    height: 40%;
+    margin-top: 2%;
+    list-style-type: none;
+    padding-top: 4%;
+    padding-left: 4%;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: auto;
+    scrollbar-color: black white;
+    /* scrollbar-color: #888 #f0f0f0; */
+}
+
+/* Style spécifique pour la poignée de la barre de défilement dans Firefox */
+#staff-list::-moz-scrollbar-thumb {
+    background-color: black !important; /* Couleur de fond de la poignée */
+    border-radius: 6px; /* Bordure arrondie de la poignée */
+}
+
+/* Style spécifique pour la piste de la barre de défilement dans Firefox */
+#staff-list::-moz-scrollbar-track {
+    background-color: black !important; /* Couleur de fond de la piste */
+}
+
+/* Style spécifique pour les boutons de la barre de défilement dans Firefox */
+#staff-list::-moz-scrollbar-button {
+    background-color: black !important; /* Couleur de fond des boutons */
+    border-radius: 6px; /* Bordure arrondie des boutons */
+}
+
+/* Style spécifique pour la barre de défilement dans les navigateurs basés sur WebKit (comme Chrome et Safari) */
+#staff-list::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+}
+
+/* Style spécifique pour la poignée de la barre de défilement dans les navigateurs basés sur WebKit (comme Chrome et Safari) */
+#staff-list::-webkit-scrollbar-thumb {
+    background-color: #888; /* Couleur de fond de la poignée */
+    border-radius: 6px; /* Bordure arrondie de la poignée */
+}
+
+/* Style spécifique pour la piste de la barre de défilement dans les navigateurs basés sur WebKit (comme Chrome et Safari) */
+#staff-list::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Couleur de fond de la piste */
+}
+
+#staff-list li {
+    line-height: 1.5;
+    color: #767676;
+    display: inline-block;
+    padding: 1%;
+}
+
+#staff-left-second-p {
+    margin-top: 5%;
+}
+
+.staff-formation-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    width: 100%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+#staff-right-div {
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%
+}
+
+.staff-right-div-main-p {
+    margin-top: 2%;
+    font-size: 1.1rem;
+}
+.staff-right-div-secondary-p {
+    margin-top: 2%;
+    font-size: 1rem;
+    color: #767676;
+}
+
+.margin-top-2 {
+    margin-top: 2%;
+}
+
+.staff-inscription-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    width: 100%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding-left: 2.5%;
+    flex-shrink: 0;
+    font-size: 1.25rem;
 }
