@@ -45,13 +45,11 @@
 
 #alert-details > *:first-child {
     display: initial;
-    margin-top: 2.5%;
     margin-bottom: 5%;
 }
 
 #alert-details > *:last-child {
     margin-top: 5%;
-    margin-bottom: 2.5%;
 }
 
 .alert-details-box {
@@ -106,9 +104,10 @@
 .custom-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px; /* Largeur du curseur */
-    height: 10px; /* Hauteur du curseur */
+    width: 1rem; /* Largeur du curseur */
+    height: 1rem; /* Hauteur du curseur */
     background-color: black; /* Couleur du curseur */
+    border-color: black;
     border-radius: 50%; /* Forme du curseur */
     cursor: pointer; /* Curseur de la souris */
 }
@@ -117,8 +116,21 @@
     width: 1rem; /* Largeur du curseur */
     height: 1rem; /* Hauteur du curseur */
     background-color: black; /* Couleur du curseur */
-    border-radius: 50%; /* Forme du curseur */
+    border-color: black;
+    border-radius: 0; /* Forme du curseur */
     cursor: pointer; /* Curseur de la souris */
+    position: relative;
+}
+
+.custom-range::-moz-range-thumb::before {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem; /* Ajustez la position verticale du triangle */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.4rem 0.4rem 0 0.4rem; /* Crée un triangle pointant vers le bas */
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }
 
 .alert-details-input-number {

@@ -2,3 +2,32 @@
     background-color: #a64d79;
     border: solid black;
 }
+
+.topSection {
+    display: flex;
+    height: 40%; /* Divise la hauteur de la div principale en deux */
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.bottomSection {
+    height: 47%; /* Divise la hauteur de la div principale en deux */
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.leftPart {
+    margin-right: 1%;
+}
+
+.rightPart {
+    margin-left: 1%;
+}
+
+.leftPart, .rightPart {
+    width: 50%; /* Divise la largeur de la partie haute en deux */
+}
