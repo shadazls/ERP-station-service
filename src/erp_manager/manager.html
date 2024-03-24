@@ -345,12 +345,12 @@
                             <div class="leftDiv">
                                 <div id="bottom-left-top-div" class="classic-box">
                                     <p id="bottom-left-top-div-p" class="bottom-left-div-p">Nombre de transactions :</p>
-                                    <input class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXX" inputmode="numeric">
+                                    <input id="nb-transaction-input" class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXX" inputmode="numeric">
                                 </div>
 
                                 <div id="bottom-left-bottom-div" class="classic-box">
                                     <p id="bottom-left-bottom-div-p" class="bottom-left-div-p">Volume total de carburant :</p>
-                                    <input class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXXX L" inputmode="numeric">
+                                    <input id="volume-total-carburant-input" class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXXX L" inputmode="numeric">
                                 </div>
                             </div>
 
@@ -358,13 +358,13 @@
 
                                 <div id="bottom-middle-div-top-div" class="classic-box">
                                     <p id="bottom-middle-div-top-div-p">Montant total en € :</p>
-                                    <input class="restrict-input middle-station-box classic-box" type="text" placeholder="XXXX €" inputmode="numeric">
+                                    <input id="montant-total-euro-input" class="restrict-input middle-station-box classic-box" type="text" placeholder="XXXX €" inputmode="numeric">
                                 </div>
 
                                 <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
                                     <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                                     <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-                                    <span class="relative text-black group-hover:text-white">Valider</span>
+                                    <span id="send-day-report-button" class="relative text-black group-hover:text-white">Valider</span>
                                 </a>
 
                             </div>
@@ -395,6 +395,10 @@
                             </ul>
                             <p id="staff-left-second-p">Gestion formation :</p>
                             <div class="content-wrapper-v2">
+                                <div class="staff-formation-box classic-box">
+                                    <p id="" class="left-element">Apprendre la pédagogie - TOUT DE SUITE</p>
+                                    
+                                </div>
                                 <div class="staff-formation-box classic-box">
                                     <p id="" class="left-element">Utilisation caisse - 01/04 14:00</p>
                                     
@@ -552,6 +556,7 @@
         <script src="scripts/restock-module/to-confirm.js"></script>
         <script src="scripts/alert-module/fuel-amount-bar.js"></script>
         <script src="scripts/alert-module/product-amount-bar.js"></script>
+        <script src="scripts/station-module/send-day-report.js"></script>
         <script src="scripts/staff-module/staff-list.js"></script>
         <script src="scripts/pump.js"></script>
     </body>

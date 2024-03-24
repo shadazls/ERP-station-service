@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Vérification que chaque champ n'est pas vide
         if (productOrEnergy.trim() === '') {
             Swal.fire({
-                icon: "warning",
+                icon: "error",
                 title: "Un des champs est vide",
                 text: "Le champ 'Produit ou énergie' ne peut pas être vide !",
             });
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (quantity.trim() === '') {
             Swal.fire({
-                icon: "warning",
+                icon: "error",
                 title: "Un des champs est vide",
                 text: "Le champ 'Quantité' ne peut pas être vide !",
             });
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (supplier.trim() === '') {
             Swal.fire({
-                icon: "warning",
+                icon: "error",
                 title: "Un des champs est vide",
                 text: "Le champ 'Fournisseur' ne peut pas être vide !",
             });
