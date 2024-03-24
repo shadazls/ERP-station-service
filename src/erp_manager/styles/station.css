@@ -1,6 +1,13 @@
 #stationContainer {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.25%;
+    margin-bottom: 0.25%;
+    margin-left: 0.25%;
+    margin-right: 0.25%;
     background-color: #a64d79;
-    border: solid black;
+    border: thick solid black;
+    border-radius: 10px;
 }
 
 .topSection {

@@ -1,8 +1,16 @@
 #incident {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.25%;
+    margin-bottom: 0.5%;
+    margin-left: 0.5%;
+    margin-right: 0.25%;
     background-color: #783f04;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: thick solid black;
+    border-radius: 10px;
 }
 
 #createIncident {

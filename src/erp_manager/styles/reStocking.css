@@ -1,9 +1,15 @@
 #reStockingContainer {
+    width: 65.84% !important;
+    height: 29.33vh !important;
+    margin-top: 0.5%;
+    margin-bottom: 0.25%;
+    margin-left: 0.25%;
+    margin-right: 0.5%;
     display: flex;
     background-color: #674ea7;
-    width: 80%;
-    border: solid black;
+    border: thick solid black;
     font-size: 1.25rem;
+    border-radius: 10px;
 }
 
 #ask-restock {
