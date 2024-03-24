@@ -1,11 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/seven-segment');
 
-
 /* Calculator */
 #employee-container-left .calculator input {
     margin: 0.8rem 0px;
-    width: 90%;
+    width: 80%;
     height: 10%;
+
 
 }
 
@@ -19,9 +19,15 @@
     font-size: 300%;
     padding-left: 1rem;
 }
+.calculator input {
+    background-color: #F9CB9C;
+    font-family: 'Seven Segment', sans-serif;
+    font-size: 250%;
+    padding-left: 0.7rem;
+}
 
 #employee-container-left .calculator button {
-    width: 30%;
+    width: 25%;
     height: 90%;
 }
 
@@ -32,7 +38,7 @@
 .calculator button{
     font-family: Balsamiq Sans;
     margin: 2px;
-    font-size: 200%;
+    font-size: 300%;
     border: solid #000;
     cursor: pointer;
     background-color: #fff;
@@ -40,16 +46,7 @@
 
 /* PAYMENT BUTTONS */
 
-#employee-container-left .payment button {
-    width: 45%;
-    height: 6rem;
-    margin: 0.2rem;
-}
 
-#employee-container-left .payment>button {
-    width: 90%;
-    height: 20%;
-}
 
 .payment {
     background-color: #CCCCCC;
@@ -58,7 +55,7 @@
 .payment button {
     font-family: Balsamiq Sans;
     margin: 2px;
-    font-size: 200%;
+    font-size: 250%;
     border: solid #000;
     cursor: pointer;
     background-color: #fff;
@@ -75,17 +72,63 @@
 
 #money {
     background-color: #93C47D;
+    width: 60%;
+    height: 6.5rem;
 }
 
 #credit-card {
     background-color: #9FC5F8;
+    width: 35%;
+    height: 6.5rem;
 }
 
 #fuel-card {
     background-color: #E06666;
+    width: 50%;
+    height: 6.5rem;
+    margin-top: 0.2rem;
 }
 
 #member-card {
     background-color: #EA9999;
+    width: 45%;
+    height: 6.5rem;
+    margin-top: 0.2rem;
 }
 
+#ticket {
+    width: 97.5%;
+    height: 24%;
+}
+
+.num-pad:active,
+#times-pad:active,
+#minus-pad:active,
+#doat-pad:active,
+#ticket:active {
+    background-color: grey;
+}
+
+#ok-pad:active {
+    background-color: #4F9744;
+}
+
+#delete-pad:active {
+    background-color: #AA0000;
+}
+
+#money:active {
+    background-color: #77B255;
+}
+
+#credit-card:active {
+    background-color: #6D8EC1;
+}
+
+#fuel-card:active {
+    background-color: #B43D3D;
+}
+
+#member-card:active {
+    background-color: #CC6666;
+}

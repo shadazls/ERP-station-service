@@ -1,0 +1,64 @@
+
+/* FORMATION */
+#employee-container-center-formation {
+    background-color: #F1C232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#liste_formation,
+#inscription_formation {
+    font-family: Balsamiq Sans;
+    width: 33%;
+    height: 90%;
+    overflow-y: scroll;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+}
+
+#inscription_formation h3 {
+    margin-bottom: 15%;
+}
+
+
+#liste_formation h3{
+    font-size: 92.5%;
+}
+
+#inscription_formation {
+    margin-left: 2%;
+}
+
+#prenom,
+#nom,
+#tel {
+    margin-bottom: 10px;
+    font-family: Balsamiq Sans;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#subscribeFormation {
+    padding: 2%;
+    width: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#employee-container-center-formation #liste_formation>p {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+#liste_formation .formation-selected {
+    background-color: blue;
+}

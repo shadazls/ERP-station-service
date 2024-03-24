@@ -4,27 +4,70 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>FuelSync</title>
+
+      <!-- Style css -->
+      <link rel="stylesheet" href="styles/header.css">
       <link rel="stylesheet" href="styles/grid.css">
       <link rel="stylesheet" href="styles/container-left.css">
-      <link rel="stylesheet" href="styles/container-top.css">
+      <link rel="stylesheet" href="styles/container-top-center.css">
+      <link rel="stylesheet" href="styles/container-top-left.css">
+      <link rel="stylesheet" href="styles/pump.css">
+      <link rel="stylesheet" href="styles/incident.css">
+      <link rel="stylesheet" href="styles/cards.css">
+      <link rel="stylesheet" href="styles/product-infos.css">
+      <link rel="stylesheet" href="styles/formations.css">
+      <link rel="stylesheet" href="styles/delivery.css">
+
+      <!-- Link Js -->
+      <script defer="defer" src="scripts/header.js"></script>
       <script defer="defer" src="scripts/calculator.js"></script>
+      <script defer="defer" src="scripts/container-top-left.js"></script>
+      <script defer="defer" src="scripts/incident.js"></script>
+      <script defer="defer" src="scripts/formations.js"></script>
+
+      <!--Balsamiq Font-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+      <!--Segment Font-->
+      <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+
+      <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+
+      <script src="scripts/pump.js" defer="defer"></script>
+
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
       <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
-
+      
   </head>
   <body>
     <header>
-      <h1>FuelSync</h1>
+      <div id="divFuelSync">
+        <h1 id="fuelsync">FuelSync</h1>
+      </div>
+      
+      <div id="alertBox">
+
+      </div>
+
+      <div id="current-time"></div>
     </header>
     
     <main>
       <div>
         <div id="employee-container-top">
+
+          <!-- Produits -->
           <div class="ticket">
+            <div id="ticket-items">
+              <!-- Les produits ici -->
+            </div>
+
             <div class="addProduct">
               <p>Ajouter un produit</p>
               <div class="divplus">
@@ -33,6 +76,7 @@
             </div>
           </div>
 
+          <!-- Pompes -->
           <div class="pumps">
             <div class="line-pump">
               <p>POMPE 1 : </p>
@@ -54,19 +98,266 @@
             </div>
         </div>
       </div>
+      
         <div id="employee-container-center">
-          <div>c</div>
-          <div>d</div>
-          <div>e</div>
+
+          <!-- Informations produits -->
+          <div id="divproduct">
+            
+          </div>
+
+          <!-- Livraisons -->
+          <div id="delivery">
+            <div id="in-progress">
+              <div class="sticky">
+              <p>En cours</p>
+              </div>
+
+              <!-- Éléments à ajouter dynamiquement -->
+              <div class="element">
+                <p id="" class="left-element">Chiffon microfibre</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">Lingettes</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">Commande n°1</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">Bombonne</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">SP95-E-10</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+            </div>
+
+            <div id="arrival">
+              <div class="sticky">
+              <p>Arrivée</p>
+              </div>
+
+              <div class="element">
+                <p id="" class="left-element">Disque A</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+
+              <div class="element">
+                <p id="" class="left-element">Balais</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+
+              <div class="element">
+                <p id="" class="left-element">Barre mars</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+
+          <!-- Incidents -->
+          <div id="incident">
+            <div id="createIncident">
+              <input type="datetime-local" id="dateTime" placeholder="Date Heure">
+              <select id="incidentType">
+                  <option value="" disabled selected>Type</option>
+                  <option value="type1">Type 1</option>
+                  <option value="type2">Type 2</option>
+                  <option value="type3">Type 3</option>
+              </select>
+              <textarea id="technicalDetail" placeholder="Détail technique"></textarea>
+              <textarea id="remark" placeholder="Remarque"></textarea>
+              <button id="createButton">Créer</button>
+            </div>
+
+            <div id="checkIncident">
+              <!-- Les incidents ici -->
+            </div>
+          </div>
+
         </div>
+
         <div id="employee-container-bottom">
-          <div>f</div>
-          <div>g</div>
-          <div>h</div>
+
+        <!-- Informations pompes -->
+          <div id="employee-container-bottom-oil">
+            <div id="employee-container-bottom-oil-remaining">
+              <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
+              <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
+              <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
+            </div>
+            <div id="employee-container-bottom-pump-status">
+              <div id="pump1">
+                <div>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump2">
+                <div>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°2</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump3">
+                <div>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°3</p>
+                  <p class="status-close"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name out-of-stock">Gazole</span>
+                </p>
+              </div>
+              <div id="pump4">
+                <div>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°4</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump5">
+                <div>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°5</p>
+                  <p class="status-close"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name out-of-stock">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+              <div id="pump6">
+                <div>
+                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i>  Pompe n°6</p>
+                  <p class="status-open"></p>
+                </div>
+                <p>
+                  <span class="pump-oil-name">SP95</span>
+                  <span class="pump-oil-name">SP98</span>
+                  <span class="pump-oil-name">Gazole</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formations -->
+          <div id="employee-container-center-formation">
+            <div id="liste_formation">
+              <h3>Liste des formations</h3>
+            </div>
+
+            <div id="inscription_formation">
+              <h3>Inscription</h3>
+              <input type="text" id="prenom" disabled>
+              <input type="text" id="nom" disabled>
+              <input type="text" id="tel" disabled>
+              <input type="button" id="subscribeFormation" value="Valider">
+            </div>
+          </div>
+
+          <!-- Cartes -->
+          <div id="cards">
+            <div id="divSearch">
+              <p>N° Carte</p>
+              <div class="search-wrapper">
+                <div class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" id="search-input" placeholder="rechercher">
+                <button class="button">SCANNER</button>
+              </div>
+            </div>
+
+            <div id="divIdCard">
+              <p>Numéro d'identification de la carte :</p>
+              <div>
+                <input type="text">
+                <button class="button">Modifier</button>
+              </div>
+            </div>
+
+            <div id="divPhoto">
+              <img src="/src/res/IMG_6800.JPG" width="20%" height="60%" alt="Photo de profil">
+              <button class="button">Modifier</button>
+            </div>
+
+            <div id="divName">
+              <p>NOM &amp; PRÉNOM :</p>
+              <div>
+                  <input type="text">
+                  <button class="button">Modifier</button>
+              </div>
+          </div>
+
+            <div id="divDateSolde">
+              <div id="divDate">
+                <p>Date de naissance :</p>
+              </div>
+
+              <div id="divSolde">
+                <p>Solde :</p>
+              </div>
+            </div>
+
+            <div id="divCreatonValiderCrediter">
+              <div id="divCreation">
+                <p>Date de création :</p>
+              </div>
+
+              <div id="divValider">
+                <p>Valider</p>
+              </div>
+
+              <div id="divCrediter">
+                <button class="button">Créditer</button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
-      <!-- Calculatrice et Paiement -->
+      <!-- Calculatrice -->
       <aside id="employee-container-left">
         <div class="calculator">
           <input type="text" id="display-pad" readonly>
@@ -97,6 +388,7 @@
           </div>
         </div>
         
+        <!-- Payement -->
         <div class="payment">
             <div>
             <button id="credit-card">CB</button>

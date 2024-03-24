@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#divFuelSync {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    border-right: 3px solid black;
+    height: 100%;
+}
+
+#fuelsync {
+    font-family: Balsamiq Sans;
+    font-size: 300%;
+    justify-content: center;
+}
+
+#current-time {
+    margin-left: 0.5%;
+    font-family: Balsamiq Sans;
+    font-size: 300%;
+}
