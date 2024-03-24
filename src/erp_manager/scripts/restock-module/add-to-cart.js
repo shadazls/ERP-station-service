@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
             icon: "success",
             title: "Produit ajouté au panier avec succès",
-            text: `Le produit "${productOrEnergy}" en ${quantity} exemplaire(s) par le fournisseur "${supplier}" a bien été ajouté au panier !`,
+            text: `Le produit "${productOrEnergy}" en ${quantity} exemplaire(s) par le fournisseur "${supplier}" a bien été ajouté au panier.`,
         });
     });
 });

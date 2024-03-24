@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Swal.fire({
                     icon: "success",
                     title: "Nom de commande validée",
-                    text: `Vous avez saisi "${commandName}" comme nom de commande`,
+                    text: `Vous avez saisi "${commandName}" comme nom de commande.`,
                 });
 
                 createCommand(commandName);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Swal.fire({
                     icon: "error",
                     title: "Commande annulée",
-                    text: "Votre commande n'a pas été envoyée au fournisseur.",
+                    text: "Votre commande n'a pas été envoyée au fournisseur !",
                 });
             } else {
                 const firstProductName = shoppingCartContent.firstElementChild.querySelector('.left-element').textContent;
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Swal.fire({
                     icon: "info",
                     title: "Nom de commande par défaut",
-                    text: `Vous n'avez pas donné de nom à votre commande, le nom de la commande sera "${defaultCommandName}"`,
+                    text: `Vous n'avez pas donné de nom à votre commande, le nom de la commande sera "${defaultCommandName}."`,
                 });
 
                 createCommand(defaultCommandName);
@@ -84,7 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startCountdown() {
         const durationElements = document.querySelectorAll('#in-progress-commands-container .right-element p');
-    
+        
+        const firstIcon = document.createElement('i');
+        firstIcon.classList.add('green', 'cliquable', 'fa-solid', 'fa-circle-check', 'fa-lg');
+
+        const secondIcon = document.createElement('i');
+        secondIcon.classList.add('red', 'cliquable', 'fa-solid', 'fa-circle-xmark', 'fa-lg');
+
         durationElements.forEach((durationElement) => {
             // Extraire le nombre de la chaîne de caractères
             const durationText = durationElement.textContent.trim(); // Supprimer les espaces inutiles
@@ -96,7 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     clearInterval(countdown);
                     // Déplacer l'élément vers une autre div
                     const toConfirmElementContainer = document.querySelector('#to-confirm-element-container');
-                    toConfirmElementContainer.appendChild(durationElement.parentElement.parentElement); // Déplacer l'élément
+                    let divRight = durationElement.parentElement;
+                    divRight.removeChild(durationElement);
+                    divRight.appendChild(firstIcon);
+                    divRight.appendChild(secondIcon);
+                    toConfirmElementContainer.appendChild(divRight.parentElement); // Déplacer l'élément
                 } else {
                     duration -= 1; // Réduire le décompte de 1 seconde
                     // Mettre à jour le texte avec la nouvelle valeur
