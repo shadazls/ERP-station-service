@@ -98,7 +98,7 @@
                                 <option value="DIESEL"></option>
                             </datalist>
 
-                            <input class="classic-box ask-restock-box" type="text" placeholder="Quantité">
+                            <input class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
 
                             <input list="supplier" id="supplier-input" class="classic-box ask-restock-box" placeholder="Fournisseur">
                             <datalist id="supplier">
@@ -372,7 +372,7 @@
                                         <option value="2">SP-95</option>
                                         <option value="3">DIESEL</option>
                                     </select>
-                                    <input id="fuel-amount-input" class="alert-details-input-number classic-box" placeholder="XXX L" type="text" oninput="updateRange()">
+                                    <input id="fuel-amount-input" class="restrict-input alert-details-input-number classic-box" placeholder="XXX L" type="text" oninput="updateRange()">
                                 </div>
 
                             </div>
@@ -390,7 +390,7 @@
                                         <option value="2">SP-95</option>
                                         <option value="3">DIESEL</option>
                                     </select>
-                                    <input id="product-amount-input" class="alert-details-input-number classic-box" placeholder="XXX" type="text" oninput="updateProductRange()">
+                                    <input id="product-amount-input" class="restrict-input alert-details-input-number classic-box" placeholder="XXX" type="text" oninput="updateProductRange()">
                                 </div>
 
                             </div>
@@ -398,14 +398,69 @@
                         </div>
                     </div>
                     <div id="stationContainer">
-
                         <div class="topSection">
-                            <div class="leftPart classic-box"></div>
-                            <div class="rightPart classic-box"></div>
-                        </div>
 
-                        <div class="bottomSection classic-box"></div>
+                            <div id="station-schedule" class="leftPart classic-box">
+                                <div class="schedule-top">
+                                    <p>Horaires :</p>
+                                </div>
+                                <div class="schedule-bottom">
+                                    <input id="schedule-start" class="classic-box station-box" type="text" placeholder="8 h 00" step="900" onfocus="this.type='time'"/>
+                                    <p>à</p>
+                                    <input id="schedule-end" class="classic-box station-box" type="text" placeholder="18 h 00" step="900" onfocus="this.type='time'"/>
+                                </div>
+                            </div>
+
+                            <div id="station-phone" class="rightPart classic-box">
+                                <div class="phone-top">
+                                    <p>Téléphone</p>
+                                </div>
+                                <div class="phone-bottom">
+                                    <input id="phone-input" class="restrict-input classic-box station-box" type="tel" placeholder="07 82 41 46 61"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottomSection classic-box">
+                            
+                            <div class="leftDiv">
+                                <div id="bottom-left-top-div" class="classic-box">
+                                    <p id="bottom-left-top-div-p" class="bottom-left-div-p">Nombre de transactions :</p>
+                                    <input class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXX" inputmode="numeric">
+                                </div>
+
+                                <div id="bottom-left-bottom-div" class="classic-box">
+                                    <p id="bottom-left-bottom-div-p" class="bottom-left-div-p">Volume total de carburant :</p>
+                                    <input class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXXX L" inputmode="numeric">
+                                </div>
+                            </div>
+
+                            <div class="middleDiv">
+
+                                <div id="bottom-middle-div-top-div" class="classic-box">
+                                    <p id="bottom-middle-div-top-div-p">Montant total en € :</p>
+                                    <input class="restrict-input middle-station-box classic-box" type="text" placeholder="XXXX €" inputmode="numeric">
+                                </div>
+
+                                <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                    <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                    <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                    <span class="relative text-black group-hover:text-white">Valider</span>
+                                </a>
+
+                            </div>
+                            <div class="rightDiv">
+                                <div id="right-div-main-div" class="classic-box">
+                                    <p>Informations sur les transactions de la journée</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
                     </div>
+                    
+                    
+                    
                     <div id="staffContainer">e</div>
                 </div>
                 <div id="manager-container-bottom">
@@ -515,8 +570,9 @@
             </div>
         </main>
 
-        <script src="scripts/product-amount-bar.js"></script>
         <script src="scripts/displayTime.js"></script>
+        <script src="scripts/restrictInput.js"></script>
+        <script src="scripts/product-amount-bar.js"></script>
         <script src="scripts/fuel-amount-bar.js"></script>
         <script src="scripts/pump.js"></script>
     </body>
