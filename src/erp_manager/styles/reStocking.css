@@ -1,6 +1,7 @@
 #reStockingContainer {
     display: flex;
     background-color: #674ea7;
+    width: 80%;
     border: solid black;
     font-size: 1.25rem;
 }

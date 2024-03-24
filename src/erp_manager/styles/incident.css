@@ -1,4 +1,65 @@
-#incidentContainer {
+#incident {
     background-color: #783f04;
-    border: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#createIncident {
+    width: 33%;
+    height: 90%;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+}
+
+#createIncident input,
+#createIncident select,
+#createIncident textarea{
+    margin-bottom: 10px;
+    font-family: Balsamiq Sans;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#createIncident textarea {
+    resize: none;
+}
+
+#createButton {
+    padding: 2%;
+    width: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#createButton:active {
+    background-color: grey;
+}
+
+#checkIncident {
+    width: 33%;
+    height: 90%;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    margin-left: 2%;
+    overflow-y: scroll;
+    padding: 2.5%;
+}
+
+.incident-info {
+    margin-bottom: 10px;
+    font-family: Balsamiq Sans;
+    font-size: 75%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 5px;
+  }
+  

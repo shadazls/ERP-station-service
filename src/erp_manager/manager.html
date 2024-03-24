@@ -409,7 +409,26 @@
                     <div id="staffContainer">e</div>
                 </div>
                 <div id="manager-container-bottom">
-                    <div id="incidentContainer">f</div>
+
+                    <div id="incident">
+                        <div id="createIncident">
+                            <input type="datetime-local" id="dateTime" placeholder="Date Heure">
+                            <select id="incidentType">
+                                <option value="" disabled selected>Type</option>
+                                <option value="type1">Type 1</option>
+                                <option value="type2">Type 2</option>
+                                <option value="type3">Type 3</option>
+                            </select>
+                            <textarea id="technicalDetail" placeholder="Détail technique"></textarea>
+                            <textarea id="remark" placeholder="Remarque"></textarea>
+                            <button id="createButton">Créer</button>
+                        </div>
+                      
+                        <div id="checkIncident">
+                          <!-- Les incidents ici -->
+                        </div>
+                    </div>
+
                     <div id="employee-container-bottom-oil">
                         <div id="employee-container-bottom-oil-remaining">
                             <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
