@@ -1,14 +1,22 @@
-#manager-container-bottom-oil {
+#employee-container-bottom-oil {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.25%;
+    margin-bottom: 0.5%;
+    margin-left: 0.25%;
+    margin-right: 0.25%;
     position: relative;
-    background-color: orange;
+    background-color: #E69138;
     display: flex;
     align-items: flex-end;
     padding-bottom: 1rem;
+    border: thick solid black;
+    border-radius: 10px;
 }
 
 /* NAME + OIL REMAINING */
 
-#manager-container-bottom-oil-remaining {
+#employee-container-bottom-oil-remaining {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -16,7 +24,7 @@
     display: flex;
 }
 
-#manager-container-bottom-oil-remaining>div {
+#employee-container-bottom-oil-remaining>div {
     margin-bottom: 7px;
     margin-right: 10px;
 }
@@ -32,25 +40,39 @@
 
 /* PUMP STATUS + OIL STATUS */
 
-#manager-container-bottom-pump-status {
+#employee-container-bottom-pump-status {
     width: 100%;
     height: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     align-items: flex-end;
+    gap: 3%;
+    margin-left: 3%;
 }
 
-#manager-container-bottom-pump-status>div {
-    width: 26%;
-    height: 5rem;
+#employee-container-bottom-pump-status>div {
+    width: 30%;
+    height: 6.2rem;
     background-color: white;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1%;
 }
 
 .out-of-stock {
     color: red;
+}
+
+#employee-container-bottom-pump-status,
+.oil-remaining,
+.oil-name {
+    font-family: Balsamiq Sans;
+}
+
+.status-open,
+.status-close {
+    margin-bottom: 5%;
 }

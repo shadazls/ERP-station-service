@@ -1,0 +1,40 @@
+* {
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.cliquable {
+    cursor: pointer;
+}
+
+.classic-box {
+    background-color: white;
+    border: solid black;
+}
+
+.content-wrapper {
+    overflow-y: auto;
+    justify-content: center;
+    height: 100%; 
+    width: 90%;
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centered-horizontal {
+    display: flex;
+    justify-content: center;
+
+}
+
+.left-element {
+    margin-left: 10px;
+}
+
+.right-element {
+    margin-right: 10px;
+    font-size: 1.25rem;
+}

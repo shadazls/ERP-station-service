@@ -1,0 +1,11 @@
+#staffContainer {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.25%;
+    margin-bottom: 0.25%;
+    margin-left: 0.25%;
+    margin-right: 0.5%;
+    background-color: #f1c232;
+    border: thick solid black;
+    border-radius: 10px;
+}

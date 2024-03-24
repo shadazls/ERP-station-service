@@ -16,6 +16,7 @@
       <link rel="stylesheet" href="styles/cards.css">
       <link rel="stylesheet" href="styles/product-infos.css">
       <link rel="stylesheet" href="styles/formations.css">
+      <link rel="stylesheet" href="styles/delivery.css">
 
       <!-- Link Js -->
       <script defer="defer" src="scripts/header.js"></script>
@@ -60,6 +61,8 @@
     <main>
       <div>
         <div id="employee-container-top">
+
+          <!-- Produits -->
           <div class="ticket">
             <div id="ticket-items">
               <!-- Les produits ici -->
@@ -73,6 +76,7 @@
             </div>
           </div>
 
+          <!-- Pompes -->
           <div class="pumps">
             <div class="line-pump">
               <p>POMPE 1 : </p>
@@ -96,10 +100,84 @@
       </div>
       
         <div id="employee-container-center">
-          <div id="divproduct">
 
+          <!-- Informations produits -->
+          <div id="divproduct">
+            
           </div>
-          <div>d</div>
+
+          <!-- Livraisons -->
+          <div id="delivery">
+            <div id="in-progress">
+              <div class="sticky">
+              <p>En cours</p>
+              </div>
+
+              <!-- Éléments à ajouter dynamiquement -->
+              <div class="element">
+                <p id="" class="left-element">Chiffon microfibre</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">Lingettes</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">Commande n°1</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">Bombonne</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+
+              <div class="element">
+                  <p id="" class="left-element">SP95-E-10</p>
+                  <div class="right-element">
+                      <p>X,X€</p>
+                  </div>
+              </div>
+            </div>
+
+            <div id="arrival">
+              <div class="sticky">
+              <p>Arrivée</p>
+              </div>
+
+              <div class="element">
+                <p id="" class="left-element">Disque A</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+
+              <div class="element">
+                <p id="" class="left-element">Balais</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+
+              <div class="element">
+                <p id="" class="left-element">Barre mars</p>
+                <div class="right-element">
+                    <p>X,X€</p>
+                </div>
+              </div>
+            
+            </div>
+          </div>
 
           <!-- Incidents -->
           <div id="incident">
@@ -117,7 +195,7 @@
             </div>
 
             <div id="checkIncident">
-
+              <!-- Les incidents ici -->
             </div>
           </div>
 
@@ -125,7 +203,7 @@
 
         <div id="employee-container-bottom">
 
-          <!-- Informations pompes -->
+        <!-- Informations pompes -->
           <div id="employee-container-bottom-oil">
             <div id="employee-container-bottom-oil-remaining">
               <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
@@ -202,42 +280,84 @@
             </div>
           </div>
 
+          <!-- Formations -->
           <div id="employee-container-center-formation">
-            <div id="formations-personnel">
-              <div>
-                <div id="liste_formation">
-                  <h3>Formations</h3>
-                </div>
-              </div>
-              <div>
-                <h3>Inscription</h3>
-                <input type="text" id="prenom" disabled>
-                <input type="text" id="nom" disabled>
-                <input type="text" id="tel" disabled>
-                <input type="button" id="subscribeFormation" value="M'inscrire">
-              </div>
+            <div id="liste_formation">
+              <h3>Liste des formations</h3>
+            </div>
+
+            <div id="inscription_formation">
+              <h3>Inscription</h3>
+              <input type="text" id="prenom" disabled>
+              <input type="text" id="nom" disabled>
+              <input type="text" id="tel" disabled>
+              <input type="button" id="subscribeFormation" value="Valider">
             </div>
           </div>
+
+          <!-- Cartes -->
           <div id="cards">
-            <p>N° Carte</p>
-            <div>
-              <button id="scanner">SCANNER</button>
+            <div id="divSearch">
+              <p>N° Carte</p>
+              <div class="search-wrapper">
+                <div class="search-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" id="search-input" placeholder="rechercher">
+                <button class="button">SCANNER</button>
+              </div>
             </div>
 
-            <p>Numéro d'identification de la carte :</p>
-            <div>
-              <button id="scanner">Modifier</button>
+            <div id="divIdCard">
+              <p>Numéro d'identification de la carte :</p>
+              <div>
+                <input type="text">
+                <button class="button">Modifier</button>
+              </div>
             </div>
 
-            <p>NOM & PRÉNOM :</p>
-            <div>
-              <button id="scanner">Modifier</button>
+            <div id="divPhoto">
+              <img src="/src/res/IMG_6800.JPG" width="20%" height="60%" alt="Photo de profil">
+              <button class="button">Modifier</button>
             </div>
+
+            <div id="divName">
+              <p>NOM &amp; PRÉNOM :</p>
+              <div>
+                  <input type="text">
+                  <button class="button">Modifier</button>
+              </div>
+          </div>
+
+            <div id="divDateSolde">
+              <div id="divDate">
+                <p>Date de naissance :</p>
+              </div>
+
+              <div id="divSolde">
+                <p>Solde :</p>
+              </div>
+            </div>
+
+            <div id="divCreatonValiderCrediter">
+              <div id="divCreation">
+                <p>Date de création :</p>
+              </div>
+
+              <div id="divValider">
+                <p>Valider</p>
+              </div>
+
+              <div id="divCrediter">
+                <button class="button">Créditer</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <!-- Calculatrice et Paiement -->
+      <!-- Calculatrice -->
       <aside id="employee-container-left">
         <div class="calculator">
           <input type="text" id="display-pad" readonly>
@@ -268,6 +388,7 @@
           </div>
         </div>
         
+        <!-- Payement -->
         <div class="payment">
             <div>
             <button id="credit-card">CB</button>

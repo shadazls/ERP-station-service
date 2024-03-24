@@ -7,13 +7,19 @@
         <link rel="stylesheet" href="styles/grid.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/selectProduct.css">
-        <!-- <link rel="stylesheet" href="styles/headerTitle.css"> -->
+        <link rel="stylesheet" href="styles/reStocking.css">
+        <link rel="stylesheet" href="styles/alert.css">
+        <link rel="stylesheet" href="styles/station.css">
+        <link rel="stylesheet" href="styles/staff.css">
+        <link rel="stylesheet" href="styles/incident.css">
+        <link rel="stylesheet" href="styles/pump.css">
+        <link rel="stylesheet" href="styles/card.css">
+        <link rel="stylesheet" href="styles/common-utils.css">
+        <link rel="stylesheet" href="styles/button.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="styles/reappro.css">
-        <script src="scripts/reappro.js" defer="defer"></script>
     </head>
     <body>
         <header id="header">
@@ -62,89 +68,433 @@
         <main>
             <div>
                 <div id="manager-container-top">
-                    <div>a</div>
-                    <div class="manager-container-top-reappro">
-                        <div class="inputProduct">
-                            <h4>Demander un réapprovisionnement</h4>
-                            <input type="text" id="productChoice" placeholder="Produit ou énergie">
-                            <input type="text" id="quantity" placeholder="Quantité">
-                            <select name="supplier" id="supplier">
-                                <option value="supplier1">Fournisseur 1</option>
-                                <option value="supplier2">Fournisseur 2</option>
-                                <option value="supplier3">Fournisseur 3</option>
-                            </select>
-                            <button id="addButton">ajouter +</button>
+                    
+                    <div id="selectProductContainer">
+                        <div id="productPicture" class="element-box"></div>
+
+                        <div id="searchProductContainer">
+                            <input id="searchInput" class="element-box" placeholder="Rechercher" type="text">
+                            <span id="searchIcon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
                         </div>
-                        <div class="basket">
-                            <h3>Panier</h3>
-                            <div id="basketItems"></div>
-                            <div class="validate">
-                                <p id="total">Total: 0 €</p>
-                                <button id="validateButton">Valider</button>
+
+                        <div id="productDescription" class="element-box">
+
+                        </div>
+                    
+                    </div>  
+
+                    <div id="reStockingContainer">
+                        
+                        <div id="ask-restock">
+                            
+                            <p id="">Demander un réapprovisionnement</p>
+
+                            <input list="products-and-energy" id="products-and-energy-input" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
+                            <datalist id="products-and-energy">
+                                <option value="Chiffon"></option>
+                                <option value="Liquide vaisselle"></option>
+                                <option value="DIESEL"></option>
+                            </datalist>
+
+                            <input class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
+
+                            <input list="supplier" id="supplier-input" class="classic-box ask-restock-box" placeholder="Fournisseur">
+                            <datalist id="supplier">
+                                <option value="Chiffon"></option>
+                                <option value="Liquide vaisselle"></option>
+                                <option value="DIESEL"></option>
+                            </datalist>
+
+                            <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                <span class="relative text-black group-hover:text-white">Ajouter +</span>
+                                
+                            </a>
+
+                        </div>
+
+                        <div id="shopping-cart" class="classic-box restock-box">
+                            <p class="">Panier</p>
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Chiffon microfibre</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Lingette</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Essuie tout</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">DIESEL XXX L</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">C4</p>
+                                    <div class="right-element">
+                                        <p>X,X€</p>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                            <div id="shopping-cart-final" class="">
+                                <p id="shopping-cart-final-p">Total : <br>XX,XX€</p>
+                                <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                    <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                    <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                    <span class="relative text-black group-hover:text-white">Valider</span>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div id="in-progress" class="classic-box restock-box">
+                            <p>En cours</p>
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Chiffon microfibre X,X€</p>
+                                    <div class="right-element">
+                                        <p>6j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Lingette X,X€</p>
+                                    <div class="right-element">
+                                        <p>5j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Commande n°1 X,X€</p>
+                                    <div class="right-element">
+                                        <p>2j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Bombonne X,X€</p>
+                                    <div class="right-element">
+                                        <p>1j</p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">SP-95-E-1 X,X€</p>
+                                    <div class="right-element">
+                                        <p>1j</p>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div id="to-confirm" class="classic-box restock-box">
+                            <p id="to-confirm-p">À confirmer</p>
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Disque A X,X€</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Balais A X,X€</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Barre Mars X,X€</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Chips Barbecue X,X€</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Liquide vaisselle X,X€</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="element-box classic-box">
+                                    <p id="" class="left-element">Brosse à dent X,X€</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
                             </div>
                         </div>
-                        <div class="inProgress">
-                            <h3>En cours</h3>
 
-                            <div id="inProgressItems"></div>
-
-                            <div id="centerer"></div>
-                            
-                        </div>
-                        <div class="toConfirm">
-                            <h3>A confirmer</h3>
-
-                            <div id="toConfirmItems"></div>
-
-                            <div id="centerer"></div>
-                            
-                        </div>
                     </div>
+                    
                 </div>
                 <div id="manager-container-center">
-                    <div>c</div>
-                    <div>d</div>
-                    <div id="manager-container-center-personnel-formation">
-                        <div id="infos-personnel">
-                            <div>
-                                <h3>Liste du personnel</h3>
-                                <div id="liste_personnel"></div>
-                            </div>
-                            <div>
-                                <h3>Fiche personnelle</h3>
-                                <h4>Formation</h4>
-                                <p id="etude_personnel">NULL</p>
-                                <h4>Expérience professionnelle</h4>
-                                <p id="experience_personnel">NULL</p>
+                    <div id="alertContainer">
+                        <div id="alert-list" class="classic-box">
+                            <div class="content-wrapper">
+
+                                <!-- Éléments à ajouter dynamiquement -->
+                                <div class="alert-list-box classic-box">
+                                    <p id="" class="left-element">Alerte</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-cart-plus fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="alert-list-box classic-box">
+                                    <p id="" class="left-element">Alerte</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-cart-plus fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="alert-list-box classic-box">
+                                    <p id="" class="left-element">Alerte</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-cart-plus fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="alert-list-box classic-box">
+                                    <p id="" class="left-element">Alerte</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-cart-plus fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="alert-list-box classic-box">
+                                    <p id="" class="left-element">Alerte</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-cart-plus fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="alert-list-box classic-box">
+                                    <p id="" class="left-element">Alerte</p>
+                                    <div class="right-element">
+                                        <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
+                                        <i class="cliquable fa-solid fa-cart-plus fa-lg"></i>
+                                    </div>
+                                    
+                                </div>
+
                             </div>
                         </div>
-                        <div id="formations-personnel">
-                            <div>
-                                <h3>Formations</h3>
-                                <div id="liste_formation"></div>
+                        <div id="alert-details">
+                            
+                            <div class="alert-details-box classic-box">
+                                <p>Détail de l'alerte</p>
+
                             </div>
-                            <div>
-                                <h3>Inscription</h3>
-                                <input type="text" id="prenom" disabled>
-                                <input type="text" id="nom" disabled>
-                                <input type="text" id="tel" disabled>
-                                <input type="button" id="subscribeFormation" value="Inscrire">
+
+                            <div class="alert-details-box classic-box">
+                                <div class="alert-details-box-left">
+                                    <p>Seuil carburant :</p>
+                                    <input id="fuel-amount-bar" class="custom-range" type="range" name="rng" min="0" step="1" max="100" value="0" oninput="updateTextInput()">
+                                </div>
+                                
+                                <div class="alert-details-box-right">
+                                    <select class="alert-details-select classic-box">
+                                        <option value="0" disabled selected>Carburant</option>
+                                        <option value="1">SP-98</option>
+                                        <option value="2">SP-95</option>
+                                        <option value="3">DIESEL</option>
+                                    </select>
+                                    <input id="fuel-amount-input" class="restrict-input alert-details-input-number classic-box" placeholder="XXX L" type="text" oninput="updateRange()">
+                                </div>
+
                             </div>
+
+                            <div class="alert-details-box classic-box">
+                                <div class="alert-details-box-left">
+                                    <p>Seuil produit :</p>
+                                    <input id="product-amount-bar" class="custom-range" type="range" name="rng" min="0" step="1" max="100" value="0" oninput="updateProductInput()">
+                                </div>
+                                
+                                <div class="alert-details-box-right">
+                                    <select class="alert-details-select classic-box">
+                                        <option value="0" disabled selected>Produit</option>
+                                        <option value="1">SP-98</option>
+                                        <option value="2">SP-95</option>
+                                        <option value="3">DIESEL</option>
+                                    </select>
+                                    <input id="product-amount-input" class="restrict-input alert-details-input-number classic-box" placeholder="XXX" type="text" oninput="updateProductRange()">
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
+                    <div id="stationContainer">
+                        <div class="topSection">
+
+                            <div id="station-schedule" class="leftPart classic-box">
+                                <div class="schedule-top">
+                                    <p>Horaires :</p>
+                                </div>
+                                <div class="schedule-bottom">
+                                    <input id="schedule-start" class="classic-box station-box" type="text" placeholder="8 h 00" step="900" onfocus="this.type='time'"/>
+                                    <p>à</p>
+                                    <input id="schedule-end" class="classic-box station-box" type="text" placeholder="18 h 00" step="900" onfocus="this.type='time'"/>
+                                </div>
+                            </div>
+
+                            <div id="station-phone" class="rightPart classic-box">
+                                <div class="phone-top">
+                                    <p>Téléphone</p>
+                                </div>
+                                <div class="phone-bottom">
+                                    <input id="phone-input" class="restrict-input classic-box station-box" type="tel" placeholder="07 82 41 46 61"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bottomSection classic-box">
+                            
+                            <div class="leftDiv">
+                                <div id="bottom-left-top-div" class="classic-box">
+                                    <p id="bottom-left-top-div-p" class="bottom-left-div-p">Nombre de transactions :</p>
+                                    <input class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXX" inputmode="numeric">
+                                </div>
+
+                                <div id="bottom-left-bottom-div" class="classic-box">
+                                    <p id="bottom-left-bottom-div-p" class="bottom-left-div-p">Volume total de carburant :</p>
+                                    <input class="restrict-input bottom-left-div-input classic-box" type="text" placeholder="XXXX L" inputmode="numeric">
+                                </div>
+                            </div>
+
+                            <div class="middleDiv">
+
+                                <div id="bottom-middle-div-top-div" class="classic-box">
+                                    <p id="bottom-middle-div-top-div-p">Montant total en € :</p>
+                                    <input class="restrict-input middle-station-box classic-box" type="text" placeholder="XXXX €" inputmode="numeric">
+                                </div>
+
+                                <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+                                    <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                    <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                    <span class="relative text-black group-hover:text-white">Valider</span>
+                                </a>
+
+                            </div>
+                            <div class="rightDiv">
+                                <div id="right-div-main-div" class="classic-box">
+                                    <p>Informations sur les transactions de la journée</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div id="staffContainer">e</div>
                 </div>
                 <div id="manager-container-bottom">
-                    <div>f</div>
-                    <div id="manager-container-bottom-oil">
-                        <div id="manager-container-bottom-oil-remaining">
+
+                    <div id="incident">
+                        <div id="createIncident">
+                            <input type="datetime-local" id="dateTime" placeholder="Date Heure">
+                            <select id="incidentType">
+                                <option value="" disabled selected>Type</option>
+                                <option value="type1">Type 1</option>
+                                <option value="type2">Type 2</option>
+                                <option value="type3">Type 3</option>
+                            </select>
+                            <textarea id="technicalDetail" placeholder="Détail technique"></textarea>
+                            <textarea id="remark" placeholder="Remarque"></textarea>
+                            <button id="createButton">Créer</button>
+                        </div>
+                      
+                        <div id="checkIncident">
+                          <!-- Les incidents ici -->
+                        </div>
+                    </div>
+
+                    <div id="employee-container-bottom-oil">
+                        <div id="employee-container-bottom-oil-remaining">
                             <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
                             <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
                             <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
                         </div>
-                        <div id="manager-container-bottom-pump-status">
+                        <div id="employee-container-bottom-pump-status">
+
                             <div id="pump1">
                                 <div>
-                                    <p class="pump-name">Pompe n°1</p>
+                                    <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
                                     <p class="status-open"></p>
                                 </div>
                                 <p>
@@ -153,9 +503,10 @@
                                     <span class="pump-oil-name">Gazole</span>
                                 </p>
                             </div>
+
                             <div id="pump2">
                                 <div>
-                                    <p class="pump-name">Pompe n°2</p>
+                                    <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°2</p>
                                     <p class="status-open"></p>
                                 </div>
                                 <p>
@@ -164,9 +515,10 @@
                                     <span class="pump-oil-name">Gazole</span>
                                 </p>
                             </div>
+
                             <div id="pump3">
                                 <div>
-                                    <p class="pump-name">Pompe n°3</p>
+                                    <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°3</p>
                                     <p class="status-close"></p>
                                 </div>
                                 <p>
@@ -175,9 +527,10 @@
                                     <span class="pump-oil-name out-of-stock">Gazole</span>
                                 </p>
                             </div>
+
                             <div id="pump4">
                                 <div>
-                                    <p class="pump-name">Pompe n°4</p>
+                                    <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°4</p>
                                     <p class="status-open"></p>
                                 </div>
                                 <p>
@@ -186,9 +539,10 @@
                                     <span class="pump-oil-name">Gazole</span>
                                 </p>
                             </div>
+
                             <div id="pump5">
                                 <div>
-                                    <p class="pump-name">Pompe n°5</p>
+                                    <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°5</p>
                                     <p class="status-close"></p>
                                 </div>
                                 <p>
@@ -197,9 +551,10 @@
                                     <span class="pump-oil-name">Gazole</span>
                                 </p>
                             </div>
+
                             <div id="pump6">
                                 <div>
-                                    <p class="pump-name">Pompe n°6</p>
+                                    <p class="pump-name"><i class="fa-solid fa-gas-pump"></i>  Pompe n°6</p>
                                     <p class="status-open"></p>
                                 </div>
                                 <p>
@@ -210,11 +565,15 @@
                             </div>
                         </div>
                     </div>
-                    <div>h</div>
+                    <div id="cardContainer">h</div>
                 </div>
             </div>
         </main>
 
         <script src="scripts/displayTime.js"></script>
+        <script src="scripts/restrictInput.js"></script>
+        <script src="scripts/product-amount-bar.js"></script>
+        <script src="scripts/fuel-amount-bar.js"></script>
+        <script src="scripts/pump.js"></script>
     </body>
 </html>
