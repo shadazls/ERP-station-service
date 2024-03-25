@@ -103,6 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Déplacer l'élément vers une autre div
                     const toConfirmElementContainer = document.querySelector('#to-confirm-element-container');
                     let divRight = durationElement.parentElement;
+                    divRight.style.display = 'flex';
+                    divRight.style.gap = '10%';
+                    divRight.style.marginRight = '5%';
                     divRight.removeChild(durationElement);
                     divRight.appendChild(firstIcon);
                     divRight.appendChild(secondIcon);
