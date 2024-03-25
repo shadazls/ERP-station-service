@@ -1,5 +1,57 @@
 #selectProductContainer {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.5%;
+    margin-bottom: 0.25%;
+    margin-left: 0.5%;
+    margin-right: 0.25%;
+    display: flex;
     background-color: #6aa84f;
+    border: thick solid black;
+    border-radius: 10px;
+}
+
+#productPicture {
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 40%;
+    width: 30%;
+}
+
+/* #top-right-container {
+    display: ;
+} */
+
+#searchProductContainer {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 55%;
+    height: 10%;
+}
+
+#searchInput {
+    font-family: 'Balsamiq Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    padding-left: 1.5vw;
+}
+
+#searchIcon {
+    position: absolute;
+    left: 10px; 
+    transform: translateY(50%);
+}
+
+.element-box {
+    background-color: white;
     border: solid black;
-    border-width: medium;
+}
+
+#productDescription {
+    clear: both;
+    width: 30%;
+    height: 30%;
 }

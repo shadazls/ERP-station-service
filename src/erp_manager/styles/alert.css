@@ -1,0 +1,148 @@
+#alertContainer {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.25%;
+    margin-bottom: 0.25%;
+    margin-left: 0.5%;
+    margin-right: 0.25%;
+    display: flex;
+    background-color: #cc0000;
+    border: thick solid black;
+    font-size: 1.25rem;
+    border-radius: 10px;
+}
+
+#alert-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 1%;
+    width: 50%;
+}
+
+.alert-list-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    flex-shrink: 0;
+}
+
+#alert-list .content-wrapper {
+    height: 95%;
+}
+
+#alert-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 2%;
+    width: 50%;
+}
+
+#alert-details > *:first-child {
+    display: initial;
+    margin-bottom: 5%;
+}
+
+#alert-details > *:last-child {
+    margin-top: 5%;
+}
+
+.alert-details-box {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    width: 100%;
+    padding: 2.5%;
+}
+
+.alert-details-box-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.alert-details-box-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 40%;
+}
+
+.alert-details-select {
+    height: 40%;
+    width: 100%;
+    padding-left: 5%;
+    font-size: 1.25rem;
+}
+
+.alert-details-select option:checked{
+    color: red;
+}
+
+.custom-range {
+    /* Cacher le style par défaut du range */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Définir les dimensions de la barre et son remplissage */
+    width: 100%;
+    height: 5%; /* Hauteur du trait */
+    background-color: black; /* Couleur du trait */
+    border: none; /* Supprimer la bordure */
+    outline: none; /* Supprimer l'outline par défaut */
+    margin-bottom: 5%;
+}
+
+/* Style personnalisé pour le curseur */
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem; /* Largeur du curseur */
+    height: 1rem; /* Hauteur du curseur */
+    background-color: black; /* Couleur du curseur */
+    border-color: black;
+    border-radius: 50%; /* Forme du curseur */
+    cursor: pointer; /* Curseur de la souris */
+}
+
+.custom-range::-moz-range-thumb {
+    width: 1rem; /* Largeur du curseur */
+    height: 1rem; /* Hauteur du curseur */
+    background-color: black; /* Couleur du curseur */
+    border-color: black;
+    border-radius: 0; /* Forme du curseur */
+    cursor: pointer; /* Curseur de la souris */
+    position: relative;
+}
+
+.custom-range::-moz-range-thumb::before {
+    content: "";
+    position: absolute;
+    bottom: -0.2rem; /* Ajustez la position verticale du triangle */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0.4rem 0.4rem 0 0.4rem; /* Crée un triangle pointant vers le bas */
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.alert-details-input-number {
+    height: 40%;
+    width: 60%;
+    padding-left: 5%;
+    font-size: 1.25rem;
+}

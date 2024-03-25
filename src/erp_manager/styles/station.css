@@ -1,0 +1,196 @@
+#stationContainer {
+    width: 32.67% !important;
+    height: 29.33vh !important;
+    margin-top: 0.25%;
+    margin-bottom: 0.25%;
+    margin-left: 0.25%;
+    margin-right: 0.25%;
+    background-color: #a64d79;
+    border: thick solid black;
+    border-radius: 10px;
+    font-size: 1.25rem;
+}
+
+.topSection {
+    display: flex;
+    height: 40%; /* Divise la hauteur de la div principale en deux */
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Ajout de styles pour organiser les éléments correctement */
+#station-schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2.5%;
+}
+
+.station-box {
+    min-height: 50px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.schedule-top{
+    display: flex;
+    align-items: center;
+}
+
+.schedule-bottom {
+    display: flex;
+    align-items: center;
+}
+
+#schedule-start {
+    margin-right: 5px;
+}
+
+#schedule-end {
+    margin-left: 5px;
+}
+
+.schedule-bottom input {
+    width: 40%;
+}
+
+.schedule-bottom p {
+    flex: 1; /* Pour occuper l'espace disponible */
+    text-align: center; /* Pour centrer le texte */
+}
+
+.bottomSection {
+    display: flex;
+    height: 47%; /* Divise la hauteur de la div principale en deux */
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.leftPart {
+    margin-right: 1%;
+}
+
+.rightPart {
+    margin-left: 1%;
+}
+
+.leftPart, .rightPart {
+    width: 50%;
+}
+
+#station-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2.5%;
+}
+
+.phone-top {
+    display: flex;
+    align-items: center;
+}
+
+.phone-bottom {
+    display: flex;
+    align-items: center;
+}
+
+#phone-input {
+    width: 80%;
+}
+
+.leftDiv, .middleDiv, .rightDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.leftDiv {
+    width: 50%;
+}
+
+.middleDiv {
+    width: 25%;
+}
+
+.rightDiv {
+    width: 35%;
+}
+
+.middleDiv {
+    align-items: center;
+}
+
+.nestedDiv {
+    background-color: lightgray; /* Juste pour la démonstration, à personnaliser selon vos besoins */
+    padding: 10px; /* Ajoute un peu d'espacement */
+}
+
+#bottom-left-top-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-left: 4%;
+    /* margin-right: 4%; */
+    margin-bottom: 2%;
+    padding: 2%;
+    height: 44%;
+}
+
+#bottom-left-bottom-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 4%;
+    /* margin-right: 4%; */
+    margin-bottom: 4%;
+    padding: 2%;
+    height: 44%;
+}
+
+.bottom-left-div-p {
+    width: 80%;
+}
+
+.bottom-left-div-input {
+    margin-right: 0px;
+    height: 96%;
+    width: 60%;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#bottom-middle-div-top-div {
+    height: 60%;
+    width: 84%;
+    margin-top: 8%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 2%;
+    padding: 4%;
+}
+
+.middle-station-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 45%;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+#right-div-main-div {
+    height: 88.58%;
+    margin-top: 5.71%;
+    margin-right: 5.71%;
+    margin-bottom: 5.71%;
+    padding: 4%;
+}
