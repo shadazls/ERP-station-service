@@ -61,27 +61,31 @@ function validateForm(event) {
                         "username": usernameInputValue,
                         "password": hash
                     }),
-                    success: function(response) {
+                    success: function(response, status, xhr) {
                         console.log(response);
-                        if (response.success) {
-                            // Redirection vers la page appropriée
-                            if (response.role === '0') {
+                        // Vérifier le code de statut HTTP
+                        if (xhr.status === 200) {
+                            // La connexion a réussi
+                            if (response.role === 0) {
                                 window.location.href = '/erp_cash_desk/employee.html';
-                            } else if (response.role === '1') {
+                            } else if (response.role === 1) {
                                 window.location.href = '/erp_manager/manager.html';
                             }
                         } else {
-                            // Gestion des erreurs
-                            if (response.error === 'Unauthorized') {
-                                usernameError.textContent = "Nom d'utilisateur ou mot de passe incorrect";
-                                usernameError.classList.remove('hidden');
-                            } else {
-                                console.log("Une erreur inattendue s'est produite");
-                            }
+                            // La connexion a échoué
+                            usernameError.textContent = "Nom d'utilisateur ou mot de passe incorrect";
+                            usernameError.classList.remove('hidden');
                         }
                     },
                     error: function(xhr, status, error) {
-                        console.error("Erreur de requête: " + xhr.status);
+                        // Vérifier le code de statut HTTP
+                        if (xhr.status === 401) {
+                            // Nom d'utilisateur ou mot de passe incorrect
+                            usernameError.textContent = "Nom d'utilisateur ou mot de passe incorrect";
+                            usernameError.classList.remove('hidden');
+                        } else {
+                            console.error("Erreur de requête: " + xhr.status);
+                        }
                     }
                 });
             })
