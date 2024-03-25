@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     background-color: #597EAA;
-    
+    position: relative; /* Pour rendre la position absolute relative à cette div */
 }
 
 #cards > div {
@@ -65,7 +65,16 @@
 
 
 #divPhoto {
-    order: 3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#divPhoto button {
+    margin-top: 4%;
 }
 
 
