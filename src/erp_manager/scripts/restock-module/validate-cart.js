@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createCommand(commandName) {
         const newElement = document.createElement('div');
-        newElement.classList.add('element-box', 'classic-box');
+        newElement.classList.add('element-box', 'classic-box', 'hvr-shrink', 'cliquable');
 
         const leftElement = document.createElement('p');
         leftElement.classList.add('left-element');
