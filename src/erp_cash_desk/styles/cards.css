@@ -11,7 +11,15 @@
     margin: 1.5%;
 }
 
-#cards input {
+#divIdCard input {
+    font-family: Balsamiq Sans;
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 2px;
+}
+
+#divName input {
     font-family: Balsamiq Sans;
     width: 50%;
     box-sizing: border-box;
@@ -43,16 +51,27 @@
     align-items: center;
 }
 
-.search-icon {
+.search-wrapper i {
+    background-color: white;
+    border: 2px solid black;
     padding: 2px;
-}
-
-.search-icon i {
-    font-size: 1.2em;
+    border-right: none;
 }
 
 #search-input {
     margin-right: 2%;
+    border-left: none;
+    outline: none;
+}
+
+#divSearch input {
+    font-family: Balsamiq Sans;
+    width: 45%;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2px;
 }
 
 
@@ -116,4 +135,5 @@
 
 #divValider {
     cursor: pointer;
+    
 }
