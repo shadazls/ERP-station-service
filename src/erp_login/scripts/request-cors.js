@@ -67,9 +67,9 @@ function validateForm(event) {
                         if (xhr.status === 200) {
                             // La connexion a réussi
                             if (response.role === 0) {
-                                window.location.href = '/erp_cash_desk/employee.html';
+                                window.location.href = '/src/erp_cash_desk/employee.html';
                             } else if (response.role === 1) {
-                                window.location.href = '/erp_manager/manager.html';
+                                window.location.href = '/src/erp_manager/manager.html';
                             }
                         } else {
                             // La connexion a échoué
