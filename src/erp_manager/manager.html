@@ -174,8 +174,8 @@
                                 <!-- <div class="element-box classic-box">
                                     <p id="" class="left-element">Disque A X,X€</p>
                                     <div class="right-element">
-                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark"></i>
                                     </div>
                                     
                                 </div> -->
@@ -413,9 +413,9 @@
                             </div>
                             
                             <p class="margin-top-2">Inscription :</p>
-                            <input type="text" class="staff-inscription-box classic-box" placeholder="Nom : Rey">
-                            <input type="text" class="staff-inscription-box classic-box" placeholder="Prénom : Gaetan">
-                            <input type="text" class="restrict-input staff-inscription-box classic-box" placeholder="Téléphone : 07 82 41 46 61">
+                            <input id="inscription-name" type="text" class="staff-inscription-box classic-box" placeholder="Nom : Rey">
+                            <input id="inscription-first-name" type="text" class="staff-inscription-box classic-box" placeholder="Prénom : Gaetan">
+                            <input id="inscription-phone" type="text" class="restrict-input staff-inscription-box classic-box" placeholder="Téléphone : 07 82 41 46 61">
                         </div>
                     </div>
                 </div>
@@ -448,7 +448,7 @@
                         </div>
                         <div id="employee-container-bottom-pump-status">
 
-                            <div id="pump1">
+                            <div id="pump1" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
                                     <p class="status-open"></p>
@@ -460,7 +460,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump2">
+                            <div id="pump2" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°2</p>
                                     <p class="status-open"></p>
@@ -472,7 +472,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump3">
+                            <div id="pump3" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°3</p>
                                     <p class="status-close"></p>
@@ -484,7 +484,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump4">
+                            <div id="pump4" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°4</p>
                                     <p class="status-open"></p>
@@ -496,7 +496,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump5">
+                            <div id="pump5" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°5</p>
                                     <p class="status-close"></p>
@@ -508,7 +508,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump6">
+                            <div id="pump6" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i>  Pompe n°6</p>
                                     <p class="status-open"></p>
@@ -541,7 +541,7 @@
                         </div>
             
                         <div id="divPhoto">
-                            <img src="/src/erp_cash_desk/image/photo-profil.jpg" alt="Photo de profil">
+                            <img src="./assets/default-pfp.jpg" alt="Photo de profil">
                             <button class="button">Modifier</button>
                         </div>
             
@@ -598,10 +598,12 @@
         <script src="scripts/restock-module/to-confirm.js"></script>
         <script src="scripts/alert-module/fuel-amount-bar.js"></script>
         <script src="scripts/alert-module/product-amount-bar.js"></script>
+        <script src="scripts/alert-module/fuel-product-limit.js"></script>
         <script src="scripts/station-module/send-day-report.js"></script>
         <script src="scripts/station-module/opening-schedules.js"></script>
         <script src="scripts/station-module/phone.js"></script>
         <script src="scripts/staff-module/staff-list.js"></script>
+        <script src="scripts/staff-module/inscription.js"></script>
         <script src="scripts/incident.js"></script>
         <script src="scripts/pump.js"></script>
     </body>

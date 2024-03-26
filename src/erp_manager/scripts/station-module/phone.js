@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 iziToast.success({
                     title: 'OK',
-                    message: 'La valeur "' + inputValue + '" a été enregistrée avec succès!',
+                    message: 'La valeur "' + phoneInput.value + '" a été enregistrée avec succès!',
                 });
             }
         }

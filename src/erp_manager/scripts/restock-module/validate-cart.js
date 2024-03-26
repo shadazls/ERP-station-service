@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const durationElements = document.querySelectorAll('#in-progress-commands-container .right-element p');
         
         const firstIcon = document.createElement('i');
-        firstIcon.classList.add('green', 'cliquable', 'fa-solid', 'fa-circle-check', 'fa-lg');
+        firstIcon.classList.add('green', 'cliquable', 'fa-solid', 'fa-circle-check');
 
         const secondIcon = document.createElement('i');
-        secondIcon.classList.add('red', 'cliquable', 'fa-solid', 'fa-circle-xmark', 'fa-lg');
+        secondIcon.classList.add('red', 'cliquable', 'fa-solid', 'fa-circle-xmark');
 
         durationElements.forEach((durationElement) => {
             // Extraire le nombre de la chaîne de caractères

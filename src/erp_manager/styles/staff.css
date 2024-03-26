@@ -9,7 +9,7 @@
     background-color: #f1c232;
     border: thick solid black;
     border-radius: 10px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 #staff-left-div {
@@ -30,6 +30,7 @@
     overflow-y: scroll;
     scrollbar-width: auto;
     scrollbar-color: black white;
+    font-size: 1rem;
     /* scrollbar-color: #888 #f0f0f0; */
 }
 
@@ -81,7 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 50px;
+    min-height: 10%;
     width: 100%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
@@ -99,11 +100,11 @@
 
 .staff-right-div-main-p {
     margin-top: 2%;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 .staff-right-div-secondary-p {
     margin-top: 2%;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #767676;
 }
 
@@ -115,11 +116,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 50px;
+    min-height: 12%;
     width: 100%;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
     padding-left: 2.5%;
     flex-shrink: 0;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
