@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Création de l'élément à ajouter dynamiquement
         var newElement = document.createElement("div");
-        newElement.classList.add("element-box", "classic-box");
+        newElement.id = productOrEnergy;
+        newElement.classList.add("element-box", "classic-box", "hvr-shrink", "cliquable");
 
         var leftElement = document.createElement("p");
         leftElement.classList.add("left-element");

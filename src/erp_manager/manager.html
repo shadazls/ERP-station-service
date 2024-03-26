@@ -19,11 +19,16 @@
         <link rel="stylesheet" href="styles/button.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="../../node_modules/izitoast/dist/css/iziToast.min.css">
+        <!-- <link rel="stylesheet" href="iziToast.min.css"> -->
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script src="../../node_modules/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
+        <!-- <script src="iziToast.min.js" type="text/javascript"></script> -->
         <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
+    <!-- <body onload="toggleZoomScreen()"> -->
         <header id="header">
             <h1 id="headerTitle" class="hover-1">FuelSync</h1>
 
@@ -123,13 +128,13 @@
                             <div id="cart-container" class="content-wrapper">
                                 
                                 <!-- Exemple d'éléments ajouté dynamiquement -->
-                                <div class="element-box classic-box">
+                                <!-- <div class="element-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Disque A - 5</p>
                                     <div class="right-element">
                                         <p>X,X€</p>
                                     </div>
                                     
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -149,13 +154,13 @@
                             <p>En cours</p>
                             <div id="in-progress-commands-container" class="content-wrapper">
                                 <!-- Exemple d'éléments ajouté dynamiquement -->
-                                <div class="element-box classic-box">
+                                <!-- <div class="element-box classic-box hvr-round-corners">
                                     <p id="" class="left-element">Disque A - X,X€</p>
                                     <div class="right-element">
                                         <p>6j</p>
                                     </div>
                                     
-                                </div>
+                                </div> -->
                             </div>
 
                         </div>
@@ -169,8 +174,8 @@
                                 <!-- <div class="element-box classic-box">
                                     <p id="" class="left-element">Disque A X,X€</p>
                                     <div class="right-element">
-                                        <i class="green cliquable fa-solid fa-circle-check fa-lg"></i>
-                                        <i class="red cliquable fa-solid fa-circle-xmark fa-lg"></i>
+                                        <i class="green cliquable fa-solid fa-circle-check"></i>
+                                        <i class="red cliquable fa-solid fa-circle-xmark"></i>
                                     </div>
                                     
                                 </div> -->
@@ -187,7 +192,7 @@
                             <div class="content-wrapper">
 
                                 <!-- Éléments à ajouter dynamiquement -->
-                                <div class="alert-list-box classic-box">
+                                <div class="alert-list-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Alerte</p>
                                     <div class="right-element">
                                         <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
@@ -196,7 +201,7 @@
                                     
                                 </div>
 
-                                <div class="alert-list-box classic-box">
+                                <div class="alert-list-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Alerte</p>
                                     <div class="right-element">
                                         <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
@@ -205,7 +210,7 @@
                                     
                                 </div>
 
-                                <div class="alert-list-box classic-box">
+                                <div class="alert-list-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Alerte</p>
                                     <div class="right-element">
                                         <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
@@ -214,7 +219,7 @@
                                     
                                 </div>
 
-                                <div class="alert-list-box classic-box">
+                                <div class="alert-list-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Alerte</p>
                                     <div class="right-element">
                                         <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
@@ -223,7 +228,7 @@
                                     
                                 </div>
 
-                                <div class="alert-list-box classic-box">
+                                <div class="alert-list-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Alerte</p>
                                     <div class="right-element">
                                         <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
@@ -232,7 +237,7 @@
                                     
                                 </div>
 
-                                <div class="alert-list-box classic-box">
+                                <div class="alert-list-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Alerte</p>
                                     <div class="right-element">
                                         <i class="cliquable fa-solid fa-circle-check fa-lg"></i>
@@ -367,23 +372,23 @@
                             </ul>
                             <p id="staff-left-second-p">Gestion formation :</p>
                             <div class="content-wrapper-v2">
-                                <div class="staff-formation-box classic-box">
+                                <div class="staff-formation-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Apprendre la pédagogie - TOUT DE SUITE</p>
                                     
                                 </div>
-                                <div class="staff-formation-box classic-box">
+                                <div class="staff-formation-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Utilisation caisse - 01/04 14:00</p>
                                     
                                 </div>
-                                <div class="staff-formation-box classic-box">
+                                <div class="staff-formation-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Réparer pompe - 03/04 10:00</p>
                                     
                                 </div>
-                                <div class="staff-formation-box classic-box">
+                                <div class="staff-formation-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Apprendre (à Rayane) à coder - 10/04 16:00</p>
                                     
                                 </div>
-                                <div class="staff-formation-box classic-box">
+                                <div class="staff-formation-box classic-box hvr-shrink cliquable">
                                     <p id="" class="left-element">Arrêter d'avoir mal au crâne - 10/04 16:00</p>
                                     
                                 </div>
@@ -408,9 +413,9 @@
                             </div>
                             
                             <p class="margin-top-2">Inscription :</p>
-                            <input type="text" class="staff-inscription-box classic-box" placeholder="Nom : Rey">
-                            <input type="text" class="staff-inscription-box classic-box" placeholder="Prénom : Gaetan">
-                            <input type="text" class="restrict-input staff-inscription-box classic-box" placeholder="Téléphone : 07 82 41 46 61">
+                            <input id="inscription-name" type="text" class="staff-inscription-box classic-box" placeholder="Nom : Rey">
+                            <input id="inscription-first-name" type="text" class="staff-inscription-box classic-box" placeholder="Prénom : Gaetan">
+                            <input id="inscription-phone" type="text" class="restrict-input staff-inscription-box classic-box" placeholder="Téléphone : 07 82 41 46 61">
                         </div>
                     </div>
                 </div>
@@ -443,7 +448,7 @@
                         </div>
                         <div id="employee-container-bottom-pump-status">
 
-                            <div id="pump1">
+                            <div id="pump1" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
                                     <p class="status-open"></p>
@@ -455,7 +460,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump2">
+                            <div id="pump2" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°2</p>
                                     <p class="status-open"></p>
@@ -467,7 +472,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump3">
+                            <div id="pump3" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°3</p>
                                     <p class="status-close"></p>
@@ -479,7 +484,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump4">
+                            <div id="pump4" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°4</p>
                                     <p class="status-open"></p>
@@ -491,7 +496,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump5">
+                            <div id="pump5" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°5</p>
                                     <p class="status-close"></p>
@@ -503,7 +508,7 @@
                                 </p>
                             </div>
 
-                            <div id="pump6">
+                            <div id="pump6" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i>  Pompe n°6</p>
                                     <p class="status-open"></p>
@@ -516,11 +521,76 @@
                             </div>
                         </div>
                     </div>
-                    <div id="cardContainer">h</div>
+
+                    <div id="cards">
+                        <div id="divSearch">
+                            <p>N° Carte</p>
+                            <div class="search-wrapper">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="search" id="search-input" placeholder="rechercher">
+                                <button class="button">SCANNER</button>
+                            </div>
+                        </div>
+            
+                        <div id="divIdCard">
+                            <p>Numéro d'identification de la carte :</p>
+                            <div>
+                                <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+                                <button class="button">Modifier</button>
+                            </div>
+                        </div>
+            
+                        <div id="divPhoto">
+                            <img src="./assets/default-pfp.jpg" alt="Photo de profil">
+                            <button class="button">Modifier</button>
+                        </div>
+            
+                        <div id="divName">
+                            <p>NOM &amp; PRÉNOM :</p>
+                            <div>
+                                <input type="text" placeholder="BOJOVIC RAYANE">
+                                <button class="button">Modifier</button>
+                            </div>
+                        </div>
+            
+                        <div id="divDateSolde">
+                            <div id="divDate">
+                                <p>Date de naissance :</p>
+                                <p>29/07/2003</p>
+                            </div>
+                
+                            <div id="divSolde">
+                                <p>Solde :</p>
+                                <p>XXXX</p>
+                            </div>
+                        </div>
+            
+                        <div id="divCreatonValiderCrediter">
+                            <div id="divCreation">
+                                <p>Date de création :</p>
+                                <p>21/02/2024</p>
+                            </div>
+            
+                            <div id="divValider">
+                                <p>Valider <i class="fa-solid fa-circle-check"></i></p>
+                            </div>
+            
+                            <div id="divCrediter">
+                                <button class="button">Créditer</button>
+                            </div>
+                        </div>
+            
+                    </div>
                 </div>
             </div>
         </main>
 
+
+        <script>
+            function toggleZoomScreen() {
+                document.body.style.zoom = "80%";
+            } 
+        </script>
         <script src="scripts/common/displayTime.js"></script>
         <script src="scripts/common/restrictInput.js"></script>
         <script src="scripts/restock-module/add-to-cart.js"></script>
@@ -528,8 +598,12 @@
         <script src="scripts/restock-module/to-confirm.js"></script>
         <script src="scripts/alert-module/fuel-amount-bar.js"></script>
         <script src="scripts/alert-module/product-amount-bar.js"></script>
+        <script src="scripts/alert-module/fuel-product-limit.js"></script>
         <script src="scripts/station-module/send-day-report.js"></script>
+        <script src="scripts/station-module/opening-schedules.js"></script>
+        <script src="scripts/station-module/phone.js"></script>
         <script src="scripts/staff-module/staff-list.js"></script>
+        <script src="scripts/staff-module/inscription.js"></script>
         <script src="scripts/incident.js"></script>
         <script src="scripts/pump.js"></script>
     </body>

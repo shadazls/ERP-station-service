@@ -8,7 +8,7 @@
     display: flex;
     background-color: #cc0000;
     border: thick solid black;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border-radius: 10px;
 }
 
@@ -87,7 +87,7 @@
     height: 40%;
     width: 100%;
     padding-left: 5%;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .alert-details-select option:checked{
@@ -144,5 +144,5 @@
     height: 40%;
     width: 60%;
     padding-left: 5%;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
