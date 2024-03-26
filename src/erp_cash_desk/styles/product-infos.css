@@ -1,27 +1,16 @@
 #divproduct {
     background-color: #6AA84F;
     display: flex;
-    flex-direction: column;
     position: relative;
+    font-family: Balsamiq Sans;
 }
 
 #left {
-
+    flex-grow: 1;
 }
 
 #right {
-
-}
-
-#right input{
-    font-family: Balsamiq Sans;
-    width: 45%;
-    box-sizing: border-box;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    padding: 2px;
-    top: 0;
+    flex-grow: 1;
 }
 
 #divPhotoProduit {
@@ -40,4 +29,49 @@
     border: 2px solid #000;
     object-fit: cover;
     object-position: center;
+    margin: 2%;
+}
+
+#description {
+    background-color: white;
+    border: 2px solid #000;
+    width: 50%;
+    height: 35%;
+    margin: 2%;
+}
+
+.search-wrapper-produit {
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper-produit i {
+    background-color: white;
+    border: 2px solid black;
+    padding: 2px;
+    border-right: none;
+}
+
+#search-input-produit {
+    margin-right: 2%;
+    border-left: none;
+    outline: none;
+}
+
+#right input {
+    font-family: Balsamiq Sans;
+    width: 45%;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2px;
+}
+
+#alerter {
+    background-color: white;
+    border: 2px solid #000;
+    width: 50%;
+    height: 35%;
+    margin: 2%;
 }
