@@ -1,0 +1,33 @@
+/* Style personnalisé pour la boîte de dialogue confirm */
+.custom-confirm {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.custom-confirm-message {
+    margin-bottom: 20px;
+}
+
+.custom-confirm-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-confirm-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.custom-confirm-button.cancel {
+    background-color: #f44336;
+}
