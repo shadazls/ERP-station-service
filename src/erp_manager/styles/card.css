@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     background-color: #597EAA;
-    position: relative; /* Pour rendre la position absolute relative à cette div */
+    position: relative;
     width: 32.67% !important;
     height: 29.33vh !important;
     /* margin-top: 0.25%;
