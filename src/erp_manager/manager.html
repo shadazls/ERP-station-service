@@ -76,20 +76,40 @@
             <div>
                 <div id="manager-container-top">
                     
-                    <div id="selectProductContainer" class="sortable">
-                        <div id="productPicture" class="element-box"></div>
-
-                        <div id="searchProductContainer">
-                            <input id="searchInput" class="element-box" placeholder="Rechercher" type="text">
-                            <span id="searchIcon">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </span>
+                    <div id="divproduct" class="sortable">
+                        <div id="left">
+                            <div id="divPhotoProduit">
+                                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                                <div id="texteInfoProduit">
+                                    <p>Nom</p>
+                                    <p>Prix</p>
+                                    <p>Quantité</p>
+                                </div>
+                            </div>
+                            <div id="modifPrix">
+                                <p>Modifier le prix :</p>
+                                <input type="text" id="inputPrix" placeholder="XX,XX€">
+                                <button>Modifier</button>
+                            </div>
+                        </div>                        
+              
+                          <div id="right">
+              
+                            <div class="search-wrapper-produit">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                              <input type="search" id="search-input-produit" placeholder="rechercher">
+                            </div>
+              
+                            <div id="description">
+                              <p>Description</p>
+                            </div>
+              
+                            <div id="alerter">
+                              <p>Alerter pour une commande :</p>
+                              <input type="text" id="quantité" placeholder="Quantité">
+                              <button>Confirmer</button>
+                            </div>
                         </div>
-
-                        <div id="productDescription" class="element-box">
-
-                        </div>
-                    
                     </div>  
 
                     <div id="reStockingContainer" class="sortable">
