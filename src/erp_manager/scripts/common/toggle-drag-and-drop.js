@@ -1,6 +1,6 @@
 // Récupérer l'élément de commutation (toggle switch)
 const toggleSwitch = document.getElementById('toggleSwitch');
-const selectProductContainer = document.getElementById('selectProductContainer');
+const selectProductContainer = document.getElementById('divproduct');
 const reStockingContainer = document.getElementById('reStockingContainer');
 const alertContainer = document.getElementById('alertContainer');
 const stationContainer = document.getElementById('stationContainer');
