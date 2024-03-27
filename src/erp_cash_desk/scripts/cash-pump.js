@@ -17,10 +17,10 @@ function getPumpData() {
                     // Déterminer le texte et la couleur en fonction de l'état
                     let statusText, color;
                     if (pump.state === 1) {
-                        statusText = 'PAYEE';
+                        statusText = 'PAYÉE';
                         color = 'green';
                     } else {
-                        statusText = 'A ENCAISSER';
+                        statusText = 'À ENCAISSER';
                         color = 'red';
                     }
 
