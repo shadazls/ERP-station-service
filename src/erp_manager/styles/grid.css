@@ -10,11 +10,11 @@ body {
 }
 
 header {
-    height: 9.75vh;
+    height: 10%;
 }
 
 main {
-    height: 90vh;
+    height: 90%;
     width: 100%;
 }
 
@@ -24,7 +24,7 @@ main {
 }
 
 #manager-container-top>div, #manager-container-center>div, #manager-container-bottom>div {
-    height: 30vh;
+    height: 30%;
     width: 33.33%;
 }
 
