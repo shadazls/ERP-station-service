@@ -21,9 +21,21 @@ function restoreSortOrder(containerId) {
 }
 
 // Initialiser SortableJS pour chaque container avec swap: true
-Sortable.create(document.getElementById('manager-container-top'), { group: 'container-group', swap: true });
-Sortable.create(document.getElementById('manager-container-center'), { group: 'container-group', swap: true });
-Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-group', swap: true });
+Sortable.create(document.getElementById('manager-container-top'), {
+    group: 'container-group',
+    swap: true,
+    // filter: '.sortable-ignore', // Spécifiez la classe des éléments à ignorer pour le drag and drop
+});
+Sortable.create(document.getElementById('manager-container-center'), {
+    group: 'container-group',
+    swap: true,
+    // filter: '.sortable-ignore', // Spécifiez la classe des éléments à ignorer pour le drag and drop
+});
+Sortable.create(document.getElementById('manager-container-bottom'), {
+    group: 'container-group',
+    swap: true,
+    // filter: '.sortable-ignore', // Spécifiez la classe des éléments à ignorer pour le drag and drop
+});
 
 // Ajouter un événement onEnd pour sauvegarder l'ordre des éléments après le glisser-déposer
 [document.getElementById('manager-container-top'), document.getElementById('manager-container-center'), document.getElementById('manager-container-bottom')].forEach(container => {
