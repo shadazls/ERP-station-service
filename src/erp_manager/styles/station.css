@@ -1,10 +1,10 @@
 #stationContainer {
     width: 32.67% !important;
     height: 29.33vh !important;
-    margin-top: 0.25%;
+    /* margin-top: 0.25%;
     margin-bottom: 0.25%;
     margin-left: 0.25%;
-    margin-right: 0.25%;
+    margin-right: 0.25%; */
     background-color: #a64d79;
     border: thick solid black;
     border-radius: 10px;
@@ -136,10 +136,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 4%;
     /* margin-right: 4%; */
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     padding: 2%;
     height: 44%;
 }
@@ -147,10 +147,10 @@
 #bottom-left-bottom-div {
     display: flex;
     justify-content: space-between;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: 4%;
     /* margin-right: 4%; */
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     padding: 2%;
     height: 44%;
 }
@@ -170,11 +170,15 @@
 #bottom-middle-div-top-div {
     height: 60%;
     width: 84%;
-    margin-top: 8%;
+    margin-top: 4%;
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 2%;
     padding: 4%;
+}
+
+#bottom-middle-div-top-div-p {
+    font-size: 1rem;
 }
 
 .middle-station-box {
@@ -182,15 +186,16 @@
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    height: 45%;
+    margin-top: 5%;
+    height: 35%;
     width: 100%;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
 }
 
 #right-div-main-div {
     height: 88.58%;
-    margin-top: 5.71%;
+    margin-top: 3%;
     margin-right: 5.71%;
-    margin-bottom: 5.71%;
+    margin-bottom: 3%;
     padding: 4%;
 }

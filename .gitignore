@@ -1,5 +1,5 @@
 # Ignore common image file formats
-*.jpg
+# *.jpg
 *.jpeg
 *.png
 *.gif
