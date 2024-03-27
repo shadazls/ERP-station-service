@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuelSync - ERP</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div id="CONTAINER_TOUTE_LA_PAGE" style="margin: 20%; background-color: blue;">
+        <div id="CONTAINER_TOP">
+            <div id="RESTOCK_CONTAINER" class="sortable" style="color: yellow;">
+                <p>Contenu 1 station</p>
+                <p>Contenu 2 station</p>
+            </div>
+            <div id="STAFF_CONTAINER" class="sortable" style="color: green;">
+                <p>Contenu 1 restock</p>
+                <p>Contenu 2 restock</p>
+            </div>
+            <div id="ALERTE_CONTAINER" class="sortable" style="color: red;">
+                <p>Contenu 1 alerte</p>
+                <p>Contenu 2 alerte</p>
+            </div>
+        </div>
+        <div id="CONTAINER_BOTTOM">
+            <div id="FORMATION_CONTAINER" class="sortable" style="background-color: orange;">
+                <div>Element A</div>
+                <div>Element B</div>
+                <div>Element C</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Initialiser SortableJS pour chaque container
+        Sortable.create(document.getElementById('CONTAINER_TOP'), { group: 'container-group' });
+        Sortable.create(document.getElementById('CONTAINER_BOTTOM'), { group: 'container-group' });
+    </script>
+</body>
+</html>
