@@ -10,17 +10,22 @@ body {
 }
 
 header {
-    height: 9.75vh;
+    height: 8vh;
 }
 
 main {
-    height: 90vh;
+    height: 90%;
     width: 100%;
 }
 
 #manager-container-top, #manager-container-center, #manager-container-bottom {
     width: 100%;
     display: flex;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    gap: 0.5%;
 }
 
 #manager-container-top>div, #manager-container-center>div, #manager-container-bottom>div {
