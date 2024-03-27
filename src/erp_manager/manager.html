@@ -587,9 +587,9 @@
 
 
         <script>
-            Sortable.create(document.getElementById('manager-container-top'), { group: 'container-group' });
-            Sortable.create(document.getElementById('manager-container-center'), { group: 'container-group' });
-            Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-group' });
+            Sortable.create(document.getElementById('manager-container-top'), { group: 'container-group', swap: true });
+            Sortable.create(document.getElementById('manager-container-center'), { group: 'container-group', swap: true });
+            Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-group', swap: true });
         </script>
         <script src="scripts/common/displayTime.js"></script>
         <script src="scripts/common/restrictInput.js"></script>

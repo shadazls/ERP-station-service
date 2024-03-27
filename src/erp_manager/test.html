@@ -7,33 +7,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 </head>
 <body>
-    <div id="CONTAINER_TOUTE_LA_PAGE" style="margin: 20%; background-color: blue;">
-        <div id="CONTAINER_TOP">
-            <div id="RESTOCK_CONTAINER" class="sortable" style="color: yellow;">
+    <div id="CONTAINER_TOUTE_LA_PAGE" style="margin: 20%;">
+        <div id="manager-container-top">
+            <div id="select-product-container" class="sortable" style="color: green;">
                 <p>Contenu 1 station</p>
                 <p>Contenu 2 station</p>
             </div>
-            <div id="STAFF_CONTAINER" class="sortable" style="color: green;">
+            <div id="restock-container" class="sortable" style="color: purple;">
                 <p>Contenu 1 restock</p>
                 <p>Contenu 2 restock</p>
             </div>
-            <div id="ALERTE_CONTAINER" class="sortable" style="color: red;">
+            <div id="imaginary-container" class="sortable" style="color: darkgray;">
                 <p>Contenu 1 alerte</p>
                 <p>Contenu 2 alerte</p>
             </div>
         </div>
-        <div id="CONTAINER_BOTTOM">
-            <div id="FORMATION_CONTAINER" class="sortable" style="background-color: orange;">
+        <div id="manager-container-center">
+            <div id="alerte-container" class="sortable" style="background-color: red;">
+                <div>Element A</div>
+                <div>Element B</div>
+                <div>Element C</div>
+            </div>
+            <div id="station-container" class="sortable" style="background-color: pink;">
+                <div>Element A</div>
+                <div>Element B</div>
+                <div>Element C</div>
+            </div>
+            <div id="staff-container" class="sortable" style="background-color: yellow;">
                 <div>Element A</div>
                 <div>Element B</div>
                 <div>Element C</div>
             </div>
         </div>
+        <div id="manager-container-bottom">
+            <div id="incident-container" class="sortable" style="color: brown;">
+                <p>Contenu 1 station</p>
+                <p>Contenu 2 station</p>
+            </div>
+            <div id="pump-container" class="sortable" style="color: orange;">
+                <p>Contenu 1 restock</p>
+                <p>Contenu 2 restock</p>
+            </div>
+            <div id="card-container" class="sortable" style="color: blue;">
+                <p>Contenu 1 alerte</p>
+                <p>Contenu 2 alerte</p>
+            </div>
+        </div>
     </div>
     <script>
-        // Initialiser SortableJS pour chaque container
-        Sortable.create(document.getElementById('CONTAINER_TOP'), { group: 'container-group' });
-        Sortable.create(document.getElementById('CONTAINER_BOTTOM'), { group: 'container-group' });
+        // Initialiser SortableJS pour chaque container avec l'option 'swap'
+        Sortable.create(document.getElementById('manager-container-top'), { group: 'container-group', swap: true });
+        Sortable.create(document.getElementById('manager-container-center'), { group: 'container-group', swap: true });
+        Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-group', swap: true });
     </script>
 </body>
 </html>
