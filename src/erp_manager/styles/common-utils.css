@@ -107,5 +107,5 @@
 }
 
 .sortable {
-    cursor:copy;
+    cursor: grab;
 }
