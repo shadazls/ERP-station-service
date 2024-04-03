@@ -50,7 +50,7 @@ input:focus {
   border-bottom: 5px solid #ffa580;
 }
 
-.formError {
+.form-error {
   font-family: 'Fjalla One';
   color: red;
 }

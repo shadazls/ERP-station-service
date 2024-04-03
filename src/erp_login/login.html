@@ -17,18 +17,19 @@
         <form id="login-form" novalidate aria-labelledby="primary-text">
             
             <div class="form-group">
-                <input id="username-input" placeholder="Entrez votre nom d'utilisateur" type="text" required aria-required="true" aria-invalid="false">
                 <span id="username-error" class="form-error hidden" role="alert" aria-live="assertive"></span>
+                <input id="username-input" placeholder="Entrez votre nom d'utilisateur" type="text" required aria-required="true" aria-invalid="false">
             </div>
             
             <div class="form-group">
                 <div id="password-container">
+                    <span id="password-error" class="form-error hidden" role="alert" aria-live="assertive"></span>
                     <input id="password-input" placeholder="Entrez votre mot de passe" type="password" required aria-required="true" aria-invalid="false">
                     <span id="password-toggle" class="password-toggle" role="button" aria-label="Afficher/masquer le mot de passe" aria-pressed="false">
                         <i class="far fa-eye"></i>
                     </span>
                 </div>
-                <span id="password-error" class="form-error hidden" role="alert" aria-live="assertive"></span>
+                
             </div>
             
             <button id="connection-button" type="submit">Connexion</button>
