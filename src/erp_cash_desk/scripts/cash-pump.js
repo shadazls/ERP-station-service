@@ -37,3 +37,12 @@ function getPumpData() {
 // Appeler la fonction pour la première fois et démarrer l'intervalle
 getPumpData();
 setInterval(getPumpData, 2500); // Appeler la fonction toutes les 5 secondes (5000 ms)
+
+$(document).on('click', '.line-pump p:contains("À ENCAISSER")', function() {
+    let pumpInfo = $(this).text().trim().split(' - ');
+
+    let newProduct = $('<div class="product-info"></div>');
+    newProduct.text(pumpInfo[0] + ' - ' + pumpInfo[1] + ' - ' + pumpInfo[2]);
+
+    $('#ticket-items').append(newProduct);
+});
