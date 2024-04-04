@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles/grid.css">
         <link rel="stylesheet" href="styles/popup.css">
         <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/toggle-deux.css">
         <link rel="stylesheet" href="styles/selectProduct.css">
         <link rel="stylesheet" href="styles/reStocking.css">
         <link rel="stylesheet" href="styles/alert.css">
@@ -37,6 +38,13 @@
             <div id="secondaryHeadersContainer">
                 <h2 id="secondHeaderTitle">Tableau de bord</h2>
                 <h3 id="thirdHeaderTitle">Système de gestion ERP</h3>
+            </div>
+
+            <div id="toggleContainer">
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider round"></span>
+                </label>
             </div>
 
             <div id="timeContainer">
@@ -112,13 +120,13 @@
                         </div>
                     </div>  
 
-                    <div id="reStockingContainer" class="sortable">
+                    <div id="reStockingContainer" class="">
                         
                         <div id="ask-restock">
                             
                             <p id="">Demander un réapprovisionnement</p>
 
-                            <input id="products-and-energy-input" list="products-and-energy"  class="classic-box ask-restock-box" placeholder="Produit ou énergie">
+                            <input id="products-and-energy-input" list="products-and-energy" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
                             <datalist id="products-and-energy">
                                 <option value="Chiffon"></option>
                                 <option value="Liquide vaisselle"></option>
@@ -143,9 +151,11 @@
 
                         </div>
 
-                        <div id="shopping-cart" class="classic-box restock-box">
+                        <div id="shopping-cart" class="classic-box restock-box sortable-ignore">
                             <p class="">Panier</p>
                             <div id="cart-container" class="content-wrapper">
+                                <button type="button" class="btn btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                </button>
                                 
                                 <!-- Exemple d'éléments ajouté dynamiquement -->
                                 <!-- <div class="element-box classic-box hvr-shrink cliquable">
@@ -170,7 +180,7 @@
 
                         </div>
 
-                        <div id="in-progress" class="classic-box restock-box">
+                        <div id="in-progress" class="classic-box restock-box sortable-ignore">
                             <p>En cours</p>
                             <div id="in-progress-commands-container" class="content-wrapper">
                                 <!-- Exemple d'éléments ajouté dynamiquement -->
@@ -185,7 +195,7 @@
 
                         </div>
 
-                        <div id="to-confirm" class="classic-box restock-box">
+                        <div id="to-confirm" class="classic-box restock-box sortable-ignore">
                             <p id="to-confirm-p">À confirmer</p>
                             <div id="to-confirm-element-container" class="content-wrapper">
 
@@ -208,7 +218,7 @@
                 </div>
                 <div id="manager-container-center">
                     <div id="alertContainer" class="sortable">
-                        <div id="alert-list" class="classic-box">
+                        <div id="alert-list" class="classic-box sortable-ignore">
                             <div class="content-wrapper">
 
                                 <!-- Éléments à ajouter dynamiquement -->
@@ -268,7 +278,7 @@
 
                             </div>
                         </div>
-                        <div id="alert-details">
+                        <div id="alert-details" class="sortable-ignore">
                             
                             <div class="alert-details-box classic-box">
                                 <p>Détail de l'alerte</p>
@@ -314,7 +324,7 @@
                         </div>
                     </div>
                     <div id="stationContainer" class="sortable">
-                        <div class="topSection">
+                        <div class="topSection sortable-ignore">
 
                             <div id="station-schedule" class="leftPart classic-box">
                                 <div class="schedule-top">
@@ -337,7 +347,7 @@
                             </div>
 
                         </div>
-                        <div class="bottomSection classic-box">
+                        <div class="bottomSection classic-box sortable-ignore">
                             
                             <div class="leftDiv">
                                 <div id="bottom-left-top-div" class="classic-box">
@@ -379,7 +389,7 @@
                     
                     <div id="staffContainer" class="sortable">
                         
-                        <div id="staff-left-div">
+                        <div id="staff-left-div" class="sortable-ignore">
                             <p>Liste du personnel :</p>
                             <ul id="staff-list" class="classic-box">
                                 <li>Shad AZUELOS</li>
@@ -416,7 +426,7 @@
                             
                         </div>
 
-                        <div id="staff-right-div">
+                        <div id="staff-right-div" class="sortable-ignore">
                             <p>Fiche personnel</p>
                             <p id="" class="staff-right-div-main-p">Formation :</p>
                             <div class="content-wrapper-v3">
@@ -442,7 +452,7 @@
                 <div id="manager-container-bottom">
 
                     <div id="incident" class="sortable">
-                        <div id="createIncident">
+                        <div id="createIncident" class="sortable-ignore">
                             <input type="datetime-local" id="dateTime" placeholder="Date Heure">
                             <select id="incidentType">
                                 <option value="" disabled selected>Type</option>
@@ -455,18 +465,18 @@
                             <button id="createButton">Créer</button>
                         </div>
                       
-                        <div id="checkIncident">
+                        <div id="checkIncident" class="sortable-ignore">
                           <!-- Les incidents ici -->
                         </div>
                     </div>
 
                     <div id="employee-container-bottom-oil" class="sortable">
-                        <div id="employee-container-bottom-oil-remaining">
+                        <div id="employee-container-bottom-oil-remaining" class="sortable-ignore">
                             <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
                             <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
                             <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
                         </div>
-                        <div id="employee-container-bottom-pump-status">
+                        <div id="employee-container-bottom-pump-status" class="sortable-ignore">
 
                             <div id="pump1" class="hvr-outline-out">
                                 <div>
@@ -543,7 +553,7 @@
                     </div>
 
                     <div id="cards" class="sortable">
-                        <div id="divSearch">
+                        <div id="divSearch" class="sortable-ignore">
                             <p>N° Carte</p>
                             <div class="search-wrapper">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -552,7 +562,7 @@
                             </div>
                         </div>
             
-                        <div id="divIdCard">
+                        <div id="divIdCard" class="sortable-ignore">
                             <p>Numéro d'identification de la carte :</p>
                             <div>
                                 <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
@@ -560,12 +570,12 @@
                             </div>
                         </div>
             
-                        <div id="divPhoto">
+                        <div id="divPhoto" class="sortable-ignore">
                             <img src="./assets/default-pfp.jpg" alt="Photo de profil">
                             <button class="button">Modifier</button>
                         </div>
             
-                        <div id="divName">
+                        <div id="divName" class="sortable-ignore">
                             <p>NOM &amp; PRÉNOM :</p>
                             <div>
                                 <input type="text" placeholder="BOJOVIC RAYANE">
@@ -573,7 +583,7 @@
                             </div>
                         </div>
             
-                        <div id="divDateSolde">
+                        <div id="divDateSolde" class="sortable-ignore">
                             <div id="divDate">
                                 <p>Date de naissance :</p>
                                 <p>29/07/2003</p>
@@ -585,7 +595,7 @@
                             </div>
                         </div>
             
-                        <div id="divCreatonValiderCrediter">
+                        <div id="divCreatonValiderCrediter" class="sortable-ignore">
                             <div id="divCreation">
                                 <p>Date de création :</p>
                                 <p>21/02/2024</p>
@@ -613,7 +623,8 @@
         </script> -->
         <script src="scripts/common/displayTime.js"></script>
         <script src="scripts/common/restrictInput.js"></script>
-        <script src="scripts/common/drag-and-drop.js"></script>
+        <!-- <script src="scripts/common/drag-and-drop.js"></script> -->
+        <script src="scripts/common/toggle-drag-and-drop.js"></script>
         <script src="scripts/restock-module/add-to-cart.js"></script>
         <script src="scripts/restock-module/validate-cart.js"></script>
         <script src="scripts/restock-module/to-confirm.js"></script>
