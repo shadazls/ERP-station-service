@@ -27,9 +27,9 @@ function disableSortable() {
 }
 
 function enableSortable() {
-    Sortable.create(document.getElementById('manager-container-top'), { group: 'container-group', swap: true });
-    Sortable.create(document.getElementById('manager-container-center'), { group: 'container-group', swap: true });
-    Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-group', swap: true });
+    Sortable.create(document.getElementById('manager-container-top'), { group: 'container-manager-group', swap: true });
+    Sortable.create(document.getElementById('manager-container-center'), { group: 'container-manager-group', swap: true });
+    Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-manager-group', swap: true });
 
     
     selectProductContainer.classList.add('shake-animation', 'sortable');

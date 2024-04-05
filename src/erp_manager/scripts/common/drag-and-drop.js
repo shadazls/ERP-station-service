@@ -20,15 +20,23 @@ function restoreSortOrder(containerId) {
 
 // Initialiser SortableJS pour chaque container avec swap: true
 Sortable.create(document.getElementById('manager-container-top'), {
-    group: 'container-group',
+    group: 'container-manager-group',
     swap: true,
 });
 Sortable.create(document.getElementById('manager-container-center'), {
-    group: 'container-group',
+    group: 'container-manager-group',
     swap: true,
 });
 Sortable.create(document.getElementById('manager-container-bottom'), {
-    group: 'container-group',
+    group: 'container-manager-group',
+    swap: true,
+});
+Sortable.create(document.getElementById('employee-container-center'), {
+    group: 'container-employee-group',
+    swap: true,
+});
+Sortable.create(document.getElementById('employee-container-bottom'), {
+    group: 'container-employee-group',
     swap: true,
 });
 
