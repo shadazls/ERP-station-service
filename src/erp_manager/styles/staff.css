@@ -2,10 +2,6 @@
     display: flex;
     width: 32.67% !important;
     height: 29.33vh !important;
-    /* margin-top: 0.25%;
-    margin-bottom: 0.25%;
-    margin-left: 0.25%;
-    margin-right: 0.5%; */
     background-color: #f1c232;
     border: thick solid black;
     border-radius: 10px;
@@ -18,6 +14,10 @@
     margin-bottom: 2%;
     margin-left: 2%;
     margin-right: 2%;
+}
+
+.p-2 {
+    padding-left: 2px;
 }
 
 #staff-list {
@@ -123,4 +123,19 @@
     padding-left: 2.5%;
     flex-shrink: 0;
     font-size: 1.15rem;
+}
+
+#staff-list li {
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    align-items: center; /* Aligner les éléments sur l'axe vertical */
+    width: 95%;
+    padding-right: 10px;
+}
+
+#staff-list li i {
+    margin-left: auto;
+}
+
+.hidden {
+    opacity: 0;
 }

@@ -19,17 +19,44 @@ scheduleStartInput.addEventListener("keydown", function(event) {
                 message: 'Le champ "Horaire ouverture" vide. Veuillez entrer une valeur.',
             });
         } else {
-            // Affichage du message de succès si le champ est rempli
-            // Ajouter requête vers BDD ici, si erreur, afficher notif erreur
-            iziToast.success({
-                title: 'OK',
-                message: 'La valeur "' + inputValue + '" a été enregistrée avec succès!',
+            // Création d'un objet contenant les données à envoyer
+            var postData = {
+                openHour: inputValue
+            };
+            
+            // Envoi de la requête POST
+            fetch("https://api.fuelsync.hertinox.fr/settings/setsettings.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(postData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur de réseau lors de l'envoi de la requête.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Affichage du message de succès si la requête a réussi
+                iziToast.success({
+                    title: 'OK',
+                    message: 'La valeur "' + inputValue + '" a été enregistrée avec succès!',
+                });
+            })
+            .catch(error => {
+                // Affichage du message d'erreur en cas d'échec de la requête
+                iziToast.error({
+                    title: 'Erreur',
+                    message: error.message,
+                });
             });
         }
     }
 });
 
-// Sélection de l'input pour l'heure de fin
+// Sélection de l'input de l'heure de fin
 var scheduleEndInput = document.getElementById("schedule-end");
 
 // Ajout d'un gestionnaire d'événement pour l'événement "keydown" sur l'input de l'heure de fin
@@ -50,10 +77,38 @@ scheduleEndInput.addEventListener("keydown", function(event) {
                 message: 'Le champ "Horaire fermeture" est vide. Veuillez entrer une valeur.',
             });
         } else {
-            // Affichage du message de succès si le champ est rempli
-            iziToast.success({
-                title: 'OK',
-                message: 'La valeur "' + inputValue + '" a été enregistrée avec succès!',
+            // Création d'un objet contenant les données à envoyer
+            var postData = {
+                closeHour: inputValue
+            };
+            
+            // Envoi de la requête POST
+            fetch("https://api.fuelsync.hertinox.fr/settings/setsettings.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(postData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur de réseau lors de l'envoi de la requête.");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Affichage du message de succès si la requête a réussi
+                iziToast.success({
+                    title: 'OK',
+                    message: 'La valeur "' + inputValue + '" a été enregistrée avec succès!',
+                });
+            })
+            .catch(error => {
+                // Affichage du message d'erreur en cas d'échec de la requête
+                iziToast.error({
+                    title: 'Erreur',
+                    message: error.message,
+                });
             });
         }
     }

@@ -51,8 +51,13 @@
                 <span id="time"></span>
             </div>
 
+            <!-- <select name="switch-screen" id="switch-screen" class="classic-box">
+                <option value="0">ERP</option>
+                <option value="1">Caisse</option>
+            </select> -->
+
             <label for="slct" class="select">
-                <select id="slct" required>
+                <select id="slct" class="classic-box" required>
                     <option selected value="0">ERP</option>
                     <option value="1">Caisse</option>
                 </select>
@@ -128,9 +133,8 @@
 
                             <input id="products-and-energy-input" list="products-and-energy" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
                             <datalist id="products-and-energy">
-                                <option value="Chiffon"></option>
-                                <option value="Liquide vaisselle"></option>
-                                <option value="DIESEL"></option>
+                                <!-- Exemple de produit ajouté dynamiquement -->
+                                <!-- <option value="Chiffon"></option> -->
                             </datalist>
 
                             <input id="product-quantity-input" class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
@@ -392,13 +396,13 @@
                         <div id="staff-left-div" class="sortable-ignore">
                             <p>Liste du personnel :</p>
                             <ul id="staff-list" class="classic-box">
-                                <li>Shad AZUELOS</li>
-                                <li>Jeremy MONCADA</li>
-                                <li>Lilian FARCHETTO</li>
-                                <li>Rayane LARBI</li>
-                                <li>Nicolas VETROFF</li>
-                                <li>Thomas MUNOZ</li>
-                                <li>Andy MONTARU</li> 
+                                <li class="p-2">Shad AZUELOS <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Jeremy MONCADA <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Lilian FARCHETTO <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Rayane LARBI <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Nicolas VETROFF <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Thomas MUNOZ <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Andy MONTARU <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li> 
                             </ul>
                             <p id="staff-left-second-p">Gestion formation :</p>
                             <div class="content-wrapper-v2">
@@ -615,27 +619,30 @@
             </div>
         </main>
 
-
-        <!-- <script>
-            Sortable.create(document.getElementById('manager-container-top'), { group: 'container-group', swap: true });
-            Sortable.create(document.getElementById('manager-container-center'), { group: 'container-group', swap: true });
-            Sortable.create(document.getElementById('manager-container-bottom'), { group: 'container-group', swap: true });
-        </script> -->
         <script src="scripts/common/displayTime.js"></script>
         <script src="scripts/common/restrictInput.js"></script>
-        <!-- <script src="scripts/common/drag-and-drop.js"></script> -->
+        <script src="scripts/common/phones-input-formatting.js"></script>
         <script src="scripts/common/toggle-drag-and-drop.js"></script>
+        <script src="scripts/common/switch-screen.js"></script>
+
         <script src="scripts/restock-module/add-to-cart.js"></script>
         <script src="scripts/restock-module/validate-cart.js"></script>
         <script src="scripts/restock-module/to-confirm.js"></script>
+        <script src="scripts/restock-module/get-products.js"></script>
+
         <script src="scripts/alert-module/fuel-amount-bar.js"></script>
         <script src="scripts/alert-module/product-amount-bar.js"></script>
         <script src="scripts/alert-module/fuel-product-limit.js"></script>
+
         <script src="scripts/station-module/send-day-report.js"></script>
         <script src="scripts/station-module/opening-schedules.js"></script>
         <script src="scripts/station-module/phone.js"></script>
+        <script src="scripts/station-module/get-station-info.js"></script>
+
         <script src="scripts/staff-module/staff-list.js"></script>
         <script src="scripts/staff-module/inscription.js"></script>
+        <script src="scripts/staff-module/manage-staff.js"></script>
+
         <script src="scripts/incident.js"></script>
         <script src="scripts/pump.js"></script>
     </body>

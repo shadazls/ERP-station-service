@@ -41,6 +41,8 @@
       <!-- Ajax -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
 
       
       
@@ -103,7 +105,7 @@
         <div id="employee-container-center">
 
           <!-- Informations produits -->
-          <div id="divproduct">
+          <div id="divproduct" class="sortable">
             <div id="left">
               <div id="divPhotoProduit">
                 <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
@@ -136,7 +138,7 @@
           </div>
 
           <!-- Livraisons -->
-          <div id="delivery">
+          <div id="delivery" class="sortable">
             <div id="in-progress">
               <div class="sticky">
               <p>En cours</p>
@@ -209,7 +211,7 @@
           </div>
 
           <!-- Incidents -->
-          <div id="incident">
+          <div id="incident" class="sortable">
             <div id="createIncident">
               <input type="datetime-local" id="dateTime" placeholder="Date Heure">
               <select id="incidentType">
@@ -233,7 +235,7 @@
         <div id="employee-container-bottom">
 
         <!-- Informations pompes -->
-          <div id="employee-container-bottom-oil">
+          <div id="employee-container-bottom-oil" class="sortable">
             <div id="employee-container-bottom-oil-remaining">
               <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
               <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
@@ -310,7 +312,7 @@
           </div>
 
           <!-- Formations -->
-          <div id="employee-container-center-formation">
+          <div id="employee-container-center-formation" class="sortable">
             <div id="liste_formation">
               <h3>Liste des formations</h3>
             </div>
@@ -325,7 +327,7 @@
           </div>
 
           <!-- Cartes -->
-          <div id="cards">
+          <div id="cards" class="sortable">
             <div id="divSearch">
               <p>N° Carte</p>
               <div class="search-wrapper">
@@ -432,5 +434,6 @@
         </div>
       </aside>
     </main>
+    <script src="./scripts/drag-and-drop.js"></script>
   </body>
 </html>
