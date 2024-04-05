@@ -3,10 +3,8 @@
 /* Calculator */
 #employee-container-left .calculator input {
     margin: 0.8rem 0px;
-    width: 80%;
+    width: 89.5%;
     height: 10%;
-
-
 }
 
 #employee-container-left .calculator div {
@@ -17,17 +15,13 @@
     background-color: #F9CB9C;
     font-family: 'Seven Segment', sans-serif;
     font-size: 300%;
-    padding-left: 1rem;
-}
-.calculator input {
-    background-color: #F9CB9C;
-    font-family: 'Seven Segment', sans-serif;
-    font-size: 250%;
     padding-left: 0.7rem;
+    border: solid #000;
 }
 
+
 #employee-container-left .calculator button {
-    width: 25%;
+    width: 28.3%;
     height: 90%;
 }
 
@@ -38,15 +32,13 @@
 .calculator button{
     font-family: Balsamiq Sans;
     margin: 2px;
-    font-size: 300%;
+    font-size: 350%;
     border: solid #000;
     cursor: pointer;
     background-color: #fff;
 }
 
 /* PAYMENT BUTTONS */
-
-
 
 .payment {
     background-color: #CCCCCC;
