@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     background-color: #597EAA;
-    position: relative; /* Pour rendre la position absolute relative à cette div */
+    position: relative;
 }
 
 #cards > div {
@@ -116,6 +116,8 @@
 #divDateSolde {
     order: 5;
     display: flex;
+    padding-top: 4%;
+    font-size: 120%;
 }
 
 #divDate {
@@ -131,6 +133,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 120%;
 }
 
 #divValider {
