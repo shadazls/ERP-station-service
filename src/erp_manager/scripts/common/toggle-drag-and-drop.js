@@ -7,7 +7,7 @@ const stationContainer = document.getElementById('stationContainer');
 const staffContainer = document.getElementById('staffContainer');
 const incidentContainer = document.getElementById('incident');
 const pumpContainer = document.getElementById('employee-container-bottom-oil');
-const cardsContainer = document.getElementsByClassName('cards');
+const cardsContainer = document.getElementById('cards');
 
 
 // Fonction pour désactiver le drag and drop

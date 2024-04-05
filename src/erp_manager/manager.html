@@ -40,18 +40,25 @@
             </div>
 
             <div id="toggleContainer">
+                OFF
                 <label class="switch">
                     <input type="checkbox" id="toggleSwitch">
                     <span class="slider round"></span>
                 </label>
+                ON
             </div>
 
             <div id="timeContainer">
                 <span id="time"></span>
             </div>
 
+            <!-- <select name="switch-screen" id="switch-screen" class="classic-box">
+                <option value="0">ERP</option>
+                <option value="1">Caisse</option>
+            </select> -->
+
             <label for="slct" class="select">
-                <select id="slct" required>
+                <select id="slct" class="classic-box" required>
                     <option selected value="0">ERP</option>
                     <option value="1">Caisse</option>
                 </select>
@@ -617,6 +624,7 @@
         <script src="scripts/common/restrictInput.js"></script>
         <script src="scripts/common/phones-input-formatting.js"></script>
         <script src="scripts/common/toggle-drag-and-drop.js"></script>
+        <script src="scripts/common/switch-screen.js"></script>
 
         <script src="scripts/restock-module/add-to-cart.js"></script>
         <script src="scripts/restock-module/validate-cart.js"></script>
