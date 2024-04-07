@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     title: "Commande annulée",
                     text: "Votre commande n'a pas été envoyée au fournisseur !",
                 });
+                clearShoppingCart();
             } else {
                 const firstProductName = shoppingCartContent.firstElementChild.querySelector('.left-element').textContent;
                 const defaultCommandName = firstProductName.split(' - ')[0]; // Récupère le nom du premier produit

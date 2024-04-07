@@ -133,20 +133,24 @@
                             
                             <p id="">Demander un réapprovisionnement</p>
 
-                            <input id="products-and-energy-input" list="products-and-energy" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
-                            <datalist id="products-and-energy">
-                                <!-- Exemple de produit ajouté dynamiquement -->
-                                <!-- <option value="Chiffon"></option> -->
-                            </datalist>
+                            <!-- <input id="products-and-energy-input" list="products-and-energy" class="classic-box ask-restock-box" placeholder="Produit ou énergie"> -->
+                            <select id="products-and-energy-select" class="ask-restock-box classic-box">
+                                <option value="0" disabled selected>Produit ou énergie</option>
+                            </select>
+                            <!-- <datalist id="products-and-energy">
+                            </datalist> -->
 
                             <input id="product-quantity-input" class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
 
-                            <input id="supplier-input" list="supplier"  class="classic-box ask-restock-box" placeholder="Fournisseur">
-                            <datalist id="supplier">
+                            <!-- <input id="supplier-input" list="supplier"  class="classic-box ask-restock-box" placeholder="Fournisseur"> -->
+                            <select id="supplier-select" class="ask-restock-box classic-box">
+                                <option value="0" disabled selected>Fournisseur</option>
+                            </select>
+                            <!-- <datalist id="supplier">
                                 <option value="Chiffon"></option>
                                 <option value="Liquide vaisselle"></option>
                                 <option value="DIESEL"></option>
-                            </datalist>
+                            </datalist> -->
 
                             <a href="#_" id="add-to-cart-button" class="relative inline-block px-4 py-2 font-medium group">
                                 <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -298,11 +302,8 @@
                                 </div>
                                 
                                 <div class="alert-details-box-right">
-                                    <select class="alert-details-select classic-box">
+                                    <select id="fuel-select" class="alert-details-select classic-box">
                                         <option value="0" disabled selected>Carburant</option>
-                                        <option value="1">SP-98</option>
-                                        <option value="2">SP-95</option>
-                                        <option value="3">DIESEL</option>
                                     </select>
                                     <input id="fuel-amount-input" class="restrict-input alert-details-input-number classic-box" placeholder="XXX L" type="text" oninput="updateRange()">
                                 </div>
@@ -316,11 +317,8 @@
                                 </div>
                                 
                                 <div class="alert-details-box-right">
-                                    <select class="alert-details-select classic-box">
+                                    <select id="product-select" class="alert-details-select classic-box">
                                         <option value="0" disabled selected>Produit</option>
-                                        <option value="1">SP-98</option>
-                                        <option value="2">SP-95</option>
-                                        <option value="3">DIESEL</option>
                                     </select>
                                     <input id="product-amount-input" class="restrict-input alert-details-input-number classic-box" placeholder="XXX" type="text" oninput="updateProductRange()">
                                 </div>
@@ -478,13 +476,13 @@
 
                     <div id="employee-container-bottom-oil" class="">
                         <div id="employee-container-bottom-oil-remaining" class="">
-                            <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
+                            <!-- <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
                             <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
-                            <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
+                            <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div> -->
                         </div>
                         <div id="employee-container-bottom-pump-status" class="">
 
-                            <div id="pump1" class="hvr-outline-out">
+                            <!-- <div id="pump1" class="hvr-outline-out">
                                 <div>
                                     <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
                                     <p class="status-open"></p>
@@ -554,7 +552,7 @@
                                     <span class="pump-oil-name">SP98</span>
                                     <span class="pump-oil-name">Gazole</span>
                                 </p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -631,10 +629,14 @@
         <script src="scripts/restock-module/validate-cart.js"></script>
         <script src="scripts/restock-module/to-confirm.js"></script>
         <script src="scripts/restock-module/get-products.js"></script>
+        <script src="scripts/restock-module/get-suppliers.js"></script>
+        <script src="scripts/restock-module/total-price.js"></script>
 
         <script src="scripts/alert-module/fuel-amount-bar.js"></script>
         <script src="scripts/alert-module/product-amount-bar.js"></script>
         <script src="scripts/alert-module/fuel-product-limit.js"></script>
+        <script src="scripts/alert-module/get-fuels.js"></script>
+        <script src="scripts/alert-module/get-products.js"></script>
 
         <script src="scripts/station-module/send-day-report.js"></script>
         <script src="scripts/station-module/opening-schedules.js"></script>
@@ -645,7 +647,9 @@
         <script src="scripts/staff-module/inscription.js"></script>
         <script src="scripts/staff-module/manage-staff.js"></script>
 
+        <script src="scripts/pump-module/pump.js"></script>
+        <script src="scripts/pump-module/get-fuels.js"></script>
+
         <script src="scripts/incident.js"></script>
-        <script src="scripts/pump.js"></script>
     </body>
 </html>
