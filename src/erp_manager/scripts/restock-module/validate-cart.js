@@ -64,22 +64,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function createCommand(commandName) {
+        // Récupérer l'élément qui contient le prix total
+        const totalPriceElement = document.getElementById("shopping-cart-final-p");
+        // Extraire le prix total
+        const totalPriceText = totalPriceElement.textContent.trim();
+        // Séparer le texte pour obtenir uniquement le prix
+        const totalPrice = totalPriceText.split(':')[1].trim();
+    
         const newElement = document.createElement('div');
         newElement.classList.add('element-box', 'classic-box', 'hvr-shrink', 'cliquable');
-
+    
         const leftElement = document.createElement('p');
         leftElement.classList.add('left-element');
-        leftElement.textContent = `${commandName} - X,X€`;
-
+        leftElement.textContent = `${commandName} - ${totalPrice}`;
+    
         const rightElement = document.createElement('div');
         rightElement.classList.add('right-element');
         const durationElement = document.createElement('p');
         durationElement.textContent = '6j';
         rightElement.appendChild(durationElement);
-
+    
         newElement.appendChild(leftElement);
         newElement.appendChild(rightElement);
-
+    
         inProgressCommandsContainer.appendChild(newElement);
     }
 
@@ -116,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Mettre à jour le texte avec la nouvelle valeur
                     durationElement.textContent = `${duration}j`;
                 }
-            }, 1000); // Mettre à jour toutes les secondes (1000 ms)
+            }, 3000); // Mettre à jour toutes les secondes (1000 ms)
         });
     }
     
