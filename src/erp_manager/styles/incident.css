@@ -9,8 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: thick solid black;
-    border-radius: 10px;
+    border: 4px solid black;
+    border-radius: 5px;
 }
 
 #createIncident {

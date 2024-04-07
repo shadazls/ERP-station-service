@@ -26,8 +26,7 @@
       <script defer="defer" src="scripts/formations.js"></script>
       <script defer="defer" src="scripts/pump.js"></script>
       <script defer="defer" src="scripts/cash-pump.js"></script>
-
-
+      <script defer="defer" src="scripts/switch-screen.js"></script>
 
       <!--Balsamiq Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +57,31 @@
       </div>
 
       <div id="current-time"></div>
+
+      <label for="slct" class="select">
+        <select id="slct" class="classic-box" required>
+          <option selected value="0">Caisse</option>
+          <option value="1">ERP</option>
+        </select>
+
+        <svg>
+          <use xlink:href="#select-arrow-down"></use>
+        </svg>
+      </label>
+    
+      <!-- SVG Sprites -->
+      <svg class="sprites">
+        <symbol id="select-arrow-down" viewBox="0 0 10 6">
+          <polyline points="1 1 5 5 9 1"></polyline>
+        </symbol>
+      </svg>
+
+      <div id="userContainer">
+        <h3 id="usernameDisplay">Nom d'utilisateur</h3>
+        <div class="circle-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
 
     </header>
     

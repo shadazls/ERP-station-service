@@ -20,7 +20,118 @@ header {
 }
 
 #current-time {
-    margin-left: 0.5%;
+    margin-left: 38%;
+    margin-right: 10%;
     font-family: Balsamiq Sans;
-    font-size: 300%;
+    font-size: 280%;
+}
+
+
+/* Select */
+
+.select {
+	display: flex;
+	align-items: center;
+	position: relative;
+	min-width: 10%;
+	margin-right: 5%;
+    font-family: Balsamiq Sans;
+}
+  
+.select svg {
+	position: absolute;
+	right: 12px;
+	top: calc(50% - 3px);
+	width: 10px;
+	height: 6px;
+	stroke-width: 2px;
+	stroke: #9098A9;
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	pointer-events: none;
+}
+  
+.select select {
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 7px 40px 7px 12px;
+	width: 100%;
+	border: 3px solid black;
+	background: white;
+	box-shadow: 0 1px 3px -2px #9098A9;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 16px;
+	transition: all 150ms ease;
+}
+  
+.select select:required:invalid {
+	color: #5A667F;
+}
+
+.select select option {
+	color: #223254;
+}
+
+.select select option[value=""][disabled] {
+	display: none;
+}
+
+.select select:focus {
+	outline: none;
+	border-color: #0077FF;
+	box-shadow: 0 0 0 2px rgba(0, 119, 255, .2);
+}
+
+.select select:hover + svg {
+	stroke: #0077FF;
+}
+
+.sprites {
+	position: absolute;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	user-select: none;
+}
+
+
+/* Utilisateur */
+
+#userContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+#usernameDisplay {
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-right: 5%;
+    white-space: nowrap;
+}
+
+.circle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60pt;
+    height: 50pt;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.circle-icon i {
+    color: black;
+    font-size: 30pt;
+}
+
+#switch-screen {
+	align-self: center;
+	height: 50%;
+	width: 10%;
+	padding-left: 1%;
 }
