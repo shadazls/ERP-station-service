@@ -18,3 +18,7 @@
     font-family: Balsamiq Sans;
     font-size: 220%;
 }
+
+.line-pump.to-encash {
+    cursor: pointer;
+}
