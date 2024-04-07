@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="styles/grid.css">
         <link rel="stylesheet" href="styles/popup.css">
         <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/toggle-deux.css">
         <link rel="stylesheet" href="styles/selectProduct.css">
         <link rel="stylesheet" href="styles/reStocking.css">
         <link rel="stylesheet" href="styles/alert.css">
@@ -20,13 +21,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="../../node_modules/izitoast/dist/css/iziToast.min.css">
-        <!-- <link rel="stylesheet" href="iziToast.min.css"> -->
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="../../node_modules/izitoast/dist/js/iziToast.min.js" type="text/javascript"></script>
-        <!-- <script src="iziToast.min.js" type="text/javascript"></script> -->
         <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
     <!-- <body onload="toggleZoomScreen()"> -->
@@ -40,12 +40,26 @@
                 <h3 id="thirdHeaderTitle">Système de gestion ERP</h3>
             </div>
 
+            <div id="toggleContainer">
+                OFF
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider round"></span>
+                </label>
+                ON
+            </div>
+
             <div id="timeContainer">
                 <span id="time"></span>
             </div>
 
+            <!-- <select name="switch-screen" id="switch-screen" class="classic-box">
+                <option value="0">ERP</option>
+                <option value="1">Caisse</option>
+            </select> -->
+
             <label for="slct" class="select">
-                <select id="slct" required>
+                <select id="slct" class="classic-box" required>
                     <option selected value="0">ERP</option>
                     <option value="1">Caisse</option>
                 </select>
@@ -77,33 +91,52 @@
             <div>
                 <div id="manager-container-top">
                     
-                    <div id="selectProductContainer">
-                        <div id="productPicture" class="element-box"></div>
-
-                        <div id="searchProductContainer">
-                            <input id="searchInput" class="element-box" placeholder="Rechercher" type="text">
-                            <span id="searchIcon">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </span>
+                    <div id="divproduct" class="">
+                        <div id="left">
+                            <div id="divPhotoProduit">
+                                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                                <div id="texteInfoProduit">
+                                    <p>Nom</p>
+                                    <p>Prix</p>
+                                    <p>Quantité</p>
+                                </div>
+                            </div>
+                            <div id="modifPrix">
+                                <p>Modifier le prix :</p>
+                                <input type="text" id="inputPrix" placeholder="XX,XX€">
+                                <button>Modifier</button>
+                            </div>
+                        </div>                        
+              
+                          <div id="right">
+              
+                            <div class="search-wrapper-produit">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                              <input type="search" id="search-input-produit" placeholder="rechercher">
+                            </div>
+              
+                            <div id="description">
+                              <p>Description</p>
+                            </div>
+              
+                            <div id="alerter">
+                              <p>Alerter pour une commande :</p>
+                              <input type="text" id="quantité" placeholder="Quantité">
+                              <button>Confirmer</button>
+                            </div>
                         </div>
-
-                        <div id="productDescription" class="element-box">
-
-                        </div>
-                    
                     </div>  
 
-                    <div id="reStockingContainer">
+                    <div id="reStockingContainer" class="">
                         
                         <div id="ask-restock">
                             
                             <p id="">Demander un réapprovisionnement</p>
 
-                            <input id="products-and-energy-input" list="products-and-energy"  class="classic-box ask-restock-box" placeholder="Produit ou énergie">
+                            <input id="products-and-energy-input" list="products-and-energy" class="classic-box ask-restock-box" placeholder="Produit ou énergie">
                             <datalist id="products-and-energy">
-                                <option value="Chiffon"></option>
-                                <option value="Liquide vaisselle"></option>
-                                <option value="DIESEL"></option>
+                                <!-- Exemple de produit ajouté dynamiquement -->
+                                <!-- <option value="Chiffon"></option> -->
                             </datalist>
 
                             <input id="product-quantity-input" class="restrict-input classic-box ask-restock-box" type="text" placeholder="Quantité">
@@ -127,6 +160,8 @@
                         <div id="shopping-cart" class="classic-box restock-box">
                             <p class="">Panier</p>
                             <div id="cart-container" class="content-wrapper">
+                                <button type="button" class="btn btn-secondary btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                </button>
                                 
                                 <!-- Exemple d'éléments ajouté dynamiquement -->
                                 <!-- <div class="element-box classic-box hvr-shrink cliquable">
@@ -188,7 +223,7 @@
                     
                 </div>
                 <div id="manager-container-center">
-                    <div id="alertContainer">
+                    <div id="alertContainer" class="">
                         <div id="alert-list" class="classic-box">
                             <div class="content-wrapper">
 
@@ -249,7 +284,7 @@
 
                             </div>
                         </div>
-                        <div id="alert-details">
+                        <div id="alert-details" class="">
                             
                             <div class="alert-details-box classic-box">
                                 <p>Détail de l'alerte</p>
@@ -294,7 +329,7 @@
 
                         </div>
                     </div>
-                    <div id="stationContainer">
+                    <div id="stationContainer" class="">
                         <div class="topSection">
 
                             <div id="station-schedule" class="leftPart classic-box">
@@ -358,18 +393,18 @@
                     
                     
                     
-                    <div id="staffContainer">
+                    <div id="staffContainer" class="">
                         
-                        <div id="staff-left-div">
+                        <div id="staff-left-div" class="">
                             <p>Liste du personnel :</p>
                             <ul id="staff-list" class="classic-box">
-                                <li>Shad AZUELOS</li>
-                                <li>Jeremy MONCADA</li>
-                                <li>Lilian FARCHETTO</li>
-                                <li>Rayane LARBI</li>
-                                <li>Nicolas VETROFF</li>
-                                <li>Thomas MUNOZ</li>
-                                <li>Andy MONTARU</li> 
+                                <li class="p-2">Shad AZUELOS <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Jeremy MONCADA <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Lilian FARCHETTO <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Rayane LARBI <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Nicolas VETROFF <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Thomas MUNOZ <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li>
+                                <li>Andy MONTARU <i class="manage-staff fa-solid fa-bars cliquable hidden"></i></li> 
                             </ul>
                             <p id="staff-left-second-p">Gestion formation :</p>
                             <div class="content-wrapper-v2">
@@ -397,7 +432,7 @@
                             
                         </div>
 
-                        <div id="staff-right-div">
+                        <div id="staff-right-div" class="">
                             <p>Fiche personnel</p>
                             <p id="" class="staff-right-div-main-p">Formation :</p>
                             <div class="content-wrapper-v3">
@@ -422,8 +457,8 @@
                 </div>
                 <div id="manager-container-bottom">
 
-                    <div id="incident">
-                        <div id="createIncident">
+                    <div id="incident" class="">
+                        <div id="createIncident" class="">
                             <input type="datetime-local" id="dateTime" placeholder="Date Heure">
                             <select id="incidentType">
                                 <option value="" disabled selected>Type</option>
@@ -436,7 +471,7 @@
                             <button id="createButton">Créer</button>
                         </div>
                       
-                        <div id="checkIncident">
+                        <div id="checkIncident" class="">
                           <!-- Les incidents ici -->
                         </div>
                     </div>
@@ -447,7 +482,7 @@
                             <div><span class="oil-name">SP95</span><span class="oil-remaining"></span></div>
                             <div><span class="oil-name">Gazole</span><span class="oil-remaining"></span></div>
                         </div>
-                        <div id="employee-container-bottom-pump-status">
+                        <div id="employee-container-bottom-pump-status" class="">
 
                             <div id="pump1" class="hvr-outline-out">
                                 <div>
@@ -523,8 +558,8 @@
                         </div>
                     </div>
 
-                    <div id="cards">
-                        <div id="divSearch">
+                    <div id="cards" class="">
+                        <div id="divSearch" class="">
                             <p>N° Carte</p>
                             <div class="search-wrapper">
                                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -533,7 +568,7 @@
                             </div>
                         </div>
             
-                        <div id="divIdCard">
+                        <div id="divIdCard" class="">
                             <p>Numéro d'identification de la carte :</p>
                             <div>
                                 <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
@@ -541,12 +576,12 @@
                             </div>
                         </div>
             
-                        <div id="divPhoto">
+                        <div id="divPhoto" class="">
                             <img src="./assets/default-pfp.jpg" alt="Photo de profil">
                             <button class="button">Modifier</button>
                         </div>
             
-                        <div id="divName">
+                        <div id="divName" class="">
                             <p>NOM &amp; PRÉNOM :</p>
                             <div>
                                 <input type="text" placeholder="BOJOVIC RAYANE">
@@ -554,7 +589,7 @@
                             </div>
                         </div>
             
-                        <div id="divDateSolde">
+                        <div id="divDateSolde" class="">
                             <div id="divDate">
                                 <p>Date de naissance :</p>
                                 <p>29/07/2003</p>
@@ -566,7 +601,7 @@
                             </div>
                         </div>
             
-                        <div id="divCreatonValiderCrediter">
+                        <div id="divCreatonValiderCrediter" class="">
                             <div id="divCreation">
                                 <p>Date de création :</p>
                                 <p>21/02/2024</p>
@@ -586,25 +621,30 @@
             </div>
         </main>
 
-
-        <script>
-            function toggleZoomScreen() {
-                document.body.style.zoom = "80%";
-            } 
-        </script>
         <script src="scripts/common/displayTime.js"></script>
         <script src="scripts/common/restrictInput.js"></script>
+        <script src="scripts/common/phones-input-formatting.js"></script>
+        <script src="scripts/common/toggle-drag-and-drop.js"></script>
+        <script src="scripts/common/switch-screen.js"></script>
+
         <script src="scripts/restock-module/add-to-cart.js"></script>
         <script src="scripts/restock-module/validate-cart.js"></script>
         <script src="scripts/restock-module/to-confirm.js"></script>
+        <script src="scripts/restock-module/get-products.js"></script>
+
         <script src="scripts/alert-module/fuel-amount-bar.js"></script>
         <script src="scripts/alert-module/product-amount-bar.js"></script>
         <script src="scripts/alert-module/fuel-product-limit.js"></script>
+
         <script src="scripts/station-module/send-day-report.js"></script>
         <script src="scripts/station-module/opening-schedules.js"></script>
         <script src="scripts/station-module/phone.js"></script>
+        <script src="scripts/station-module/get-station-info.js"></script>
+
         <script src="scripts/staff-module/staff-list.js"></script>
         <script src="scripts/staff-module/inscription.js"></script>
+        <script src="scripts/staff-module/manage-staff.js"></script>
+
         <script src="scripts/incident.js"></script>
         <script src="scripts/pump.js"></script>
     </body>

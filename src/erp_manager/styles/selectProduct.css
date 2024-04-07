@@ -1,57 +1,159 @@
-#selectProductContainer {
+#divproduct {
     width: 32.67% !important;
     height: 29.33vh !important;
-    margin-top: 0.5%;
+    /* margin-top: 0.5%;
     margin-bottom: 0.25%;
     margin-left: 0.5%;
-    margin-right: 0.25%;
-    display: flex;
-    background-color: #6aa84f;
+    margin-right: 0.25%; */
     border: thick solid black;
     border-radius: 10px;
-}
-
-#productPicture {
-    margin-top: 3%;
-    margin-left: 3%;
-    height: 40%;
-    width: 30%;
-}
-
-/* #top-right-container {
-    display: ;
-} */
-
-#searchProductContainer {
+    background-color: #6AA84F;
+    display: flex;
     position: relative;
-    display: inline-block;
-    text-align: right;
-    margin-left: 5%;
+    font-family: Balsamiq Sans;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2%;
+}
+
+#right {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+    margin-left: auto;
+    width: 50%;
+}
+
+#divPhotoProduit {
+    top: 0;
+    left: 0;
+    margin: 2%;
     margin-top: 3%;
-    width: 55%;
-    height: 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-#searchInput {
-    font-family: 'Balsamiq Sans', sans-serif;
-    width: 100%;
-    height: 100%;
-    padding-left: 1.5vw;
+
+#divPhotoProduit img {
+    width: 141px;
+    height: 141px;
+    border: 2px solid #000;
+    object-fit: cover;
+    object-position: center;
+    margin: 2%;
 }
 
-#searchIcon {
-    position: absolute;
-    left: 10px; 
-    transform: translateY(50%);
-}
-
-.element-box {
+#description {
     background-color: white;
-    border: solid black;
+    border: 2px solid #000;
+    width: 75%;
+    height: 35%;
+    margin: 2%;
+    margin-left: 20%;
 }
 
-#productDescription {
-    clear: both;
-    width: 30%;
-    height: 30%;
+.search-wrapper-produit {
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.search-wrapper-produit i {
+    background-color: white;
+    border: 2px solid black;
+    padding: 2px;
+    border-right: none;
+}
+
+#search-input-produit {
+    margin-right: 2%;
+    border-left: none;
+    outline: none;
+}
+
+#right input {
+    font-family: Balsamiq Sans;
+    width: 87%;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 2px;
+}
+
+#quantité {
+    width: 50%;
+    border-left: 2px solid black;
+}
+
+#alerter {
+    background-color: white;
+    border: 2px solid #000;
+    width: 75%;
+    height: 35%;
+    margin: 2%;
+    margin-left: 20%;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#alerter > * {
+    margin: 4px 0;
+}
+
+#alerter button {
+    font-family: Balsamiq Sans;
+    height: 25%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#texteInfoProduit {
+    margin-top: 8%;
+    flex-direction: column;
+}
+
+#texteInfoProduit p {
+    padding: 4px 0;
+    font-size: 120%;
+}
+
+#modifPrix {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 25%;
+}
+
+#modifPrix p {
+    text-align: center;
+}
+
+#modifPrix p,
+#modifPrix input,
+#modifPrix button {
+    margin: 5px 0;
+}
+
+#modifPrix p {
+    text-align: center;
+}
+
+#modifPrix input {
+    font-family: Balsamiq Sans;
+    border: 2px solid black;
+}
+
+#modifPrix button {
+    border: 2px solid black;
+    width: 50%;
+    cursor: pointer;
 }

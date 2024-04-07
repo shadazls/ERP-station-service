@@ -24,6 +24,10 @@
       <script defer="defer" src="scripts/container-top-left.js"></script>
       <script defer="defer" src="scripts/incident.js"></script>
       <script defer="defer" src="scripts/formations.js"></script>
+      <script defer="defer" src="scripts/pump.js"></script>
+      <script defer="defer" src="scripts/cash-pump.js"></script>
+
+
 
       <!--Balsamiq Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,17 +36,15 @@
 
       <!--Segment Font-->
       <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
-
       <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
 
-      <script src="scripts/pump.js" defer="defer"></script>
+      <!-- Ajax -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-      <script src="https://kit.fontawesome.com/a0e9db0451.js" crossorigin="anonymous"></script>
+      
       
   </head>
   <body>
@@ -56,6 +58,7 @@
       </div>
 
       <div id="current-time"></div>
+
     </header>
     
     <main>
@@ -102,12 +105,40 @@
         <div id="employee-container-center">
 
           <!-- Informations produits -->
-          <div id="divproduct">
-            
+          <div id="divproduct" class="sortable">
+            <div id="left">
+              <div id="divPhotoProduit">
+                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                <div id="texteInfoProduit">
+                  <p>Nom : WD40</p>
+                  <p>Prix : 5€</p>
+                  <p>Quantité : 12</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="right">
+
+              <div class="search-wrapper-produit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="search-input-produit" placeholder="rechercher">
+              </div>
+
+              <div id="description">
+                <p>Description</p>
+              </div>
+
+              <div id="alerter">
+                <p>Alerter pour une commande :</p>
+                <input type="text" id="quantité" placeholder="Quantité">
+                <button>Confirmer</button>
+              </div>
+
+            </div>
           </div>
 
           <!-- Livraisons -->
-          <div id="delivery">
+          <div id="delivery" class="sortable">
             <div id="in-progress">
               <div class="sticky">
               <p>En cours</p>
@@ -180,7 +211,7 @@
           </div>
 
           <!-- Incidents -->
-          <div id="incident">
+          <div id="incident" class="sortable">
             <div id="createIncident">
               <input type="datetime-local" id="dateTime" placeholder="Date Heure">
               <select id="incidentType">
@@ -204,7 +235,7 @@
         <div id="employee-container-bottom">
 
         <!-- Informations pompes -->
-          <div id="employee-container-bottom-oil">
+          <div id="employee-container-bottom-oil" class="sortable">
             <div id="employee-container-bottom-oil-remaining">
               <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
               <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
@@ -281,7 +312,7 @@
           </div>
 
           <!-- Formations -->
-          <div id="employee-container-center-formation">
+          <div id="employee-container-center-formation" class="sortable">
             <div id="liste_formation">
               <h3>Liste des formations</h3>
             </div>
@@ -296,7 +327,7 @@
           </div>
 
           <!-- Cartes -->
-          <div id="cards">
+          <div id="cards" class="sortable">
             <div id="divSearch">
               <p>N° Carte</p>
               <div class="search-wrapper">
@@ -315,7 +346,7 @@
             </div>
 
             <div id="divPhoto">
-              <img src="/src/erp_cash_desk/image/photo-profil.jpg" alt="Photo de profil">
+              <img src="/src/erp_cash_desk/images/photo-profil.png" alt="Photo de profil">
               <button class="button">Modifier</button>
             </div>
 
@@ -403,5 +434,6 @@
         </div>
       </aside>
     </main>
+    <script src="./scripts/drag-and-drop.js"></script>
   </body>
 </html>
