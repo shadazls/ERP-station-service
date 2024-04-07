@@ -22,6 +22,7 @@
 #createIncident textarea{
     margin-bottom: 10px;
     font-family: Balsamiq Sans;
+    font-size: 120%;
     width: 100%;
     box-sizing: border-box;
     border: 2px solid black;
@@ -33,6 +34,8 @@
 }
 
 #createButton {
+    font-family: Balsamiq Sans;
+    font-size: 100%;
     padding: 2%;
     width: 50%;
     border: 2px solid black;
