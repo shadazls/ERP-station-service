@@ -67,29 +67,49 @@ function getProductsData() {
     });
 }
 
-function addProductToTicket(code) {
+function addProductToTicket(code, price) {
     var fuelsync_product = productsData[code];
     if (fuelsync_product) {
-        if(removeProduct) {
-            var newParagraph = document.createElement('p');
-                newParagraph.textContent = fuelsync_product.productName + ' - -' + fuelsync_product.sellPrice + '€';
-                
-                var ticketDiv = document.querySelector('.ticket > div');
-                ticketDiv.appendChild(newParagraph);
-
-                removeProduct = false;
-        } else {
-            for(let i = 0; i < save; i++) {
-                var newParagraph = document.createElement('p');
-                newParagraph.textContent = fuelsync_product.productName + ' - ' + fuelsync_product.sellPrice + '€';
-                
-                var ticketDiv = document.querySelector('.ticket > div');
-                ticketDiv.appendChild(newParagraph);
-            }
-        }
+        var productPrice = fuelsync_product.sellPrice; // Stocker le prix du produit dans une variable
+        var newParagraph = document.createElement('p');
+        newParagraph.textContent = fuelsync_product.productName + ' - ' + productPrice + '€';
         
-        save = 1;
+        var ticketDiv = document.querySelector('.ticket > div');
+        ticketDiv.appendChild(newParagraph);
+
+        // Mettre à jour le prix total en ajoutant le prix du produit
+        updateTotal(productPrice);
     }
 }
 
+
+
+function updateTotal() {
+    var totalPrice = 0;
+
+    // Ajouter les prix des produits du ticket
+    var ticketItems = document.querySelectorAll('.ticket > div > p');
+    ticketItems.forEach(function(item) {
+        var priceText = item.textContent.split(' - ')[1]; // Récupérer le texte du prix
+        var itemPrice = parseFloat(priceText);
+        if (!isNaN(itemPrice)) { // Vérifier si le prix est un nombre valide
+            totalPrice += itemPrice;
+        }
+    });
+
+    // Ajouter les prix des produits de la pompe
+    var pumpProducts = document.querySelectorAll('.product-info');
+    pumpProducts.forEach(function(product) {
+        var priceText = product.textContent.split(' - ')[1]; // Récupérer le texte du prix
+        var productPrice = parseFloat(priceText);
+        if (!isNaN(productPrice)) { // Vérifier si le prix est un nombre valide
+            totalPrice += productPrice;
+        }
+    });
+
+    // Mettre à jour le prix total
+    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+}
+
 getProductsData();
+updateTotal();

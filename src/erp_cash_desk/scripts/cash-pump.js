@@ -44,9 +44,11 @@ setInterval(getPumpData, 2500); // Appeler la fonction toutes les 5 secondes (50
 $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
     let pumpInfo = $(this).text().trim().split(' - ');
     pumpName = pumpInfo[0].split(":")[1].trim();
+    let pumpPrice = parseFloat(pumpInfo[2].split('€')[0]);
 
-    let newProduct = $('<div class="product-info"></div>');
+    var newProduct = $('<div class="product-info"></div>');
     newProduct.text(pumpName + " - " + pumpInfo[2]);
-
     $('#ticket-items').append(newProduct);
-});
+
+    updateTotal(pumpPrice);
+})
