@@ -28,6 +28,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer="defer" src="scripts/products.js"></script>
     </head>
     <body>
     <!-- <body onload="toggleZoomScreen()"> -->
@@ -93,11 +94,11 @@
                     <div id="divproduct" class="sortable">
                         <div id="left">
                             <div id="divPhotoProduit">
-                                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                                <img src="/src/erp_cash_desk/images/wd40.jpg" id="product-image" alt="Photo de produit">
                                 <div id="texteInfoProduit">
-                                    <p>Nom</p>
-                                    <p>Prix</p>
-                                    <p>Quantité</p>
+                                    <p id="product-name">Nom : </p>
+                                    <p id="product-price">Prix : </p>
+                                    <p id="product-quantity">Stock : </p>
                                 </div>
                             </div>
                             <div id="modifPrix">
@@ -110,12 +111,14 @@
                           <div id="right">
               
                             <div class="search-wrapper-produit">
-                              <i class="fa-solid fa-magnifying-glass"></i>
-                              <input type="search" id="search-input-produit" placeholder="rechercher">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <datalist id="product-options">
+                                </datalist>
+                                <input type="search" id="search-input-produit" placeholder="rechercher">
                             </div>
               
                             <div id="description">
-                              <p>Description</p>
+                                <p id="product-description">Description</p>
                             </div>
               
                             <div id="alerter">
