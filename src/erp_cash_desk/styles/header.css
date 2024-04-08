@@ -19,8 +19,16 @@ header {
     justify-content: center;
 }
 
+
+/* Mode édition */
+#toggleContainer {
+	margin-left: 25%;
+}
+
+
+/* Horloge */
+
 #current-time {
-    margin-left: 38%;
     margin-right: 10%;
     font-family: Balsamiq Sans;
     font-size: 280%;
