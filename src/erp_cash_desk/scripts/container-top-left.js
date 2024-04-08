@@ -67,22 +67,31 @@ function getProductsData() {
     });
 }
 
-function addProductToTicket(code, price) {
+function addProductToTicket(code) {
     var fuelsync_product = productsData[code];
     if (fuelsync_product) {
-        var productPrice = fuelsync_product.sellPrice; // Stocker le prix du produit dans une variable
-        var newParagraph = document.createElement('p');
-        newParagraph.textContent = fuelsync_product.productName + ' - ' + productPrice + '€';
-        
-        var ticketDiv = document.querySelector('.ticket > div');
-        ticketDiv.appendChild(newParagraph);
+        if(removeProduct) {
+            var newParagraph = document.createElement('p');
+                newParagraph.textContent = fuelsync_product.productName + ' - -' + fuelsync_product.sellPrice + '€';
+                
+                var ticketDiv = document.querySelector('.ticket > div');
+                ticketDiv.appendChild(newParagraph);
 
-        // Mettre à jour le prix total en ajoutant le prix du produit
-        updateTotal(productPrice);
+                removeProduct = false;
+        } else {
+            for(let i = 0; i < save; i++) {
+                var newParagraph = document.createElement('p');
+                newParagraph.textContent = fuelsync_product.productName + ' - ' + fuelsync_product.sellPrice + '€';
+                
+                var ticketDiv = document.querySelector('.ticket > div');
+                ticketDiv.appendChild(newParagraph);
+            }
+        }
+        
+        save = 1;
+        updateTotal();
     }
 }
-
-
 
 function updateTotal() {
     var totalPrice = 0;
