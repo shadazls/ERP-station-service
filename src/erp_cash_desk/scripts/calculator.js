@@ -32,6 +32,7 @@ times_pad.addEventListener("click", () => {
 
 delete_pad.addEventListener("click", () => {
   display_pad.value = ""
+  removeProduct = false;
   save = 1;
 })
 

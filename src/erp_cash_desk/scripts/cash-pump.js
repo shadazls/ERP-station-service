@@ -41,14 +41,35 @@ function getPumpData() {
 getPumpData();
 setInterval(getPumpData, 2500); // Appeler la fonction toutes les 5 secondes (5000 ms)
 
+let pumpChoosen = null;
+
 $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
     let pumpInfo = $(this).text().trim().split(' - ');
+    pumpID = pumpInfo[0].split(":")[0].trim()
     pumpName = pumpInfo[0].split(":")[1].trim();
     let pumpPrice = parseFloat(pumpInfo[2].split('€')[0]);
 
-    var newProduct = $('<div class="product-info"></div>');
-    newProduct.text(pumpName + " - " + pumpInfo[2]);
-    $('#ticket-items').append(newProduct);
+    if(pumpChoosen == null) {
+        pumpChoosen = pumpID;
+    
+        let newProduct = $('<div class="product-info"></div>');
+        newProduct.text(pumpName + " - " + pumpInfo[2]);
 
-    updateTotal(pumpPrice);
-})
+        removeProduct = false
+    
+        $('#ticket-items').append(newProduct);
+        updateTotal(pumpPrice);
+    } else {
+        if(removeProduct == true && pumpID === pumpChoosen) {
+            pumpChoosen = null;
+        
+            let newProduct = $('<div class="product-info"></div>');
+            newProduct.text(pumpName + " - -" + pumpInfo[2]);
+
+            $('#ticket-items').append(newProduct);
+            updateTotal(pumpPrice);
+            removeProduct = false
+        }
+    }
+});
+
