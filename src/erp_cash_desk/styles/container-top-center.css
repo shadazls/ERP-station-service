@@ -16,5 +16,9 @@
     display: flex;
     margin-left: 2%;
     font-family: Balsamiq Sans;
-    font-size: 170%;
+    font-size: 220%;
+}
+
+.line-pump.to-encash {
+    cursor: pointer;
 }

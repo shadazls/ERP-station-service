@@ -138,5 +138,15 @@
 
 #divValider {
     cursor: pointer;
-    
+    background-color: white;
+    border: 2px solid black;
+    padding: 2px;
+}
+
+#divValider:active {
+    background-color: grey;
+}
+
+#cards button:active {
+    background-color: grey;
 }

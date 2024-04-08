@@ -11,7 +11,8 @@
 #liste_formation,
 #inscription_formation {
     font-family: Balsamiq Sans;
-    width: 33%;
+    font-size: 140%;
+    width: 46%;
     height: 90%;
     overflow-y: scroll;
     background-color: #FFFFFF;
@@ -41,6 +42,7 @@
 #tel {
     margin-bottom: 10px;
     font-family: Balsamiq Sans;
+    font-size: 90%;
     width: 100%;
     box-sizing: border-box;
     border: 2px solid black;
@@ -48,10 +50,16 @@
 }
 
 #subscribeFormation {
+    font-family: Balsamiq Sans;
+    font-size: 90%;
     padding: 2%;
     width: 50%;
     border: 2px solid black;
     cursor: pointer;
+}
+
+#subscribeFormation:active {
+    background-color: grey;
 }
 
 #employee-container-center-formation #liste_formation>p {

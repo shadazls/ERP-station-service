@@ -3,8 +3,8 @@
     width: 32.67% !important;
     height: 29.33vh !important;
     background-color: #f1c232;
-    border: thick solid black;
-    border-radius: 10px;
+    border: 4px solid black;
+    border-radius: 5px;
     font-size: 1.15rem;
 }
 

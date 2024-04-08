@@ -17,6 +17,8 @@
       <link rel="stylesheet" href="styles/product-infos.css">
       <link rel="stylesheet" href="styles/formations.css">
       <link rel="stylesheet" href="styles/delivery.css">
+      <link rel="stylesheet" href="styles/toggle.css">
+      <link rel="stylesheet" href="../erp_manager/styles/common-utils.css">
 
       <!-- Link Js -->
       <script defer="defer" src="scripts/header.js"></script>
@@ -26,8 +28,9 @@
       <script defer="defer" src="scripts/formations.js"></script>
       <script defer="defer" src="scripts/pump.js"></script>
       <script defer="defer" src="scripts/cash-pump.js"></script>
-
-
+      <script defer="defer" src="scripts/switch-screen.js"></script>
+      <script defer="defer" src="scripts/toggle-drag-and-drop.js"></script>
+      <script defer="defer" src="scripts/products.js"></script>
 
       <!--Balsamiq Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +60,39 @@
 
       </div>
 
+      <div id="toggleContainer">
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider round"></span>
+        </label>
+      </div>
+
       <div id="current-time"></div>
+
+      <label for="slct" class="select">
+        <select id="slct" class="classic-box" required>
+          <option selected value="0">Caisse</option>
+          <option value="1">ERP</option>
+        </select>
+
+        <svg>
+          <use xlink:href="#select-arrow-down"></use>
+        </svg>
+      </label>
+    
+      <!-- SVG Sprites -->
+      <svg class="sprites">
+        <symbol id="select-arrow-down" viewBox="0 0 10 6">
+          <polyline points="1 1 5 5 9 1"></polyline>
+        </symbol>
+      </svg>
+
+      <div id="userContainer">
+        <h3 id="usernameDisplay">Nom d'utilisateur</h3>
+        <div class="circle-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
 
     </header>
     
@@ -66,7 +101,7 @@
         <div id="employee-container-top">
 
           <!-- Produits -->
-          <div class="ticket">
+          <div class="ticket" class="">
             <div id="ticket-items">
               <!-- Les produits ici -->
             </div>
@@ -105,14 +140,14 @@
         <div id="employee-container-center">
 
           <!-- Informations produits -->
-          <div id="divproduct" class="sortable">
+          <div id="divproduct" class="">
             <div id="left">
               <div id="divPhotoProduit">
-                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                <img src="/src/erp_cash_desk/images/wd40.jpg" id="product-image" alt="Photo de produit">
                 <div id="texteInfoProduit">
-                  <p>Nom : WD40</p>
-                  <p>Prix : 5€</p>
-                  <p>Quantité : 12</p>
+                  <p id="product-name">Nom : </p>
+                  <p id="product-price">Prix : </p>
+                  <p id="product-quantity">Stock : </p>
                 </div>
               </div>
             </div>
@@ -121,24 +156,29 @@
 
               <div class="search-wrapper-produit">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" id="search-input-produit" placeholder="rechercher">
+                <input type="search" list="product-options" id="search-input-produit" placeholder="rechercher">
+                <datalist id="product-options">
+                  <option value="Cordon bleu"></option>
+                  <option value="Nuggets"></option>
+                  <option value="Tenders"></option>
+              </datalist>
               </div>
 
               <div id="description">
-                <p>Description</p>
+                <p id="product-description">Description</p>
               </div>
 
               <div id="alerter">
                 <p>Alerter pour une commande :</p>
-                <input type="text" id="quantité" placeholder="Quantité">
-                <button>Confirmer</button>
+                <input type="text" id="quantity" placeholder="Quantité">
+                <button id="confirm-btn">Confirmer</button>
               </div>
 
             </div>
           </div>
 
           <!-- Livraisons -->
-          <div id="delivery" class="sortable">
+          <div id="delivery" class="">
             <div id="in-progress">
               <div class="sticky">
               <p>En cours</p>
@@ -211,7 +251,7 @@
           </div>
 
           <!-- Incidents -->
-          <div id="incident" class="sortable">
+          <div id="incident" class="">
             <div id="createIncident">
               <input type="datetime-local" id="dateTime" placeholder="Date Heure">
               <select id="incidentType">
@@ -235,7 +275,7 @@
         <div id="employee-container-bottom">
 
         <!-- Informations pompes -->
-          <div id="employee-container-bottom-oil" class="sortable">
+          <div id="employee-container-bottom-oil" class="">
             <div id="employee-container-bottom-oil-remaining">
               <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
               <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
@@ -312,22 +352,22 @@
           </div>
 
           <!-- Formations -->
-          <div id="employee-container-center-formation" class="sortable">
+          <div id="employee-container-center-formation" class="">
             <div id="liste_formation">
               <h3>Liste des formations</h3>
             </div>
 
             <div id="inscription_formation">
               <h3>Inscription</h3>
-              <input type="text" id="prenom" disabled>
-              <input type="text" id="nom" disabled>
-              <input type="text" id="tel" disabled>
+              <input type="text" id="prenom">
+              <input type="text" id="nom">
+              <input type="text" id="tel">
               <input type="button" id="subscribeFormation" value="Valider">
             </div>
           </div>
 
           <!-- Cartes -->
-          <div id="cards" class="sortable">
+          <div id="cards" class="">
             <div id="divSearch">
               <p>N° Carte</p>
               <div class="search-wrapper">

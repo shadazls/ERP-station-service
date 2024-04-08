@@ -36,15 +36,9 @@ deleteButton.addEventListener('click', function() {
 
 okButton.addEventListener('click', function() {
     var inputValue = displayPad.value;
-    var ticketDiv = document.querySelector('.ticket > div');
-
 
     if (isEnteringValue && inputValue.trim() !== '' && /^\d{13}$/.test(inputValue)) {
-        var newParagraph = document.createElement('p');
-        newParagraph.textContent = inputValue;
-
-        ticketDiv.appendChild(newParagraph);
-
+        addProductToTicket(inputValue);
         displayPad.value = '';
         addButton.innerHTML = '<i class="fa-solid fa-plus"></i>';
         addButton.style.width = '';
@@ -55,3 +49,33 @@ okButton.addEventListener('click', function() {
         minusButton.disabled = false;
     }
 });
+var productsData = {};
+
+function getProductsData() {
+    $.ajax({
+        url: "https://api.fuelsync.hertinox.fr/products/getallproducts.php",
+        type: "GET",
+        contentType: "application/json",
+        success: function(response) {
+            response.forEach(function(fuelsync_product) {
+                productsData[fuelsync_product.idProduct] = {
+                    productName: fuelsync_product.productName,
+                    sellPrice: fuelsync_product.sellPrice
+                };
+            });
+        }
+    });
+}
+
+function addProductToTicket(code) {
+    var fuelsync_product = productsData[code];
+    if (fuelsync_product) {
+        var newParagraph = document.createElement('p');
+        newParagraph.textContent = fuelsync_product.productName + ' - ' + fuelsync_product.sellPrice + '€';
+        
+        var ticketDiv = document.querySelector('.ticket > div');
+        ticketDiv.appendChild(newParagraph);
+    }
+}
+
+getProductsData();

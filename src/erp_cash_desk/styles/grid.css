@@ -84,45 +84,17 @@ body main>div {
 #employee-container-bottom-oil,
 #employee-container-center-formation,
 #cards {
-    width: 100%;
+    width: calc(100% - 1rem);
     display: flex;
+    margin: 0.25%;
 }
 
-#divproduct {
-    margin-top: 0.5%;
-    margin-bottom: 0.25%;
-    margin-left: 0.5%;
-    margin-right: 0.25%;
+#employee-container-center,
+#employee-container-bottom {
+    padding-left: 0.25%;
+    padding-right: 0.25%;
 }
 
-#delivery {
-    margin-top: 0.5%;
-    margin-bottom: 0.25%;
-    margin-left: 0.25%;
-    margin-right: 0.25%;
-}
-
-#incident {
-    margin-top: 0.5%;
-    margin-bottom: 0.25%;
-    margin-left: 0.25%;
-    margin-right: 0.5%;
-}
-
-#employee-container-bottom-oil {
-    margin-top: 0.25%;
-    margin-left: 0.5%;
-    margin-right: 0.25%;
-}
-
-#employee-container-center-formation {
-    margin-top: 0.25%;
-    margin-left: 0.25%;
-    margin-right: 0.25%;
-}
-
-#cards {
-    margin-top: 0.25%;
-    margin-left: 0.25%;
-    margin-right: 0.5%;
+#employee-container-center {
+    padding-top: 0.25%
 }

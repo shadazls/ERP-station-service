@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
 }
 
 .addProduct {
@@ -39,6 +38,7 @@ i:hover {
 }
 
 #ticket-items {
+    max-height: 81%;
     overflow-y: scroll;
     font-family: Balsamiq Sans;
     padding: 2%;
