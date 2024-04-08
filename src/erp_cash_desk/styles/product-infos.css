@@ -35,6 +35,7 @@
     object-fit: cover;
     object-position: center;
     margin: 2%;
+    background-color: white;
 }
 
 #description {

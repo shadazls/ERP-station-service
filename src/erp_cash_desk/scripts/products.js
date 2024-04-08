@@ -9,11 +9,14 @@ function updateProductInfo(product) {
     var productPrice = document.getElementById('product-price');
     var productQuantity = document.getElementById('product-quantity');
     var productDescription = document.getElementById('product-description');
+    var productImage = document.getElementById('product-image');
 
     productName.textContent = 'Nom : ' + product.productName;
     productPrice.textContent = 'Prix : ' + product.sellPrice + '€';
     productQuantity.textContent = 'Stock : ' + product.quantity;
     productDescription.textContent = product.description;
+    productImage.src = product.img;
+    
 }
 
 function getProductsData() {
