@@ -47,6 +47,7 @@ $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
     let pumpInfo = $(this).text().trim().split(' - ');
     pumpID = pumpInfo[0].split(":")[0].trim()
     pumpName = pumpInfo[0].split(":")[1].trim();
+    let pumpPrice = parseFloat(pumpInfo[2].split('€')[0]);
 
     if(pumpChoosen == null) {
         pumpChoosen = pumpID;
@@ -57,6 +58,7 @@ $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
         removeProduct = false
     
         $('#ticket-items').append(newProduct);
+        updateTotal(pumpPrice);
     } else {
         if(removeProduct == true && pumpID === pumpChoosen) {
             pumpChoosen = null;
@@ -65,6 +67,7 @@ $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
             newProduct.text(pumpName + " - -" + pumpInfo[2]);
 
             $('#ticket-items').append(newProduct);
+            updateTotal(pumpPrice);
             removeProduct = false
         }
     }

@@ -9,16 +9,31 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Clic détecté sur le bouton 'Ajouter +'");
 
         // Récupération des valeurs des inputs
-        var productOrEnergy = document.querySelector("#products-and-energy-input").value;
+        // Sélection de l'élément select
+        var productsEnergySelect = document.getElementById("products-and-energy-select");
+        var productsEnergySelectValue = productsEnergySelect.value;
+
+        // Récupération de l'option sélectionnée
+        var selectedOption = productsEnergySelect.options[productsEnergySelect.selectedIndex];
+
+        // Récupération du texte de l'option sélectionnée
+        var selectedText = selectedOption.text;
+
+        // Affichage du texte de l'option sélectionnée
+        console.log(selectedText);
         var quantity = document.querySelector("#product-quantity-input").value;
-        var supplier = document.querySelector("#supplier-input").value;
+        // var supplier = document.querySelector("#supplier-input").value;
+        var supplierSelect = document.getElementById("supplier-select");
+        var supplierSelectValue = supplierSelect.value;
+        var supplierSelectedOption = supplierSelect.options[supplierSelect.selectedIndex];
+        var supplierSelectedText = supplierSelectedOption.text;
 
         // Vérification que chaque champ n'est pas vide
-        if (productOrEnergy.trim() === '') {
+        if (productsEnergySelectValue === '0') {
             Swal.fire({
                 icon: "error",
                 title: "Un des champs est vide",
-                text: "Le champ 'Produit ou énergie' ne peut pas être vide !",
+                text: "Le champ 'Produit ou énergie' doit avoir un produit selectionné!",
             });
             return;
         }
@@ -32,33 +47,57 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (supplier.trim() === '') {
+        if (supplierSelectValue === '0') {
             Swal.fire({
                 icon: "error",
                 title: "Un des champs est vide",
-                text: "Le champ 'Fournisseur' ne peut pas être vide !",
+                text: "Le champ 'Fournisseur' doit avoir un fournisseur selectionné!",
             });
             return;
         }
 
-        console.log("Produit ou énergie:", productOrEnergy);
-        console.log("Quantité:", quantity);
-        console.log("Fournisseur:", supplier);
-
         // Création de l'élément à ajouter dynamiquement
         var newElement = document.createElement("div");
-        newElement.id = productOrEnergy;
-        newElement.classList.add("element-box", "classic-box", "hvr-buzz", "cliquable");
+        newElement.id = productsEnergySelectValue;
+        newElement.classList.add("element-box", "classic-box", "hvr-shrink", "cliquable");
 
         var leftElement = document.createElement("p");
         leftElement.classList.add("left-element");
-        leftElement.textContent = productOrEnergy + " - " + quantity;
+        leftElement.textContent = selectedText + " - " + quantity;
 
+        //avant
+
+
+        // Création de l'élément div
         var rightElement = document.createElement("div");
         rightElement.classList.add("right-element");
+
+        // Création de l'élément paragraphe pour le prix
         var priceElement = document.createElement("p");
-        priceElement.textContent = "X,X€";
-        rightElement.appendChild(priceElement);
+
+        // Requête GET à l'API
+        fetch("https://api.fuelsync.hertinox.fr/products/getproduct.php?idProduct=" + productsEnergySelectValue, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json()) // Convertit la réponse en JSON
+            .then(data => {
+                // Récupération du prix du produit
+                var price = data.purshasePrice;
+
+                // Mise à jour du texte de l'élément priceElement avec le prix récupéré
+                priceElement.textContent = price.toFixed(2) + "€";
+
+                // Ajout de l'élément priceElement à l'élément rightElement
+                rightElement.appendChild(priceElement);
+            })
+            .catch(error => {
+                console.error("Erreur lors de la récupération du prix du produit :", error);
+            });
+
+        //après
 
         newElement.appendChild(leftElement);
         newElement.appendChild(rightElement);
@@ -70,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
             icon: "success",
             title: "Produit ajouté au panier avec succès",
-            text: `Le produit "${productOrEnergy}" en ${quantity} exemplaire(s) par le fournisseur "${supplier}" a bien été ajouté au panier.`,
+            text: `Le produit "${selectedText}" en ${quantity} exemplaire(s) par le fournisseur "${supplierSelectedText}" a bien été ajouté au panier.`,
         });
     });
 });

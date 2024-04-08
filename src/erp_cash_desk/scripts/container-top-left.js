@@ -89,7 +89,36 @@ function addProductToTicket(code) {
         }
         
         save = 1;
+        updateTotal();
     }
 }
 
+function updateTotal() {
+    var totalPrice = 0;
+
+    // Ajouter les prix des produits du ticket
+    var ticketItems = document.querySelectorAll('.ticket > div > p');
+    ticketItems.forEach(function(item) {
+        var priceText = item.textContent.split(' - ')[1]; // Récupérer le texte du prix
+        var itemPrice = parseFloat(priceText);
+        if (!isNaN(itemPrice)) { // Vérifier si le prix est un nombre valide
+            totalPrice += itemPrice;
+        }
+    });
+
+    // Ajouter les prix des produits de la pompe
+    var pumpProducts = document.querySelectorAll('.product-info');
+    pumpProducts.forEach(function(product) {
+        var priceText = product.textContent.split(' - ')[1]; // Récupérer le texte du prix
+        var productPrice = parseFloat(priceText);
+        if (!isNaN(productPrice)) { // Vérifier si le prix est un nombre valide
+            totalPrice += productPrice;
+        }
+    });
+
+    // Mettre à jour le prix total
+    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+}
+
 getProductsData();
+updateTotal();

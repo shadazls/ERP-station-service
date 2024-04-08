@@ -14,7 +14,7 @@
 }
 
 #createIncident {
-    width: 33%;
+    width: 46%;
     height: 90%;
     background-color: #FFFFFF;
     border: 3px solid black;
@@ -30,6 +30,7 @@
 #createIncident textarea{
     margin-bottom: 10px;
     font-family: Balsamiq Sans;
+    font-size: 120%;
     width: 100%;
     box-sizing: border-box;
     border: 2px solid black;
@@ -43,6 +44,7 @@
 #createButton {
     padding: 2%;
     width: 50%;
+    font-size: 100%;
     border: 2px solid black;
     cursor: pointer;
 }
@@ -52,7 +54,7 @@
 }
 
 #checkIncident {
-    width: 33%;
+    width: 46%;
     height: 90%;
     background-color: #FFFFFF;
     border: 3px solid black;
