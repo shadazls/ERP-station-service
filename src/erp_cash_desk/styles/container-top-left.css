@@ -27,6 +27,7 @@
     width: 7%;
     margin: 1%;
     margin-right: 2%;
+    min-width: 8%;
     border: 2px solid black;
     background-color: #6AA84F;
     display: flex;
