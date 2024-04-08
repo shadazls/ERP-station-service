@@ -22,6 +22,7 @@ function getProductsData() {
         type: "GET",
         contentType: "application/json",
         success: function(response) {
+            addProductsToDataList(response);
             allProducts = response; // Stocker les données des produits dans la variable globale
             response.forEach(function(product) {
                 updateProductInfo(product);
@@ -80,5 +81,19 @@ function displaySuggestions(products) {
             // Effacer la liste déroulante des suggestions
             suggestionList.innerHTML = '';
         });
+    });
+}
+
+function addProductsToDataList(products) {
+    var dataList = document.getElementById('product-options');
+
+    // Effacer le datalist précédent
+    dataList.innerHTML = '';
+
+    // Ajouter chaque produit comme une option au datalist
+    products.forEach(function(product) {
+        var option = document.createElement('option');
+        option.value = product.productName;
+        dataList.appendChild(option);
     });
 }
