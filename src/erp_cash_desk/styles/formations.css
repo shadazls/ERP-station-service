@@ -7,6 +7,9 @@
     justify-content: center;
 }
 
+#liste_formation {
+    overflow: scroll;
+}
 
 #liste_formation,
 #inscription_formation {

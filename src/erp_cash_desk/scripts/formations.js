@@ -58,5 +58,19 @@ function onClickFormation() {
 
 subscribeFormation.addEventListener("click", () => {
     console.log("Envoi des données d'inscription...")
-    // TODO
+    
+    xhr.onreadystatechange = function() {
+        if(this.readyState == 4) {
+            if(this.status == 200) {
+                console.log("Inscription formations réussie...")
+                response_formation = this.response;
+    
+            } else {
+                console.log("Inscription formations échouée...");
+            }
+        } 
+    }
+    
+    xhr.open("POST", "URL", true);
+    xhr.send();
 })
