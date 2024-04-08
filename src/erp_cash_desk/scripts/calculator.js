@@ -6,6 +6,9 @@ let times_pad = document.getElementById("times-pad")
 let times_pad_request = false
 let save = 0
 
+let minus_pad = document.getElementById("minus-pad")
+let removeProduct = false
+
 let ok_pad = document.getElementById("ok-pad")
 
 let delete_pad = document.getElementById("delete-pad")
@@ -16,6 +19,10 @@ Array.from(num_pad).forEach(element => {
   element.addEventListener("click", () => {
     display_pad.value += element.innerHTML
   })
+})
+
+minus_pad.addEventListener("click", () => {
+  removeProduct = true;
 })
 
 times_pad.addEventListener("click", () => {
