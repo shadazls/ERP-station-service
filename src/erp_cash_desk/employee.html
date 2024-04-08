@@ -18,7 +18,6 @@
       <link rel="stylesheet" href="styles/formations.css">
       <link rel="stylesheet" href="styles/delivery.css">
       <link rel="stylesheet" href="styles/toggle.css">
-      <link rel="stylesheet" href="styles/animation.css">
       <link rel="stylesheet" href="../erp_manager/styles/common-utils.css">
 
       <!-- Link Js -->
@@ -31,6 +30,7 @@
       <script defer="defer" src="scripts/cash-pump.js"></script>
       <script defer="defer" src="scripts/switch-screen.js"></script>
       <script defer="defer" src="scripts/toggle-drag-and-drop.js"></script>
+      <script defer="defer" src="scripts/products.js"></script>
 
       <!--Balsamiq Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,11 +143,11 @@
           <div id="divproduct" class="">
             <div id="left">
               <div id="divPhotoProduit">
-                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                <img src="/src/erp_cash_desk/images/wd40.jpg" id="product-image" alt="Photo de produit">
                 <div id="texteInfoProduit">
-                  <p>Nom : WD40</p>
-                  <p>Prix : 5€</p>
-                  <p>Quantité : 12</p>
+                  <p id="product-name">Nom : </p>
+                  <p id="product-price">Prix : </p>
+                  <p id="product-quantity">Stock : </p>
                 </div>
               </div>
             </div>
@@ -160,13 +160,13 @@
               </div>
 
               <div id="description">
-                <p>Description</p>
+                <p id="product-description">Description</p>
               </div>
 
               <div id="alerter">
                 <p>Alerter pour une commande :</p>
-                <input type="text" id="quantité" placeholder="Quantité">
-                <button>Confirmer</button>
+                <input type="text" id="quantity" placeholder="Quantité">
+                <button id="confirm-btn">Confirmer</button>
               </div>
 
             </div>
