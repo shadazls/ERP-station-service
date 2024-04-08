@@ -40,6 +40,7 @@ i:hover {
 }
 
 #ticket-items {
+    margin-top: 1%;
     max-height: 65%;
     overflow-y: scroll;
     font-family: Balsamiq Sans;
