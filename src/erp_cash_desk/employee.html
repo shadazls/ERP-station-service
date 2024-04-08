@@ -17,7 +17,9 @@
       <link rel="stylesheet" href="styles/product-infos.css">
       <link rel="stylesheet" href="styles/formations.css">
       <link rel="stylesheet" href="styles/delivery.css">
-      <link rel="stylesheet" href="styles/toggle-deux.css">
+      <link rel="stylesheet" href="styles/toggle.css">
+      <link rel="stylesheet" href="styles/animation.css">
+      <link rel="stylesheet" href="../erp_manager/styles/common-utils.css">
 
       <!-- Link Js -->
       <script defer="defer" src="scripts/header.js"></script>
@@ -28,6 +30,7 @@
       <script defer="defer" src="scripts/pump.js"></script>
       <script defer="defer" src="scripts/cash-pump.js"></script>
       <script defer="defer" src="scripts/switch-screen.js"></script>
+      <script defer="defer" src="scripts/toggle-drag-and-drop.js"></script>
 
       <!--Balsamiq Font-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,7 +101,7 @@
         <div id="employee-container-top">
 
           <!-- Produits -->
-          <div class="ticket">
+          <div class="ticket" class="">
             <div id="ticket-items">
               <!-- Les produits ici -->
             </div>
@@ -137,7 +140,7 @@
         <div id="employee-container-center">
 
           <!-- Informations produits -->
-          <div id="divproduct" class="sortable">
+          <div id="divproduct" class="">
             <div id="left">
               <div id="divPhotoProduit">
                 <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
@@ -170,7 +173,7 @@
           </div>
 
           <!-- Livraisons -->
-          <div id="delivery" class="sortable">
+          <div id="delivery" class="">
             <div id="in-progress">
               <div class="sticky">
               <p>En cours</p>
@@ -243,7 +246,7 @@
           </div>
 
           <!-- Incidents -->
-          <div id="incident" class="sortable">
+          <div id="incident" class="">
             <div id="createIncident">
               <input type="datetime-local" id="dateTime" placeholder="Date Heure">
               <select id="incidentType">
@@ -267,7 +270,7 @@
         <div id="employee-container-bottom">
 
         <!-- Informations pompes -->
-          <div id="employee-container-bottom-oil" class="sortable">
+          <div id="employee-container-bottom-oil" class="">
             <div id="employee-container-bottom-oil-remaining">
               <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
               <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
@@ -344,22 +347,22 @@
           </div>
 
           <!-- Formations -->
-          <div id="employee-container-center-formation" class="sortable">
+          <div id="employee-container-center-formation" class="">
             <div id="liste_formation">
               <h3>Liste des formations</h3>
             </div>
 
             <div id="inscription_formation">
               <h3>Inscription</h3>
-              <input type="text" id="prenom" disabled>
-              <input type="text" id="nom" disabled>
-              <input type="text" id="tel" disabled>
+              <input type="text" id="prenom">
+              <input type="text" id="nom">
+              <input type="text" id="tel">
               <input type="button" id="subscribeFormation" value="Valider">
             </div>
           </div>
 
           <!-- Cartes -->
-          <div id="cards" class="sortable">
+          <div id="cards" class="">
             <div id="divSearch">
               <p>N° Carte</p>
               <div class="search-wrapper">
