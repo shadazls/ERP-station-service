@@ -1,8 +1,11 @@
 let liste_formation = document.getElementById("liste_formation")
 
-let inputName = document.getElementById("inscription-name")
+let inputName = document.getElementById("nom")
+inputName.setAttribute("placeholder", "Nom")
 let inputFirstname = document.getElementById("prenom")
-let inputPhone = document.getElementById("inscription-phone")
+inputFirstname.setAttribute("placeholder", "Prénom")
+let inputPhone = document.getElementById("tel")
+inputPhone.setAttribute("placeholder", "Téléphone")
 
 let subscribeFormation = document.getElementById("subscribeFormation")
 
@@ -58,19 +61,5 @@ function onClickFormation() {
 
 subscribeFormation.addEventListener("click", () => {
     console.log("Envoi des données d'inscription...")
-    
-    xhr.onreadystatechange = function() {
-        if(this.readyState == 4) {
-            if(this.status == 200) {
-                console.log("Inscription formations réussie...")
-                response_formation = this.response;
-    
-            } else {
-                console.log("Inscription formations échouée...");
-            }
-        } 
-    }
-    
-    xhr.open("POST", "URL", true);
-    xhr.send();
+    // TODO
 })

@@ -7,10 +7,6 @@
     justify-content: center;
 }
 
-#liste_formation {
-    overflow: scroll;
-}
-
 #liste_formation,
 #inscription_formation {
     font-family: Balsamiq Sans;
@@ -31,6 +27,11 @@
     margin-bottom: 15%;
 }
 
+#liste_formation {
+    overflow: scroll;
+    justify-content: flex-start;
+}
+
 
 #liste_formation h3{
     font-size: 92.5%;
@@ -38,6 +39,7 @@
 
 #inscription_formation {
     margin-left: 2%;
+    
 }
 
 #prenom,

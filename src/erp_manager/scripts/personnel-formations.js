@@ -1,12 +1,6 @@
 let liste_personnel = document.getElementById("liste_personnel")
-let liste_formation = document.getElementById("liste_formation")
-
-let inputName = document.getElementById("nom")
-inputName.setAttribute("placeholder", "Nom")
-let inputFirstname = document.getElementById("prenom")
-inputFirstname.setAttribute("placeholder", "Prénom")
-let inputPhone = document.getElementById("tel")
-inputPhone.setAttribute("placeholder", "Téléphone")
+let liste_formation = document.querySelector("#liste_formation")
+console.log(liste_formation)
 
 let subscribeFormation = document.getElementById("subscribeFormation")
 
@@ -83,11 +77,6 @@ function onClickFormation() {
         })
     }
 }
-
-subscribeFormation.addEventListener("click", () => {
-    console.log("Envoi des données d'inscription...")
-    // TODO
-})
 
 // -------------------------------------------------
 
