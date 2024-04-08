@@ -30,8 +30,7 @@ function getPumpData() {
 
                     // Mettre à jour le HTML avec les informations de la pompe
                     pumpElement.empty(); // Supprimer le contenu existant pour éviter la duplication
-                    pumpElement.append('<p>POMPE ' + pump.idPump + ' : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + pump.name + ' - ' + pump.lastQuantity.toFixed(2) + 'L - ' + pump.lastPrice.toFixed(2) + '€&nbsp;-&nbsp; <span style="color:' + color + '">' + statusText + '</span></p>');
-
+                    pumpElement.append('<p>POMPE ' + pump.idPump + ' : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + pump.name + ' - ' + pump.lastQuantity.toFixed(2) + 'L - ' + pump.lastPrice.toFixed(2) + '€ - <span style="color:' + color + '">' + statusText + '</span></p>');
                 });
             }
         }
@@ -44,9 +43,10 @@ setInterval(getPumpData, 2500); // Appeler la fonction toutes les 5 secondes (50
 
 $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
     let pumpInfo = $(this).text().trim().split(' - ');
+    pumpName = pumpInfo[0].split(":")[1].trim();
 
     let newProduct = $('<div class="product-info"></div>');
-    newProduct.text(pumpInfo[0] + ' - ' + pumpInfo[1] + ' - ' + pumpInfo[2]);
+    newProduct.text(pumpName + " - " + pumpInfo[2]);
 
     $('#ticket-items').append(newProduct);
 });

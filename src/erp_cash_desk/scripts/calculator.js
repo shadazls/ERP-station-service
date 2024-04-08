@@ -19,21 +19,13 @@ Array.from(num_pad).forEach(element => {
 })
 
 times_pad.addEventListener("click", () => {
-  times_pad_request = true
   save = display_pad.value
   display_pad.value = ""
 })
 
-ok_pad.addEventListener("click", () => {
-  if(times_pad_request) {
-    display_pad.value *= save
-    // Arrondir à la 2e décimale
-    times_pad_request = false
-  }
-})
-
 delete_pad.addEventListener("click", () => {
   display_pad.value = ""
+  save = 1;
 })
 
 doat_pad.addEventListener("click", () => {

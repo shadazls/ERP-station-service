@@ -70,11 +70,14 @@ function getProductsData() {
 function addProductToTicket(code) {
     var fuelsync_product = productsData[code];
     if (fuelsync_product) {
-        var newParagraph = document.createElement('p');
-        newParagraph.textContent = fuelsync_product.productName + ' - ' + fuelsync_product.sellPrice + '€';
-        
-        var ticketDiv = document.querySelector('.ticket > div');
-        ticketDiv.appendChild(newParagraph);
+        for(let i = 0; i < save; i++) {
+            var newParagraph = document.createElement('p');
+            newParagraph.textContent = fuelsync_product.productName + ' - ' + fuelsync_product.sellPrice + '€';
+            
+            var ticketDiv = document.querySelector('.ticket > div');
+            ticketDiv.appendChild(newParagraph);
+        }
+        save = 1;
     }
 }
 
