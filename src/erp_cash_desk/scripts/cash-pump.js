@@ -24,6 +24,10 @@ function getPumpData() {
                         color = 'red';
                     }
 
+                    if (pump.state === 0) {
+                        pumpElement.addClass('to-encash');
+                    }
+
                     // Mettre à jour le HTML avec les informations de la pompe
                     pumpElement.empty(); // Supprimer le contenu existant pour éviter la duplication
                     pumpElement.append('<p>POMPE ' + pump.idPump + ' : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + pump.name + ' - ' + pump.lastQuantity.toFixed(2) + 'L - ' + pump.lastPrice.toFixed(2) + '€&nbsp;-&nbsp; <span style="color:' + color + '">' + statusText + '</span></p>');
@@ -38,7 +42,7 @@ function getPumpData() {
 getPumpData();
 setInterval(getPumpData, 2500); // Appeler la fonction toutes les 5 secondes (5000 ms)
 
-$(document).on('click', '.line-pump p:contains("À ENCAISSER")', function() {
+$(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
     let pumpInfo = $(this).text().trim().split(' - ');
 
     let newProduct = $('<div class="product-info"></div>');
