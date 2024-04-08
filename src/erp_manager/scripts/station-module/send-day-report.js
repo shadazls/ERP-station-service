@@ -48,10 +48,47 @@ sendDayReportButton.addEventListener('click', function() {
         // Vous pouvez ajouter d'autres options personnalisées ici
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire({
-                icon: "success",
-                title: "Rapport quotidien envoyé",
-                html: `Le rapport quotidien a été envoyé avec succès.<br>Nombre de transactions : ${nbTransaction}<br>Volume total de carburant : ${volumeTotalCarburant}<br>Montant total en € : ${montantTotalEuro}`,
+            // Effectuer la requête AJAX POST
+            console.log(nbTransaction, volumeTotalCarburant, montantTotalEuro)
+            $.ajax({
+                type: 'POST',
+                dataType: "text",
+                url: 'https://api.fuelsync.hertinox.fr/daily_reports/publish.php',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    "nbTransactions": nbTransaction,
+                    "fuelAmount": volumeTotalCarburant,
+                    "sales": montantTotalEuro
+                }),
+                success: function(response) {
+                    if (response.status === 200) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Rapport quotidien envoyé',
+                            html: `Le rapport quotidien a été envoyé avec succès.<br>Nombre de transactions : ${nbTransaction}<br>Volume total de carburant : ${volumeTotalCarburant}<br>Montant total en € : ${montantTotalEuro}`
+                        });
+                    } else if (response.status === 405) {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Rapport déjà publié',
+                            text: 'Le rapport de la journée a déjà été publié.'
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erreur serveur',
+                            text: 'Une erreur est survenue côté serveur. Veuillez réessayer plus tard.'
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Erreur lors de l\'envoi de la requête:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erreur réseau',
+                        text: 'Une erreur est survenue lors de l\'envoi de la requête. Veuillez vérifier votre connexion internet et réessayer.'
+                    });
+                }
             });
         }
     });
