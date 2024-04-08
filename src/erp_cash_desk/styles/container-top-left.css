@@ -20,6 +20,7 @@
 .addProduct > p {
     margin: 2%;
     font-family: Balsamiq Sans;
+    font-size: 140%;
 }
 
 .divplus {
@@ -41,5 +42,6 @@ i:hover {
     max-height: 81%;
     overflow-y: scroll;
     font-family: Balsamiq Sans;
+    font-size: 120%;
     padding: 2%;
 }
