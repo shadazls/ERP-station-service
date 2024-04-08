@@ -61,6 +61,7 @@ sendDayReportButton.addEventListener('click', function() {
                     "sales": montantTotalEuro
                 }),
                 success: function(response) {
+                    console.log('Réponse du serveur:', response.status);
                     if (response.status === 200) {
                         Swal.fire({
                             icon: 'success',
@@ -83,11 +84,20 @@ sendDayReportButton.addEventListener('click', function() {
                 },
                 error: function(xhr, status, error) {
                     console.error('Erreur lors de l\'envoi de la requête:', error);
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Erreur réseau',
-                        text: 'Une erreur est survenue lors de l\'envoi de la requête. Veuillez vérifier votre connexion internet et réessayer.'
-                    });
+                    console.log('Statut de la requête:', error.status);
+                    if (error === "Method Not Allowed") {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Rapport déjà publié',
+                            text: 'Le rapport de la journée a déjà été publié.'
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erreur réseau',
+                            text: 'Une erreur est survenue lors de l\'envoi de la requête. Veuillez vérifier votre connexion internet et réessayer.'
+                        });
+                    }
                 }
             });
         }

@@ -76,3 +76,11 @@
 .status-close {
     margin-bottom: 5%;
 }
+
+.status-open {
+    color: green;
+}
+
+.status-close {
+    color: red;
+}

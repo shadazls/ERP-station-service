@@ -1,4 +1,4 @@
-// Effectuer la requête GET pour récupérer les produits
+// Effectuer la requête GET
 fetch("https://api.fuelsync.hertinox.fr/products/getallproducts.php")
     .then(response => {
         if (!response.ok) {
@@ -8,14 +8,14 @@ fetch("https://api.fuelsync.hertinox.fr/products/getallproducts.php")
     })
     .then(data => {
         // Sélection du select
-        const select = document.getElementById('products-and-energy-select');
+        const productSelect = document.getElementById('product-select');
 
         // Parcourir les données et créer les options dynamiquement
-        data.forEach(item => {
+        data.forEach(product => {
             const option = document.createElement('option');
-            option.value = item.idProduct;
-            option.textContent = item.productName;
-            select.appendChild(option);
+            option.value = product.idProduct;
+            option.textContent = product.productName;
+            productSelect.appendChild(option);
         });
     })
     .catch(error => {
