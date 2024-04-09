@@ -39,7 +39,6 @@ okButton.addEventListener('click', function() {
 
     if (isEnteringValue && inputValue.trim() !== '' && /^\d{13}$/.test(inputValue)) {
         addProductToTicket(inputValue);
-        addProductToTicket(inputValue);
         displayPad.value = '';
         addButton.innerHTML = '<i class="fa-solid fa-plus"></i>';
         addButton.style.width = '';

@@ -28,10 +28,6 @@ function getPumpData() {
                         pumpElement.addClass('to-encash');
                     }
 
-                    if (pump.state === 0) {
-                        pumpElement.addClass('to-encash');
-                    }
-
                     // Mettre à jour le HTML avec les informations de la pompe
                     pumpElement.empty(); // Supprimer le contenu existant pour éviter la duplication
                     pumpElement.append('<p>POMPE ' + pump.idPump + ' : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + pump.name + ' - ' + pump.lastQuantity.toFixed(2) + 'L - ' + pump.lastPrice.toFixed(2) + '€ - <span style="color:' + color + '">' + statusText + '</span></p>');

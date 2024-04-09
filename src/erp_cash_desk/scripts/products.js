@@ -41,7 +41,7 @@ var suggestionList = document.getElementById('suggestion-list');
 searchInput.addEventListener('input', function() {
     var searchKeyword = searchInput.value.trim().toLowerCase();
     var filteredProducts = [];
-
+    
     // Filtrer les produits correspondant au texte de recherche
     allProducts.forEach(function(product) { // Utiliser la variable globale allProducts
         if (product.productName.toLowerCase().includes(searchKeyword)) {
@@ -56,6 +56,7 @@ searchInput.addEventListener('input', function() {
 // Gérer l'événement "Entrée" pour mettre à jour les informations du produit
 searchInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
+        console.log(searchInput.value);
         var productName = searchInput.value.trim().toLowerCase();
         var foundProduct = allProducts.find(function(product) { // Utiliser la variable globale allProducts
             return product.productName.toLowerCase() === productName;
