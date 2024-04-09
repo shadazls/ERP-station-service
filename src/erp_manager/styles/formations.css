@@ -10,7 +10,7 @@
     background-color: blue;
 }
 
-#liste_formation {
+/* #liste_formation {
     font-family: Balsamiq Sans;
     font-size: 140%;
     overflow-y: scroll;
@@ -21,7 +21,7 @@
     justify-content: center;
     align-items: center;
     padding: 2.5%;
-}
+} */
 
 #liste_formation {
     overflow: scroll;
