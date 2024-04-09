@@ -30,6 +30,7 @@
 #liste_formation {
     overflow: scroll;
     justify-content: flex-start;
+    gap: 5%;
 }
 
 

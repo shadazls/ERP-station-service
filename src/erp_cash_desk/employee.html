@@ -25,7 +25,7 @@
       <script defer="defer" src="scripts/calculator.js"></script>
       <script defer="defer" src="scripts/container-top-left.js"></script>
       <script defer="defer" src="scripts/incident.js"></script>
-      <script defer="defer" src="scripts/formations.js"></script>
+      <script src="../erp_manager/scripts/staff-module/getallformations.js"></script>
       <script defer="defer" src="scripts/pump.js"></script>
       <script defer="defer" src="scripts/cash-pump.js"></script>
       <script defer="defer" src="scripts/switch-screen.js"></script>
@@ -102,7 +102,7 @@
         <div id="employee-container-top">
 
           <!-- Produits -->
-          <div class="ticket" class="">
+          <div class="ticket">
             <div id="ticket-items">
               <!-- Les produits ici -->
             </div>
@@ -268,7 +268,7 @@
             </div>
 
             <div id="checkIncident">
-              <!-- Les incidents ici -->
+                <!-- Les incidents ici -->
             </div>
           </div>
 
@@ -277,85 +277,31 @@
         <div id="employee-container-bottom">
 
         <!-- Informations pompes -->
-          <div id="employee-container-bottom-oil" class="">
-            <div id="employee-container-bottom-oil-remaining">
-              <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
+        <div id="employee-container-bottom-oil" class="">
+            <div id="employee-container-bottom-oil-remaining" class="">
+              <!-- <div><span class="oil-name">SP85</span><span class="oil-remaining">26.125,22</span></div>
               <div><span class="oil-name">SP95</span><span class="oil-remaining">29.645,36</span></div>
-              <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div>
+              <div><span class="oil-name">Gazole</span><span class="oil-remaining">16.234,78</span></div> -->
             </div>
-            <div id="employee-container-bottom-pump-status">
-              <div id="pump1">
-                <div>
-                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
-                  <p class="status-open"></p>
-                </div>
-                <p>
-                  <span class="pump-oil-name">SP95</span>
-                  <span class="pump-oil-name">SP98</span>
-                  <span class="pump-oil-name">Gazole</span>
-                </p>
-              </div>
-              <div id="pump2">
-                <div>
-                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°2</p>
-                  <p class="status-open"></p>
-                </div>
-                <p>
-                  <span class="pump-oil-name">SP95</span>
-                  <span class="pump-oil-name">SP98</span>
-                  <span class="pump-oil-name">Gazole</span>
-                </p>
-              </div>
-              <div id="pump3">
-                <div>
-                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°3</p>
-                  <p class="status-close"></p>
-                </div>
-                <p>
-                  <span class="pump-oil-name">SP95</span>
-                  <span class="pump-oil-name">SP98</span>
-                  <span class="pump-oil-name out-of-stock">Gazole</span>
-                </p>
-              </div>
-              <div id="pump4">
-                <div>
-                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°4</p>
-                  <p class="status-open"></p>
-                </div>
-                <p>
-                  <span class="pump-oil-name">SP95</span>
-                  <span class="pump-oil-name">SP98</span>
-                  <span class="pump-oil-name">Gazole</span>
-                </p>
-              </div>
-              <div id="pump5">
-                <div>
-                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°5</p>
-                  <p class="status-close"></p>
-                </div>
-                <p>
-                  <span class="pump-oil-name out-of-stock">SP95</span>
-                  <span class="pump-oil-name">SP98</span>
-                  <span class="pump-oil-name">Gazole</span>
-                </p>
-              </div>
-              <div id="pump6">
-                <div>
-                  <p class="pump-name"><i class="fa-solid fa-gas-pump"></i>  Pompe n°6</p>
-                  <p class="status-open"></p>
-                </div>
-                <p>
-                  <span class="pump-oil-name">SP95</span>
-                  <span class="pump-oil-name">SP98</span>
-                  <span class="pump-oil-name">Gazole</span>
-                </p>
-              </div>
+            <div id="employee-container-bottom-pump-status" class="">
+
+                <!-- <div id="pump1" class="hvr-outline-out">
+                    <div>
+                        <p class="pump-name"><i class="fa-solid fa-gas-pump"></i> Pompe n°1</p>
+                        <p class="status"></p>
+                    </div>
+                    <p>
+                        <span class="pump-oil-name">SP95</span>
+                        <span class="pump-oil-name">SP98</span>
+                        <span class="pump-oil-name">Gazole</span>
+                    </p>
+                </div> -->
             </div>
-          </div>
+        </div>
 
           <!-- Formations -->
           <div id="employee-container-center-formation" class="">
-            <div id="liste_formation">
+            <div id="liste_formation" class="p">
               
             </div>
 
@@ -478,5 +424,10 @@
       </aside>
     </main>
     <script src="./scripts/drag-and-drop.js"></script>
+    <script src="../erp_manager/scripts/pump-module/get-fuels.js"></script>
+    <script src="../erp_manager/scripts/pump-module/pump.js"></script>
+    <script src="../erp_manager/scripts/incident-module/createincident.js*"></script>
+    <script src="../erp_manager/scripts/incident-module/getallincidents.js"></script>
+    <script src="../erp_manager/scripts/incident-module/get.js*"></script>
   </body>
 </html>
