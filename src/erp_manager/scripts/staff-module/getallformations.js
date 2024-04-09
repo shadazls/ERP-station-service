@@ -26,5 +26,5 @@ fetch("https://api.fuelsync.hertinox.fr/formations/getallformations.php")
   .catch(error => {
     console.error('Erreur lors de la récupération des données des formations:', error);
     // Gérer l'erreur, par exemple afficher un message à l'utilisateur
-    alert('Une erreur s\'est produite lors de la récupération des données des formations. Veuillez réessayer.');
+    // alert('Une erreur s\'est produite lors de la récupération des données des formations. Veuillez réessayer.');
   });
