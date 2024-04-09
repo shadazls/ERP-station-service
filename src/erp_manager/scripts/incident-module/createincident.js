@@ -1,6 +1,22 @@
 document.getElementById('createButton').addEventListener('click', function(event) {
     event.preventDefault(); // Empêcher le comportement par défaut du lien
 
+    // Récupérer les valeurs des champs
+    var dateTime = document.getElementById('dateTime').value.trim();
+    var incidentType = document.getElementById('incidentType').value.trim();
+    var technicalDetail = document.getElementById('technicalDetail').value.trim();
+    var remark = document.getElementById('remark').value.trim();
+
+    // Vérifier que tous les champs sont remplis
+    if (dateTime === '' || incidentType === '' || technicalDetail === '' || remark === '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Champs incomplets',
+            text: 'Veuillez remplir tous les champs avant de créer l\'incident.'
+        });
+        return; // Arrêter l'exécution de la fonction
+    }
+
     // Afficher la popup pour demander le nom de l'incident
     Swal.fire({
         title: 'Choisir un nom pour l\'incident',
@@ -19,12 +35,6 @@ document.getElementById('createButton').addEventListener('click', function(event
         if (result.isConfirmed) {
             // Récupérer le nom de l'incident saisi par l'utilisateur
             var nameIncident = result.value.trim();
-
-            // Récupérer les valeurs des autres champs
-            var dateTime = document.getElementById('dateTime').value.trim();
-            var incidentType = document.getElementById('incidentType').value.trim();
-            var technicalDetail = document.getElementById('technicalDetail').value.trim();
-            var remark = document.getElementById('remark').value.trim();
 
             // Convertir la date au format YYYY-MM-DD HH:MM
             var dateObj = new Date(dateTime);
@@ -59,6 +69,7 @@ document.getElementById('createButton').addEventListener('click', function(event
                         title: "Incident créé avec succès",
                         text: "L'incident a été enregistré avec succès."
                     });
+                    window.location.reload();
                 } else {
                     // Afficher une popup d'erreur si la requête a échoué
                     Swal.fire({
@@ -66,6 +77,7 @@ document.getElementById('createButton').addEventListener('click', function(event
                         title: "Incident créé avec succès",
                         text: "L'incident a été enregistré avec succès."
                     });
+                    window.location.reload();
                 }
             })
             .catch(error => {
