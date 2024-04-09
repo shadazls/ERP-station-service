@@ -5,8 +5,8 @@
     margin-bottom: 0.25%;
     margin-left: 0.5%;
     margin-right: 0.25%; */
-    border: thick solid black;
-    border-radius: 10px;
+    border: 4px solid black;
+    border-radius: 5px;
     background-color: #6AA84F;
     display: flex;
     position: relative;
@@ -55,6 +55,7 @@
     width: 75%;
     height: 35%;
     margin: 2%;
+    padding: 2%;
     margin-left: 20%;
 }
 
@@ -110,6 +111,7 @@
 
 #alerter button {
     font-family: Balsamiq Sans;
+    font-size: 120%;
     height: 25%;
     border: 2px solid black;
     cursor: pointer;
@@ -144,16 +146,20 @@
 }
 
 #modifPrix p {
+    font-size: 130%;
     text-align: center;
 }
 
 #modifPrix input {
     font-family: Balsamiq Sans;
+    font-size: 110%;
+    max-width: 92%;
     border: 2px solid black;
 }
 
 #modifPrix button {
     border: 2px solid black;
+    font-size: 120%;
     width: 50%;
     cursor: pointer;
 }

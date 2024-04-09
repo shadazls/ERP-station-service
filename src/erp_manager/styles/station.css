@@ -6,8 +6,8 @@
     margin-left: 0.25%;
     margin-right: 0.25%; */
     background-color: #a64d79;
-    border: thick solid black;
-    border-radius: 10px;
+    border: 4px solid black;
+    border-radius: 5px;
     font-size: 1.25rem;
 }
 

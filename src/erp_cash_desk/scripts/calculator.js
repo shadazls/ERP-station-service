@@ -6,6 +6,9 @@ let times_pad = document.getElementById("times-pad")
 let times_pad_request = false
 let save = 0
 
+let minus_pad = document.getElementById("minus-pad")
+let removeProduct = false
+
 let ok_pad = document.getElementById("ok-pad")
 
 let delete_pad = document.getElementById("delete-pad")
@@ -18,22 +21,19 @@ Array.from(num_pad).forEach(element => {
   })
 })
 
+minus_pad.addEventListener("click", () => {
+  removeProduct = true;
+})
+
 times_pad.addEventListener("click", () => {
-  times_pad_request = true
   save = display_pad.value
   display_pad.value = ""
 })
 
-ok_pad.addEventListener("click", () => {
-  if(times_pad_request) {
-    display_pad.value *= save
-    // Arrondir à la 2e décimale
-    times_pad_request = false
-  }
-})
-
 delete_pad.addEventListener("click", () => {
   display_pad.value = ""
+  removeProduct = false;
+  save = 1;
 })
 
 doat_pad.addEventListener("click", () => {

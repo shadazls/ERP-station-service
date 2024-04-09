@@ -1,3 +1,5 @@
+// drag-and-drop.js
+
 // Fonction pour sauvegarder l'ordre des éléments dans le stockage local
 function saveSortOrder(containerId) {
     const container = document.getElementById(containerId);

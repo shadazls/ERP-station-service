@@ -28,10 +28,13 @@ function getPumpData() {
                         pumpElement.addClass('to-encash');
                     }
 
+                    if (pump.state === 0) {
+                        pumpElement.addClass('to-encash');
+                    }
+
                     // Mettre à jour le HTML avec les informations de la pompe
                     pumpElement.empty(); // Supprimer le contenu existant pour éviter la duplication
-                    pumpElement.append('<p>POMPE ' + pump.idPump + ' : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + pump.name + ' - ' + pump.lastQuantity.toFixed(2) + 'L - ' + pump.lastPrice.toFixed(2) + '€&nbsp;-&nbsp; <span style="color:' + color + '">' + statusText + '</span></p>');
-
+                    pumpElement.append('<p>POMPE ' + pump.idPump + ' : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + pump.name + ' - ' + pump.lastQuantity.toFixed(2) + 'L - ' + pump.lastPrice.toFixed(2) + '€ - <span style="color:' + color + '">' + statusText + '</span></p>');
                 });
             }
         }
@@ -42,11 +45,35 @@ function getPumpData() {
 getPumpData();
 setInterval(getPumpData, 2500); // Appeler la fonction toutes les 5 secondes (5000 ms)
 
+let pumpChoosen = null;
+
 $(document).on('click', '.line-pump:contains("À ENCAISSER")', function() {
     let pumpInfo = $(this).text().trim().split(' - ');
+    pumpID = pumpInfo[0].split(":")[0].trim()
+    pumpName = pumpInfo[0].split(":")[1].trim();
+    let pumpPrice = parseFloat(pumpInfo[2].split('€')[0]);
 
-    let newProduct = $('<div class="product-info"></div>');
-    newProduct.text(pumpInfo[0] + ' - ' + pumpInfo[1] + ' - ' + pumpInfo[2]);
+    if(pumpChoosen == null) {
+        pumpChoosen = pumpID;
+    
+        let newProduct = $('<div class="product-info"></div>');
+        newProduct.text(pumpName + " - " + pumpInfo[2]);
 
-    $('#ticket-items').append(newProduct);
+        removeProduct = false
+    
+        $('#ticket-items').append(newProduct);
+        updateTotal(pumpPrice);
+    } else {
+        if(removeProduct == true && pumpID === pumpChoosen) {
+            pumpChoosen = null;
+        
+            let newProduct = $('<div class="product-info"></div>');
+            newProduct.text(pumpName + " - -" + pumpInfo[2]);
+
+            $('#ticket-items').append(newProduct);
+            updateTotal(pumpPrice);
+            removeProduct = false
+        }
+    }
 });
+

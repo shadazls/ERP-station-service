@@ -25,14 +25,15 @@ function getProductsData() {
         type: "GET",
         contentType: "application/json",
         success: function(response) {
-            addProductsToDataList(response);
             allProducts = response; // Stocker les données des produits dans la variable globale
             response.forEach(function(product) {
                 updateProductInfo(product);
             });
+            addProductsToDataList(response); // Ajouter les produits au datalist
         }
     });
 }
+
 
 // Gérer l'événement de recherche
 var searchInput = document.getElementById('search-input-produit');
@@ -100,3 +101,42 @@ function addProductsToDataList(products) {
         dataList.appendChild(option);
     });
 }
+
+
+
+// MODIFICATION DU PRIX :
+
+// Ajouter un événement de clic sur le bouton de modification du prix
+var modifyButton = document.querySelector('#modifPrix button');
+modifyButton.addEventListener('click', function() {
+    // Récupérer le nouveau prix depuis l'élément d'entrée
+    var newPrice = document.getElementById('inputPrix').value.trim();
+    
+    // Vérifier si le prix est valide
+    if (newPrice !== '' && !isNaN(newPrice)) {
+        // Envoyer une requête AJAX pour mettre à jour le prix dans la base de données
+        $.ajax({
+            url: "URL_DU_SCRIPT_D_ENREGISTREMENT_EN_BASE_DE_DONNÉES",
+            type: "POST",
+            data: { newPrice: newPrice }, // Envoyer le nouveau prix comme données POST
+            success: function(response) {
+                // Gérer la réponse de la requête AJAX
+                if (response.success) {
+                    // Afficher un message de confirmation
+                    alert('Le prix a été modifié avec succès !');
+                } else {
+                    // Afficher un message d'erreur si la modification a échoué
+                    alert('Erreur lors de la modification du prix. Veuillez réessayer.');
+                }
+            },
+            error: function(xhr, status, error) {
+                // Gérer les erreurs de la requête AJAX
+                console.error(xhr.responseText);
+                alert('Une erreur s\'est produite. Veuillez réessayer.');
+            }
+        });
+    } else {
+        // Afficher un message d'erreur si le prix n'est pas valide
+        alert('Veuillez entrer un prix valide.');
+    }
+});

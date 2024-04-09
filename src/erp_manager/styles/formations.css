@@ -1,0 +1,29 @@
+.formation {
+    border: 3px solid black;
+    height: 3rem;
+    width: 90%;
+    font-size: small;
+    margin-bottom: 1rem;
+}
+
+#liste_formation .formation-selected {
+    background-color: blue;
+}
+
+#liste_formation {
+    font-family: Balsamiq Sans;
+    font-size: 140%;
+    overflow-y: scroll;
+    background-color: #FFFFFF;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+}
+
+#liste_formation {
+    overflow: scroll;
+    justify-content: flex-start;
+}
