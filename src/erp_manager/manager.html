@@ -94,7 +94,7 @@
                     <div id="divproduct" class="">
                         <div id="left">
                             <div id="divPhotoProduit">
-                                <img src="/src/erp_cash_desk/images/wd40.jpg" alt="Photo de produit">
+                                <img src="./assets/default-product.jpg" alt="Photo de produit">
                                 <div id="texteInfoProduit">
                                     <p>Nom</p>
                                     <p>Prix</p>
@@ -458,24 +458,28 @@
                     <!-- Incidents -->
                     <div id="incident" class="">
                         <div id="createIncident">
-                        <input type="datetime-local" id="dateTime" placeholder="Date Heure">
-                        <select id="incidentType">
-                            <option value="" disabled selected>Type</option>
-                            <option value="type1">Type 1</option>
-                            <option value="type2">Type 2</option>
-                            <option value="type3">Type 3</option>
-                        </select>
-                        <textarea id="technicalDetail" placeholder="Détail technique"></textarea>
-                        <textarea id="remark" placeholder="Remarque"></textarea>
-                        <a href="#_" id="createButton" class="relative inline-block px-4 py-2 font-medium group">
-                            <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                            <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-                            <span class="relative text-black group-hover:text-white">Créer</span>
-                        </a>
+                            <input type="datetime-local" id="dateTime" placeholder="Date Heure">
+                            <select id="incidentType">
+                                <option value="" disabled selected>Type</option>
+                                <option value="type1">Type 1</option>
+                                <option value="type2">Type 2</option>
+                                <option value="type3">Type 3</option>
+                            </select>
+                            <textarea id="technicalDetail" placeholder="Détail technique"></textarea>
+                            <textarea id="remark" placeholder="Remarque"></textarea>
+                            <a href="#_" id="createButton" class="relative inline-block px-4 py-2 font-medium group">
+                                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                                <span class="button absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+                                <span class="relative text-black group-hover:text-white">Créer</span>
+                            </a>
                         </div>
 
                         <div id="checkIncident">
                         <!-- Les incidents ici -->
+                            <div class="incident-list-box classic-box hvr-shrink cliquable">
+                                <p>Incident</p>
+                                
+                            </div>
                         </div>
                     </div>
 
@@ -596,6 +600,8 @@
         <script src="scripts/pump-module/pump.js"></script>
         <script src="scripts/pump-module/get-fuels.js"></script>
 
+        <script src="scripts/incident-module/getallincidents.js"></script>
+        <script src="scripts/incident-module/createincident.js"></script>
         <script src="scripts/incident.js"></script>
     </body>
 </html>
